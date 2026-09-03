@@ -7,7 +7,42 @@ const config: Config = {
     './lib/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bg: '#100E1B',
+        surface: '#1A1730',
+        surface2: '#241F42',
+        ink: '#F5F3FF',
+        inksoft: '#ABA3D1',
+        inkfaint: '#6F6796',
+        line: 'rgba(245,243,255,0.08)',
+        brand: {
+          DEFAULT: '#7C5CFF',
+          soft: '#2B2354',
+          bright: '#9B82FF',
+        },
+        xp: {
+          DEFAULT: '#FFC94A',
+          soft: '#3D3018',
+        },
+        certo: {
+          DEFAULT: '#2DD4BF',
+          soft: '#12332F',
+        },
+        errado: {
+          DEFAULT: '#FF6B6B',
+          soft: '#3A1F22',
+        },
+      },
+      fontFamily: {
+        display: ['var(--font-fredoka)'],
+        body: ['var(--font-lexend)'],
+        mono: ['var(--font-mono)'],
+      },
+      borderRadius: {
+        xl2: '1.25rem',
+      },
+    },
   },
   plugins: [],
 }

@@ -64,14 +64,36 @@ IDs do domínio do pipeline (`Concurso`, `Edicao`, `Disciplina`, `Topico`, `Ques
 `"HIS.T04.S01"`) em vez de `cuid()` — rastreável direto ao arquivo de origem. IDs de dado que
 nasce no produto (`User`, `Progresso`, `Tentativa`) são `cuid()`.
 
+## Identidade visual — decisão deliberada
+Escuro por padrão (não claro/escuro alternável — decisão única, pensada pra sessão de estudo à
+noite, que é como um estudante de 15 anos realmente usa isso). Fredoka (display, arredondada,
+enérgica) + Lexend (corpo — desenhada especificamente pra facilitar leitura, escolha ligada ao
+conteúdo: são enunciados longos) + JetBrains Mono (números/tags). Cor com função, não decoração:
+`brand` (violeta) é a marca/CTA, `xp` (dourado) é progresso, `certo` (verde-água) e `errado`
+(coral) são o feedback do quiz — nunca usar `errado`/`certo` como se fossem a cor de marca.
+Dificuldade é escolhida em círculos tocáveis 1-10, não slider (mais preciso no dedo/celular que
+o thumb minúsculo de um `<input type=range>`).
+
+## Sessão sem login
+Ainda não tem cadastro. `middleware.ts` dá um cookie `uid` (UUID aleatório) pra todo visitante
+novo; a linha `User` correspondente só é criada na primeira escrita real (`lib/session.ts` →
+`garantirUsuario`), via upsert. Isso já é suficiente pra testar dificuldade/tempo/progresso
+por pessoa, em navegadores diferentes, sem exigir tela de cadastro. Quando entrar NextAuth de
+verdade, a migração é: trocar a origem do `userId` (hoje vem do cookie `uid`) pela sessão do
+NextAuth — o resto (Progresso, Tentativa, Server Actions) não muda.
+
 ## O que ainda falta (na ordem que faz sentido construir)
-1. Migrar as telas do protótipo em Artifact (Resumo / Estatística / Meu Plano / Praticar / Banco)
-   para páginas reais lendo do Prisma em vez do JSON embutido.
-2. Auth (NextAuth) — cadastro de usuário, o que o protótipo em Artifact não tem.
+1. ~~Migrar as telas do protótipo em Artifact para páginas reais lendo do Prisma~~ — feito
+   (`/`, `/configurar`, `/estudar`, `/questoes`). `lib/estatistica.ts` é a mesma lógica de
+   `pipeline/stats_ch.py` (Dirichlet + recência), agora recalculada ao vivo a cada carregamento.
+2. Auth de verdade (NextAuth) — trocar o cookie `uid` anônimo por cadastro/login real.
 3. Tela de classificação manual (fila filtrável, sem sugestão de LLM por enquanto — Róberson
    classifica direto).
-4. Motor de habilidade por tópico (Elo com esquecimento) — hoje o protótipo só tem um tally de
-   sessão em `localStorage`, sem persistir nem alimentar a fila de prática.
+4. Motor de habilidade por tópico (Elo com esquecimento) — hoje `Progresso.acertos/tentativasN`
+   só acumula bruto; falta o ajuste que sobe/desce a dificuldade estimada por resposta e decai
+   com o tempo sem revisar.
+5. Fila de prática hoje só cobre Ciências Humanas (as únicas classificadas) e só entram questões
+   com gabarito confirmado no PDF (14 do banco atual) — cresce junto com o que for classificado.
 
 ## Scripts npm
 ```

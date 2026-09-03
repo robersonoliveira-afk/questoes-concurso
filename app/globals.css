@@ -2,8 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: #100E1B;
+}
+
 @layer components {
-  .input {
-    @apply w-full rounded border border-gray-300 px-3 py-2 text-sm text-gray-800 focus:border-emerald-700 focus:outline-none focus:ring-1 focus:ring-emerald-700;
+  .tap-dificuldade {
+    @apply flex h-9 w-9 items-center justify-center rounded-full font-mono text-sm font-medium transition-colors;
   }
+  .chip-tempo {
+    @apply rounded-full border px-4 py-2 text-sm font-medium transition-colors;
+  }
+}
+
+/* barra de progresso da fila de prática */
+.barra-fila {
+  @apply h-1.5 w-full overflow-hidden rounded-full bg-white/10;
+}
+.barra-fila > i {
+  @apply block h-full rounded-full bg-brand transition-all;
 }

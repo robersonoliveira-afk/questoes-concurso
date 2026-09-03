@@ -23,6 +23,7 @@ model User {
   name         String?
   email        String      @unique
   passwordHash String?
+  horasSemana  Float       @default(3)   // tempo disponível pra estudar por semana
   criadoEm     DateTime    @default(now())
 
   progresso    Progresso[]
