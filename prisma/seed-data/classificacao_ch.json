@@ -1,0 +1,436 @@
+[
+ {
+  "questao_id": "POLI.2020.Q39",
+  "no_id": "HIS.T03.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Guerra dos Farrapos: farroupilhas x chimangos"
+ },
+ {
+  "questao_id": "POLI.2020.Q40",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Milagre econômico 1968-73, regime militar"
+ },
+ {
+  "questao_id": "POLI.2020.Q42",
+  "no_id": "HIS.T04.S02",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Era Vargas: CLT, DIP — literal"
+ },
+ {
+  "questao_id": "POLI.2020.Q43",
+  "no_id": "HIS.T02.S01",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Expansão territorial colonial; enunciado truncado"
+ },
+ {
+  "questao_id": "POLI.2020.Q44",
+  "no_id": "HIS.T02.S04",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Escravidão no engenho (Rugendas)"
+ },
+ {
+  "questao_id": "POLI.2020.Q46",
+  "no_id": "GEO.T01.S01",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Leitura de coordenadas num mapa — cartografia geral"
+ },
+ {
+  "questao_id": "POLI.2020.Q49",
+  "no_id": null,
+  "confianca": 0.3,
+  "fora_do_programa": true,
+  "justificativa": "Gráfico setor primário/secundário/terciário global — sem região definida, gap"
+ },
+ {
+  "questao_id": "POLI.2020.Q50",
+  "no_id": "GEO.T05",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "Tecnologia e globalização — só nível de tópico"
+ },
+ {
+  "questao_id": "POLI.2022.Q39",
+  "no_id": "HIS.T01.S02",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Línguas indígenas, política indigenista — literal"
+ },
+ {
+  "questao_id": "POLI.2022.Q40",
+  "no_id": "HIS.T02.S07",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Bloqueio Continental -> fuga da Família Real"
+ },
+ {
+  "questao_id": "POLI.2022.Q41",
+  "no_id": "HIS.T03.S03",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Racionais MCs, questão racial pós-abolição"
+ },
+ {
+  "questao_id": "POLI.2022.Q42",
+  "no_id": "HIS.T04.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Vargas 1942, 2ª Guerra Mundial"
+ },
+ {
+  "questao_id": "POLI.2022.Q43",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "JK, otimismo desenvolvimentista"
+ },
+ {
+  "questao_id": "POLI.2022.Q45",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Atentado do Riocentro, ditadura civil-militar"
+ },
+ {
+  "questao_id": "POLI.2022.Q47",
+  "no_id": "GEO.T02",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Associação continente-descrição — transversal a vários tópicos"
+ },
+ {
+  "questao_id": "POLI.2022.Q48",
+  "no_id": null,
+  "confianca": 0.3,
+  "fora_do_programa": true,
+  "justificativa": "Espaço agrário mundial comparado — sem região única, gap"
+ },
+ {
+  "questao_id": "POLI.2022.Q49",
+  "no_id": "GEO.T05",
+  "confianca": 0.35,
+  "fora_do_programa": false,
+  "justificativa": "Setor terciário globalizado — só nível de tópico"
+ },
+ {
+  "questao_id": "POLI.2022.Q50",
+  "no_id": "GEO.T01.S01",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "Leitura de escala em planta — cartografia geral"
+ },
+ {
+  "questao_id": "POLI.2023.Q39",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Jânio Quadros, contexto pré-golpe"
+ },
+ {
+  "questao_id": "POLI.2023.Q41",
+  "no_id": "HIS.T02",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Feitorias + capitanias + missões — mistura 3 subtópicos"
+ },
+ {
+  "questao_id": "POLI.2023.Q42",
+  "no_id": "HIS.T03.S03",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "D. Pedro II, liberais x conservadores"
+ },
+ {
+  "questao_id": "POLI.2023.Q43",
+  "no_id": "HIS.T02.S02",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Governo-Geral 1549 — literal"
+ },
+ {
+  "questao_id": "POLI.2023.Q44",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Redemocratização 1985 — literal"
+ },
+ {
+  "questao_id": "POLI.2023.Q45",
+  "no_id": "GEO.T01.S05",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Agropecuária brasileira, PIB — literal"
+ },
+ {
+  "questao_id": "POLI.2023.Q46",
+  "no_id": "GEO.T01.S05",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Comércio exterior, commodities"
+ },
+ {
+  "questao_id": "POLI.2023.Q47",
+  "no_id": null,
+  "confianca": 0.1,
+  "fora_do_programa": true,
+  "justificativa": "Enunciado truncado no fatiamento — só 'Observe a figura'"
+ },
+ {
+  "questao_id": "POLI.2023.Q48",
+  "no_id": "GEO.T01.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Estruturas geológicas — relevo"
+ },
+ {
+  "questao_id": "POLI.2023.Q49",
+  "no_id": "GEO.T04",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Mapa da OTAN — Guerra Fria não tem nó próprio"
+ },
+ {
+  "questao_id": "POLI.2024.Q39",
+  "no_id": "HIS.T01.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "STF, marco temporal, terras indígenas"
+ },
+ {
+  "questao_id": "POLI.2024.Q40",
+  "no_id": "HIS.T01.S02",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Fragmento mesclado com questão de trabalho doméstico"
+ },
+ {
+  "questao_id": "POLI.2024.Q43",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "1945-1964, suicídio de Vargas — truncado"
+ },
+ {
+  "questao_id": "POLI.2024.Q44",
+  "no_id": null,
+  "confianca": 0.2,
+  "fora_do_programa": true,
+  "justificativa": "Caso Doca Street/Ângela Diniz — direito, não consta no edital"
+ },
+ {
+  "questao_id": "POLI.2024.Q45",
+  "no_id": "GEO.T01.S03",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Fragmento mesclado; parte final é horizonte do solo"
+ },
+ {
+  "questao_id": "POLI.2024.Q46",
+  "no_id": null,
+  "confianca": 0.3,
+  "fora_do_programa": true,
+  "justificativa": "Clima comparado entre cidades do mundo — sem nó de clima global"
+ },
+ {
+  "questao_id": "POLI.2024.Q47",
+  "no_id": "GEO.T05",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "IDH/PNUD — indicador global, só nível de tópico"
+ },
+ {
+  "questao_id": "POLI.2024.Q48",
+  "no_id": "GEO.T01.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Estiagem na Amazônia — clima do Brasil"
+ },
+ {
+  "questao_id": "POLI.2024.Q49",
+  "no_id": "GEO.T04.S02",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "China, zonas econômicas especiais"
+ },
+ {
+  "questao_id": "POLI.2024.Q50",
+  "no_id": null,
+  "confianca": 0.3,
+  "fora_do_programa": true,
+  "justificativa": "Estações do ano / movimento da Terra — sem nó específico"
+ },
+ {
+  "questao_id": "POLI.2025.Q39",
+  "no_id": "HIS.T01.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Planisfério de Cantino, grandes navegações"
+ },
+ {
+  "questao_id": "POLI.2025.Q40",
+  "no_id": "HIS.T02.S03",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Companhia de Jesus — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q41",
+  "no_id": "HIS.T03.S01",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Independência, Assembleia Constituinte 1823"
+ },
+ {
+  "questao_id": "POLI.2025.Q42",
+  "no_id": "HIS.T03.S03",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Segundo Reinado, fim do tráfico"
+ },
+ {
+  "questao_id": "POLI.2025.Q43",
+  "no_id": "HIS.T04.S01",
+  "confianca": 0.95,
+  "fora_do_programa": false,
+  "justificativa": "Coronelismo — literal no edital"
+ },
+ {
+  "questao_id": "POLI.2025.Q44",
+  "no_id": "HIS.T04.S02",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Era Vargas 1930-1945 — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q45",
+  "no_id": "GEO.T01.S01",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Coordenadas, latitude, hemisférios — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q46",
+  "no_id": "GEO.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Pontos extremos do Brasil"
+ },
+ {
+  "questao_id": "POLI.2025.Q47",
+  "no_id": "GEO.T05.S03",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "Crescimento por investimento estrangeiro — Tigres Asiáticos, fragmento"
+ },
+ {
+  "questao_id": "POLI.2025.Q48",
+  "no_id": "GEO.T04.S04",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Primavera Árabe — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q49",
+  "no_id": "GEO.T01.S03",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Rios e bacias hidrográficas"
+ },
+ {
+  "questao_id": "POLI.2025.Q50",
+  "no_id": "GEO.T01.S04",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Envelhecimento populacional, IBGE — população"
+ },
+ {
+  "questao_id": "POLI.2026.Q39",
+  "no_id": "HIS.T02.S04",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Diáspora africana, travessia atlântica"
+ },
+ {
+  "questao_id": "POLI.2026.Q40",
+  "no_id": "HIS.T04.S01",
+  "confianca": 0.55,
+  "fora_do_programa": false,
+  "justificativa": "Crise da monarquia, Guerra do Paraguai, republicanismo"
+ },
+ {
+  "questao_id": "POLI.2026.Q41",
+  "no_id": "HIS.T04.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Voto de cabresto, coronéis"
+ },
+ {
+  "questao_id": "POLI.2026.Q42",
+  "no_id": "HIS.T04",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Coluna dos Tenentes — Tenentismo não tem nó próprio"
+ },
+ {
+  "questao_id": "POLI.2026.Q43",
+  "no_id": "HIS.T04.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Ditadura militar, direitos humanos"
+ },
+ {
+  "questao_id": "POLI.2026.Q44",
+  "no_id": "HIS.T04",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Plataforma tenentista — mesma lacuna da Q42"
+ },
+ {
+  "questao_id": "POLI.2026.Q45",
+  "no_id": "GEO.T01.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Regionalização do Brasil — literal"
+ },
+ {
+  "questao_id": "POLI.2026.Q46",
+  "no_id": "GEO.T04.S06",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Guerra Rússia-Ucrânia — sem nó de conflito atual"
+ },
+ {
+  "questao_id": "POLI.2026.Q47",
+  "no_id": "GEO.T01",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Leitura de mapa-infográfico — cartografia geral"
+ },
+ {
+  "questao_id": "POLI.2026.Q48",
+  "no_id": "GEO.T01.S05",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Fronteira agrícola, Cerrado"
+ },
+ {
+  "questao_id": "POLI.2026.Q49",
+  "no_id": null,
+  "confianca": 0.3,
+  "fora_do_programa": true,
+  "justificativa": "Pegada Ecológica — conceito ambiental sem nó regional"
+ },
+ {
+  "questao_id": "POLI.2026.Q50",
+  "no_id": "GEO.T01",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Crítica de mapa (Mapa Mundi invertido IBGE) — cartografia geral"
+ }
+]

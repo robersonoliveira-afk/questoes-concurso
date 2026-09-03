@@ -1,0 +1,153 @@
+// Schema do Questões-Concurso.
+// Convenção de IDs: onde o dado vem do pipeline de classificação (Concurso,
+// Edicao, Disciplina, Topico, Questao, Classificacao), o ID é a mesma string
+// estável usada nos arquivos de saída do pipeline (ex: "POLI.2025.Q43",
+// "HIS.T04.S01") em vez de um cuid() gerado — assim dá pra rastrear um
+// registro do banco de volta ao arquivo de origem sem tabela auxiliar.
+// Onde o dado nasce no produto (User, Progresso, Tentativa), fica cuid().
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------------------------------------------------------------- usuário
+
+model User {
+  id           String      @id @default(cuid())
+  name         String?
+  email        String      @unique
+  passwordHash String?
+  criadoEm     DateTime    @default(now())
+
+  progresso    Progresso[]
+  tentativas   Tentativa[]
+}
+
+// ---------------------------------------------------------------- edital
+
+model Concurso {
+  id           String   @id            // ex: "POLI"
+  nome         String                  // "Politécnico / CTISM — UFSM"
+  instituicao  String
+  edicoes      Edicao[]
+}
+
+model Edicao {
+  id                 String       @id  // ex: "POLI.2027", "POLI.2025"
+  concursoId         String
+  concurso           Concurso     @relation(fields: [concursoId], references: [id])
+  ano                Int
+  rotulo             String?              // "Ensino Médio 2027"
+  vigente            Boolean      @default(false) // edital em vigor: dono da árvore de tópicos
+  dataProva          DateTime?
+  inscricaoInicio    DateTime?
+  inscricaoFim       DateTime?
+  nQuestoes          Int
+  temPesoPorQuestao  Boolean      @default(false)
+  criterioDesempate  Json?               // lista ordenada de siglas de disciplina, ex ["LP","MAT"]
+  acertoMinimo       Json?               // { sigla: mínimo } quando o edital elimina por disciplina
+
+  disciplinas        Disciplina[]        // só populado na edição vigente (dona do programa)
+  questoes           Questao[]           // questões desta prova específica
+
+  @@index([concursoId])
+}
+
+model Disciplina {
+  id            String   @id            // ex: "HIS", "GEO"
+  edicaoId      String
+  edicao        Edicao   @relation(fields: [edicaoId], references: [id])
+  nome          String
+  nQuestoes     Int
+  pesoDeclarado Float?                  // null = edital não declara peso por questão
+
+  topicos       Topico[]
+
+  @@index([edicaoId])
+}
+
+model Topico {
+  id             String          @id   // ex: "HIS.T04", "HIS.T04.S01"
+  disciplinaId   String
+  disciplina     Disciplina      @relation(fields: [disciplinaId], references: [id])
+  nome           String
+  nivel          String                // "topico" | "subtopico"
+  paiId          String?
+  pai            Topico?         @relation("SubTopicos", fields: [paiId], references: [id])
+  subtopicos     Topico[]        @relation("SubTopicos")
+
+  classificacoes Classificacao[]
+  progresso      Progresso[]
+
+  @@index([disciplinaId])
+  @@index([paiId])
+}
+
+// ---------------------------------------------------------------- banco de questões
+
+model Questao {
+  id            String          @id  // ex: "POLI.2025.Q43"
+  edicaoId      String
+  edicao        Edicao          @relation(fields: [edicaoId], references: [id])
+  ano           Int
+  numero        Int
+  enunciado     String
+  alternativas  Json                    // { A: "...", B: "...", ... }
+  gabarito      String?                 // letra correta, quando lida do PDF da prova
+  arquivoOrigem String?
+
+  classificacao Classificacao?
+  tentativas    Tentativa[]
+
+  @@unique([edicaoId, numero])
+  @@index([ano])
+}
+
+model Classificacao {
+  id             String    @id @default(cuid())
+  questaoId      String    @unique
+  questao        Questao   @relation(fields: [questaoId], references: [id])
+  topicoId       String?
+  topico         Topico?   @relation(fields: [topicoId], references: [id])
+  confianca      Float?
+  foraDoPrograma Boolean   @default(false)
+  justificativa  String?
+  origem         String    @default("manual")   // "manual" | "triagem_llm"
+  classificadoEm DateTime  @default(now())
+
+  @@index([topicoId])
+}
+
+// ---------------------------------------------------------------- progresso do usuário
+
+model Progresso {
+  id                   String   @id @default(cuid())
+  userId               String
+  user                 User     @relation(fields: [userId], references: [id])
+  topicoId             String
+  topico               Topico   @relation(fields: [topicoId], references: [id])
+  dificuldadeDeclarada Int      @default(5)   // 1-10, autoavaliação — só o ponto de partida
+  acertos              Int      @default(0)
+  tentativasN          Int      @default(0)
+  atualizadoEm         DateTime @updatedAt
+
+  @@unique([userId, topicoId])
+}
+
+model Tentativa {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  questaoId    String
+  questao      Questao  @relation(fields: [questaoId], references: [id])
+  acertou      Boolean
+  respondidoEm DateTime @default(now())
+
+  @@index([userId, questaoId])
+}

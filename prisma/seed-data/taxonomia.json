@@ -1,0 +1,3713 @@
+{
+ "arvore": {
+  "concurso": "Politécnico/CTISM — UFSM",
+  "edital": "Ensino Médio 2027",
+  "disciplinas": [
+   {
+    "sigla": "LP",
+    "nome": "Língua Portuguesa",
+    "area": "Língua Portuguesa",
+    "n_questoes": 12,
+    "topicos": [
+     {
+      "nome": "Interpretação De Texto",
+      "subtopicos": [
+       {
+        "nome": "Estudo do texto",
+        "folhas": [
+         "compreensão e interpretação",
+         "tema",
+         "ideias principais e ideias secundárias",
+         "gêneros textuais",
+         "tipologia textual",
+         "coesão e coerência textual"
+        ]
+       }
+      ]
+     },
+     {
+      "nome": "Semântica",
+      "subtopicos": [
+       {
+        "nome": "Significação das palavras e expressões no contexto (sinônimos, antônimos, parônimos,",
+        "folhas": [
+         "homônimos, denotação, conotação, figuras de linguagem)"
+        ]
+       },
+       {
+        "nome": "Relação de sentido entre os elementos do texto",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Ortografia",
+      "subtopicos": [
+       {
+        "nome": "Emprego das letras conforme o novo Acordo Ortográfico",
+        "folhas": []
+       },
+       {
+        "nome": "Emprego dos porquês",
+        "folhas": []
+       },
+       {
+        "nome": "Acentuação gráfica",
+        "folhas": []
+       },
+       {
+        "nome": "Emprego do hífen",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Fonologia",
+      "subtopicos": [
+       {
+        "nome": "Letras e fonemas",
+        "folhas": []
+       },
+       {
+        "nome": "Separação silábica",
+        "folhas": []
+       },
+       {
+        "nome": "Sílaba tônica",
+        "folhas": []
+       },
+       {
+        "nome": "Encontros vocálicos",
+        "folhas": []
+       },
+       {
+        "nome": "Encontros consonantais",
+        "folhas": []
+       },
+       {
+        "nome": "Dígrafos",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Morfologia",
+      "subtopicos": [
+       {
+        "nome": "Classe de palavras e flexões",
+        "folhas": []
+       },
+       {
+        "nome": "Estrutura e formação de palavras",
+        "folhas": []
+       },
+       {
+        "nome": "Colocação pronominal",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Sintaxe",
+      "subtopicos": [
+       {
+        "nome": "Frase, oração, período",
+        "folhas": []
+       },
+       {
+        "nome": "Estrutura do período simples: termos da oração (essenciais, integrantes, acessórios)",
+        "folhas": []
+       },
+       {
+        "nome": "Organização do período composto: coordenação e subordinação",
+        "folhas": []
+       },
+       {
+        "nome": "Nexos oracionais (conectivos)",
+        "folhas": []
+       },
+       {
+        "nome": "Concordância verbal e nominal",
+        "folhas": []
+       },
+       {
+        "nome": "Regência verbal e nominal",
+        "folhas": []
+       },
+       {
+        "nome": "Crase",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Pontuação",
+      "subtopicos": []
+     }
+    ]
+   },
+   {
+    "sigla": "MAT",
+    "nome": "Matemática",
+    "area": "Matemática",
+    "n_questoes": 12,
+    "topicos": [
+     {
+      "nome": "Aritmética E Álgebra",
+      "subtopicos": [
+       {
+        "nome": "Conjuntos: conjunto dos números naturais, inteiros, racionais, irracionais e reais",
+        "folhas": []
+       },
+       {
+        "nome": "Operações com conjuntos",
+        "folhas": []
+       },
+       {
+        "nome": "Máximo divisor comum (MDC)",
+        "folhas": []
+       },
+       {
+        "nome": "Mínimo múltiplo comum (MMC)",
+        "folhas": []
+       },
+       {
+        "nome": "Potenciação e radiciação (propriedades e operações)",
+        "folhas": []
+       },
+       {
+        "nome": "Números reais sob a forma de radicais",
+        "folhas": []
+       },
+       {
+        "nome": "Racionalização de denominadores",
+        "folhas": []
+       },
+       {
+        "nome": "Razão e proporção (regra de três simples e composta)",
+        "folhas": []
+       },
+       {
+        "nome": "Porcentagem",
+        "folhas": []
+       },
+       {
+        "nome": "Juros simples",
+        "folhas": []
+       },
+       {
+        "nome": "Grandezas, unidades de medida e conversões",
+        "folhas": []
+       },
+       {
+        "nome": "Monômios e polinômios",
+        "folhas": []
+       },
+       {
+        "nome": "Produtos notáveis",
+        "folhas": []
+       },
+       {
+        "nome": "Fatoração",
+        "folhas": []
+       },
+       {
+        "nome": "Frações algébricas",
+        "folhas": []
+       },
+       {
+        "nome": "Equação do 1º grau e aplicações",
+        "folhas": []
+       },
+       {
+        "nome": "Equação do 2ª grau e aplicações",
+        "folhas": []
+       },
+       {
+        "nome": "Equações literais, fracionárias e irracionais",
+        "folhas": []
+       },
+       {
+        "nome": "Sistema de equações",
+        "folhas": []
+       },
+       {
+        "nome": "Inequações",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Relações E Funções",
+      "subtopicos": [
+       {
+        "nome": "Plano cartesiano ortogonal e gráficos de funções",
+        "folhas": []
+       },
+       {
+        "nome": "Relações e funções (conceito e propriedades)",
+        "folhas": []
+       },
+       {
+        "nome": "Função afim (conceito e propriedades)",
+        "folhas": []
+       },
+       {
+        "nome": "Função quadrática (conceito e propriedades)",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Geometria",
+      "subtopicos": [
+       {
+        "nome": "Razão de segmentos de reta",
+        "folhas": []
+       },
+       {
+        "nome": "Projeções paralelas",
+        "folhas": []
+       },
+       {
+        "nome": "Feixes paralelos. Teorema de Tales",
+        "folhas": []
+       },
+       {
+        "nome": "Aplicação do Teorema de Tales nos triângulos",
+        "folhas": []
+       },
+       {
+        "nome": "Semelhança de triângulos",
+        "folhas": []
+       },
+       {
+        "nome": "Casos de semelhança de triângulos",
+        "folhas": []
+       },
+       {
+        "nome": "Semelhança de polígonos",
+        "folhas": []
+       },
+       {
+        "nome": "Ângulos (internos e externos) em um polígono",
+        "folhas": []
+       },
+       {
+        "nome": "Polígonos regulares inscritos e circunscritos",
+        "folhas": []
+       },
+       {
+        "nome": "Medidas de lados e apótemas de polígonos regulares",
+        "folhas": []
+       },
+       {
+        "nome": "Comprimento da circunferência",
+        "folhas": []
+       },
+       {
+        "nome": "Perímetro de um polígono",
+        "folhas": []
+       },
+       {
+        "nome": "Noção de área",
+        "folhas": []
+       },
+       {
+        "nome": "Cálculo da área de polígonos",
+        "folhas": []
+       },
+       {
+        "nome": "Área do círculo",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Trigonometria",
+      "subtopicos": [
+       {
+        "nome": "Elementos de um triângulo retângulo",
+        "folhas": []
+       },
+       {
+        "nome": "Relações métricas de um triângulo retângulo",
+        "folhas": []
+       },
+       {
+        "nome": "Relações métricas em triângulos quaisquer",
+        "folhas": []
+       },
+       {
+        "nome": "Natureza de um triângulo quanto aos ângulos internos",
+        "folhas": []
+       },
+       {
+        "nome": "Teorema de Pitágoras e aplicações",
+        "folhas": []
+       },
+       {
+        "nome": "Seno, cosseno e tangentes de um ângulo agudo",
+        "folhas": []
+       },
+       {
+        "nome": "Tábua de razões trigonométricas",
+        "folhas": []
+       },
+       {
+        "nome": "Lei dos cossenos",
+        "folhas": []
+       },
+       {
+        "nome": "Lei dos senos",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Tratamento Da Informação: Estatística",
+      "subtopicos": [
+       {
+        "nome": "Quadros e tabelas",
+        "folhas": []
+       },
+       {
+        "nome": "Gráficos (tipos e interpretação)",
+        "folhas": []
+       },
+       {
+        "nome": "Média aritmética simples e ponderada",
+        "folhas": []
+       },
+       {
+        "nome": "Interpretação de informações",
+        "folhas": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "sigla": "BIO",
+    "nome": "Biologia",
+    "area": "Ciências Da Natureza",
+    "n_questoes": 8,
+    "topicos": [
+     {
+      "nome": "O Ambiente Em Que Vivemos",
+      "subtopicos": [
+       {
+        "nome": "Matéria e energia nos ecossistemas",
+        "folhas": []
+       },
+       {
+        "nome": "Tipos de ecossistemas",
+        "folhas": []
+       },
+       {
+        "nome": "Biomas brasileiros",
+        "folhas": []
+       },
+       {
+        "nome": "A água na terra",
+        "folhas": []
+       },
+       {
+        "nome": "Poluição do ar e do solo",
+        "folhas": []
+       },
+       {
+        "nome": "Lixo",
+        "folhas": []
+       },
+       {
+        "nome": "Desmatamento",
+        "folhas": []
+       },
+       {
+        "nome": "Recursos naturais renováveis",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Ser Humano",
+      "subtopicos": [
+       {
+        "nome": "Alimentos, nutrientes e suas funções",
+        "folhas": []
+       },
+       {
+        "nome": "Células, tecidos e sistemas",
+        "folhas": []
+       },
+       {
+        "nome": "DNA, genes e cromossomos",
+        "folhas": []
+       },
+       {
+        "nome": "Estrutura e fisiologia do corpo humano",
+        "folhas": []
+       },
+       {
+        "nome": "Imunologia",
+        "folhas": []
+       },
+       {
+        "nome": "Coordenação nervosa e hormonal",
+        "folhas": []
+       },
+       {
+        "nome": "Reprodução humana e DST",
+        "folhas": []
+       },
+       {
+        "nome": "Gametogênese e embriologia",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Seres Vivos",
+      "subtopicos": [
+       {
+        "nome": "A classificação biológica",
+        "folhas": []
+       },
+       {
+        "nome": "Organização e origem dos seres vivos",
+        "folhas": []
+       },
+       {
+        "nome": "Vírus",
+        "folhas": []
+       },
+       {
+        "nome": "Os cinco reinos dos seres vivos",
+        "folhas": [
+         "Reino Monera",
+         "Reino Protista ou Protoctista",
+         "Reino Fungi",
+         "Reino Plantae",
+         "Reino Animalia"
+        ]
+       },
+       {
+        "nome": "Organização, morfologia e fisiologia dos representantes dos reinos",
+        "folhas": []
+       },
+       {
+        "nome": "Relações entre os seres vivos",
+        "folhas": []
+       },
+       {
+        "nome": "Adaptações relacionadas à sobrevivência",
+        "folhas": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "sigla": "QUI",
+    "nome": "Química",
+    "area": "Ciências Da Natureza",
+    "n_questoes": 3,
+    "topicos": [
+     {
+      "nome": "Programa",
+      "subtopicos": [
+       {
+        "nome": "Elementos químicos, substâncias e misturas",
+        "folhas": []
+       },
+       {
+        "nome": "Separação de misturas",
+        "folhas": []
+       },
+       {
+        "nome": "Estudo do Átomo: número atômico, número de massa, partículas atômicas, íons, distribuição",
+        "folhas": [
+         "eletrônica"
+        ]
+       },
+       {
+        "nome": "Relações entre espécies atômicas: isótopos, isóbaros, isótonos e isoeletrônicos",
+        "folhas": []
+       },
+       {
+        "nome": "Tabela Periódica: famílias, períodos",
+        "folhas": []
+       },
+       {
+        "nome": "Ligações químicas: iônicas, covalentes e metálicas",
+        "folhas": []
+       },
+       {
+        "nome": "Funções inorgânicas: ácidos, bases, sais e óxidos",
+        "folhas": []
+       },
+       {
+        "nome": "Noções de reações químicas",
+        "folhas": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "sigla": "FIS",
+    "nome": "Física",
+    "area": "Ciências Da Natureza",
+    "n_questoes": 3,
+    "topicos": [
+     {
+      "nome": "Programa",
+      "subtopicos": [
+       {
+        "nome": "Energia e suas transformações",
+        "folhas": []
+       },
+       {
+        "nome": "Movimentos e forças",
+        "folhas": []
+       },
+       {
+        "nome": "Trabalho e energia",
+        "folhas": []
+       },
+       {
+        "nome": "Máquinas simples",
+        "folhas": []
+       },
+       {
+        "nome": "Calor e temperatura",
+        "folhas": []
+       },
+       {
+        "nome": "Ondas, som e luz",
+        "folhas": []
+       },
+       {
+        "nome": "Ótica",
+        "folhas": []
+       },
+       {
+        "nome": "Magnetismo e eletricidade",
+        "folhas": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "sigla": "HIS",
+    "nome": "História",
+    "area": "Ciências Humanas",
+    "n_questoes": 6,
+    "topicos": [
+     {
+      "nome": "As Grandes Navegações",
+      "subtopicos": [
+       {
+        "nome": "O descobrimento do Brasil",
+        "folhas": []
+       },
+       {
+        "nome": "O indígena: usos, costumes, contribuição e política indigenista",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Brasil Colônia",
+      "subtopicos": [
+       {
+        "nome": "As capitanias hereditárias",
+        "folhas": []
+       },
+       {
+        "nome": "Os governos gerais",
+        "folhas": []
+       },
+       {
+        "nome": "O papel dos jesuítas na colonização",
+        "folhas": []
+       },
+       {
+        "nome": "O negro: a miscigenação, as contribuições",
+        "folhas": []
+       },
+       {
+        "nome": "O nativismo: as origens, a Insurreição Pernambucana (1630), a Inconfidência Mineira (1789)",
+        "folhas": []
+       },
+       {
+        "nome": "A Família Real Portuguesa no Brasil",
+        "folhas": []
+       },
+       {
+        "nome": "Causas da transferência da Família Real para o Brasil",
+        "folhas": []
+       },
+       {
+        "nome": "Consequências políticas, econômicas e culturais",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Brasil Império",
+      "subtopicos": [
+       {
+        "nome": "O Primeiro Reinado",
+        "folhas": [
+         "A Regência de D. Pedro e o processo de independência",
+         "Assembleia Constituinte e a Constituição outorgada em 1824",
+         "O reconhecimento da Independência",
+         "A abdicação de D. Pedro I"
+        ]
+       },
+       {
+        "nome": "As regências",
+        "folhas": [
+         "Características do período regencial",
+         "Movimentos separatistas: A Guerra dos Farrapos e a Balaiada; A Pacificação; A"
+        ]
+       },
+       {
+        "nome": "O Segundo Reinado",
+        "folhas": [
+         "O sistema político do parlamentarismo",
+         "O desenvolvimento econômico",
+         "A imigração estrangeira",
+         "Abolição da escravatura: o fim do tráfico negreiro, as leis abolicionistas",
+         "A Guerra do Paraguai: causas e consequências",
+         "A queda da monarquia"
+        ]
+       }
+      ]
+     },
+     {
+      "nome": "Brasil República (1889 - 1930)",
+      "subtopicos": [
+       {
+        "nome": "O movimento republicano e a Proclamação da República",
+        "folhas": [
+         "O coronelismo",
+         "A política café com leite"
+        ]
+       },
+       {
+        "nome": "A Era de Vargas",
+        "folhas": [
+         "A Revolução de 1930",
+         "O Governo Constitucional",
+         "A Constituição de 1934",
+         "O Golpe de 1937 e a Constituição do Estado Novo",
+         "A participação do Brasil na Segunda Guerra Mundial",
+         "A queda de Vargas"
+        ]
+       },
+       {
+        "nome": "A Redemocratização do País",
+        "folhas": [
+         "O Governo de Dutra e a Constituição de 1946",
+         "O Segundo Governo de Vargas (1951 - 1954)",
+         "O Governo de Juscelino Kubitschek de Oliveira",
+         "O Governo de Jânio da Silva Quadros",
+         "O Governo de João Goulart",
+         "O Modelo Político Brasileiro de 1964 a 1985",
+         "Os Governos Brasileiros Pós-Regime Militar"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "sigla": "GEO",
+    "nome": "Geografia",
+    "area": "Ciências Humanas",
+    "n_questoes": 6,
+    "topicos": [
+     {
+      "nome": "Brasil",
+      "subtopicos": [
+       {
+        "nome": "Localização: extensão e posição geográfica",
+        "folhas": []
+       },
+       {
+        "nome": "Divisão regional e geoeconômica",
+        "folhas": []
+       },
+       {
+        "nome": "Aspectos físicos: relevo, hidrografia, clima, solos e vegetação",
+        "folhas": []
+       },
+       {
+        "nome": "Aspectos humanos: população e urbanização, imigração e setores de atividades",
+        "folhas": []
+       },
+       {
+        "nome": "Aspectos econômicos: extrativismo vegetal, animal e mineral, agricultura, pecuária, fontes de",
+        "folhas": [
+         "energia, atividades industriais, comércio, transportes"
+        ]
+       }
+      ]
+     },
+     {
+      "nome": "Continente Americano",
+      "subtopicos": [
+       {
+        "nome": "Localização: extensão e posição geográfica",
+        "folhas": []
+       },
+       {
+        "nome": "Divisão política: América do Norte, América Central, América do Sul",
+        "folhas": []
+       },
+       {
+        "nome": "Aspectos físicos: relevo, hidrografia, clima, solos e vegetação",
+        "folhas": []
+       },
+       {
+        "nome": "Aspectos humanos: população e povoamento",
+        "folhas": []
+       },
+       {
+        "nome": "Os Povos Pré-Colombianos",
+        "folhas": []
+       },
+       {
+        "nome": "Aspectos Econômicos: extrativismo vegetal, animal e mineral, agricultura, pecuária,",
+        "folhas": [
+         "fontes de energia; atividades industriais, comércio, transportes"
+        ]
+       }
+      ]
+     },
+     {
+      "nome": "Oceania",
+      "subtopicos": [
+       {
+        "nome": "Aspectos humanos, físicos e econômicos",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Velho Mundo",
+      "subtopicos": [
+       {
+        "nome": "Japão: aspectos humanos e econômicos",
+        "folhas": []
+       },
+       {
+        "nome": "China: aspectos humanos e econômicos",
+        "folhas": []
+       },
+       {
+        "nome": "A Unificação Europeia: aspectos políticos, humanos e econômicos",
+        "folhas": []
+       },
+       {
+        "nome": "O Mundo Árabe: Oriente Fundamental",
+        "folhas": []
+       },
+       {
+        "nome": "África: aspectos humanos, físicos e econômicos",
+        "folhas": []
+       },
+       {
+        "nome": "O Mundo Socialista após a Glasnost e a Perestroika",
+        "folhas": []
+       }
+      ]
+     },
+     {
+      "nome": "Globalização, O Cenário Do Novo Século",
+      "subtopicos": [
+       {
+        "nome": "O Mercosul e o Brasil",
+        "folhas": []
+       },
+       {
+        "nome": "Da URSS a CEI",
+        "folhas": []
+       },
+       {
+        "nome": "Tigres Asiáticos",
+        "folhas": []
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "nos": [
+  {
+   "id": "LP.T01",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Interpretação De Texto",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Interpretação De Texto"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Interpretação De Texto",
+   "subtopico": "Estudo do texto",
+   "caminho": [
+    "Língua Portuguesa",
+    "Interpretação De Texto",
+    "Estudo do texto"
+   ],
+   "folhas": [
+    "compreensão e interpretação",
+    "tema",
+    "ideias principais e ideias secundárias",
+    "gêneros textuais",
+    "tipologia textual",
+    "coesão e coerência textual"
+   ]
+  },
+  {
+   "id": "LP.T02",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Semântica",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Semântica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T02.S01",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Semântica",
+   "subtopico": "Significação das palavras e expressões no contexto (sinônimos, antônimos, parônimos,",
+   "caminho": [
+    "Língua Portuguesa",
+    "Semântica",
+    "Significação das palavras e expressões no contexto (sinônimos, antônimos, parônimos,"
+   ],
+   "folhas": [
+    "homônimos, denotação, conotação, figuras de linguagem)"
+   ]
+  },
+  {
+   "id": "LP.T02.S02",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Semântica",
+   "subtopico": "Relação de sentido entre os elementos do texto",
+   "caminho": [
+    "Língua Portuguesa",
+    "Semântica",
+    "Relação de sentido entre os elementos do texto"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T03",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Ortografia",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Ortografia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T03.S01",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Ortografia",
+   "subtopico": "Emprego das letras conforme o novo Acordo Ortográfico",
+   "caminho": [
+    "Língua Portuguesa",
+    "Ortografia",
+    "Emprego das letras conforme o novo Acordo Ortográfico"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T03.S02",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Ortografia",
+   "subtopico": "Emprego dos porquês",
+   "caminho": [
+    "Língua Portuguesa",
+    "Ortografia",
+    "Emprego dos porquês"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T03.S03",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Ortografia",
+   "subtopico": "Acentuação gráfica",
+   "caminho": [
+    "Língua Portuguesa",
+    "Ortografia",
+    "Acentuação gráfica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T03.S04",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Ortografia",
+   "subtopico": "Emprego do hífen",
+   "caminho": [
+    "Língua Portuguesa",
+    "Ortografia",
+    "Emprego do hífen"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04.S01",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": "Letras e fonemas",
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia",
+    "Letras e fonemas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04.S02",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": "Separação silábica",
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia",
+    "Separação silábica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04.S03",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": "Sílaba tônica",
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia",
+    "Sílaba tônica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04.S04",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": "Encontros vocálicos",
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia",
+    "Encontros vocálicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04.S05",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": "Encontros consonantais",
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia",
+    "Encontros consonantais"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T04.S06",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Fonologia",
+   "subtopico": "Dígrafos",
+   "caminho": [
+    "Língua Portuguesa",
+    "Fonologia",
+    "Dígrafos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T05",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Morfologia",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Morfologia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T05.S01",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Morfologia",
+   "subtopico": "Classe de palavras e flexões",
+   "caminho": [
+    "Língua Portuguesa",
+    "Morfologia",
+    "Classe de palavras e flexões"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T05.S02",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Morfologia",
+   "subtopico": "Estrutura e formação de palavras",
+   "caminho": [
+    "Língua Portuguesa",
+    "Morfologia",
+    "Estrutura e formação de palavras"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T05.S03",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Morfologia",
+   "subtopico": "Colocação pronominal",
+   "caminho": [
+    "Língua Portuguesa",
+    "Morfologia",
+    "Colocação pronominal"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S01",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Frase, oração, período",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Frase, oração, período"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S02",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Estrutura do período simples: termos da oração (essenciais, integrantes, acessórios)",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Estrutura do período simples: termos da oração (essenciais, integrantes, acessórios)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S03",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Organização do período composto: coordenação e subordinação",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Organização do período composto: coordenação e subordinação"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S04",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Nexos oracionais (conectivos)",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Nexos oracionais (conectivos)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S05",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Concordância verbal e nominal",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Concordância verbal e nominal"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S06",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Regência verbal e nominal",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Regência verbal e nominal"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T06.S07",
+   "nivel": "subtopico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Sintaxe",
+   "subtopico": "Crase",
+   "caminho": [
+    "Língua Portuguesa",
+    "Sintaxe",
+    "Crase"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "LP.T07",
+   "nivel": "topico",
+   "disciplina": "LP",
+   "disciplina_nome": "Língua Portuguesa",
+   "area": "Língua Portuguesa",
+   "n_questoes_disciplina": 12,
+   "topico": "Pontuação",
+   "subtopico": null,
+   "caminho": [
+    "Língua Portuguesa",
+    "Pontuação"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01",
+   "nivel": "topico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": null,
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Conjuntos: conjunto dos números naturais, inteiros, racionais, irracionais e reais",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Conjuntos: conjunto dos números naturais, inteiros, racionais, irracionais e reais"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S02",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Operações com conjuntos",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Operações com conjuntos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S03",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Máximo divisor comum (MDC)",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Máximo divisor comum (MDC)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S04",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Mínimo múltiplo comum (MMC)",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Mínimo múltiplo comum (MMC)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S05",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Potenciação e radiciação (propriedades e operações)",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Potenciação e radiciação (propriedades e operações)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S06",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Números reais sob a forma de radicais",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Números reais sob a forma de radicais"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S07",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Racionalização de denominadores",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Racionalização de denominadores"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S08",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Razão e proporção (regra de três simples e composta)",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Razão e proporção (regra de três simples e composta)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S09",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Porcentagem",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Porcentagem"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S10",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Juros simples",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Juros simples"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S11",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Grandezas, unidades de medida e conversões",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Grandezas, unidades de medida e conversões"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S12",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Monômios e polinômios",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Monômios e polinômios"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S13",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Produtos notáveis",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Produtos notáveis"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S14",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Fatoração",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Fatoração"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S15",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Frações algébricas",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Frações algébricas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S16",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Equação do 1º grau e aplicações",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Equação do 1º grau e aplicações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S17",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Equação do 2ª grau e aplicações",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Equação do 2ª grau e aplicações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S18",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Equações literais, fracionárias e irracionais",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Equações literais, fracionárias e irracionais"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S19",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Sistema de equações",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Sistema de equações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T01.S20",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Aritmética E Álgebra",
+   "subtopico": "Inequações",
+   "caminho": [
+    "Matemática",
+    "Aritmética E Álgebra",
+    "Inequações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T02",
+   "nivel": "topico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Relações E Funções",
+   "subtopico": null,
+   "caminho": [
+    "Matemática",
+    "Relações E Funções"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T02.S01",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Relações E Funções",
+   "subtopico": "Plano cartesiano ortogonal e gráficos de funções",
+   "caminho": [
+    "Matemática",
+    "Relações E Funções",
+    "Plano cartesiano ortogonal e gráficos de funções"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T02.S02",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Relações E Funções",
+   "subtopico": "Relações e funções (conceito e propriedades)",
+   "caminho": [
+    "Matemática",
+    "Relações E Funções",
+    "Relações e funções (conceito e propriedades)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T02.S03",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Relações E Funções",
+   "subtopico": "Função afim (conceito e propriedades)",
+   "caminho": [
+    "Matemática",
+    "Relações E Funções",
+    "Função afim (conceito e propriedades)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T02.S04",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Relações E Funções",
+   "subtopico": "Função quadrática (conceito e propriedades)",
+   "caminho": [
+    "Matemática",
+    "Relações E Funções",
+    "Função quadrática (conceito e propriedades)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03",
+   "nivel": "topico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": null,
+   "caminho": [
+    "Matemática",
+    "Geometria"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S01",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Razão de segmentos de reta",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Razão de segmentos de reta"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S02",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Projeções paralelas",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Projeções paralelas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S03",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Feixes paralelos. Teorema de Tales",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Feixes paralelos. Teorema de Tales"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S04",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Aplicação do Teorema de Tales nos triângulos",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Aplicação do Teorema de Tales nos triângulos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S05",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Semelhança de triângulos",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Semelhança de triângulos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S06",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Casos de semelhança de triângulos",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Casos de semelhança de triângulos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S07",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Semelhança de polígonos",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Semelhança de polígonos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S08",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Ângulos (internos e externos) em um polígono",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Ângulos (internos e externos) em um polígono"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S09",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Polígonos regulares inscritos e circunscritos",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Polígonos regulares inscritos e circunscritos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S10",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Medidas de lados e apótemas de polígonos regulares",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Medidas de lados e apótemas de polígonos regulares"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S11",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Comprimento da circunferência",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Comprimento da circunferência"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S12",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Perímetro de um polígono",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Perímetro de um polígono"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S13",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Noção de área",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Noção de área"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S14",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Cálculo da área de polígonos",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Cálculo da área de polígonos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T03.S15",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Geometria",
+   "subtopico": "Área do círculo",
+   "caminho": [
+    "Matemática",
+    "Geometria",
+    "Área do círculo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04",
+   "nivel": "topico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": null,
+   "caminho": [
+    "Matemática",
+    "Trigonometria"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S01",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Elementos de um triângulo retângulo",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Elementos de um triângulo retângulo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S02",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Relações métricas de um triângulo retângulo",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Relações métricas de um triângulo retângulo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S03",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Relações métricas em triângulos quaisquer",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Relações métricas em triângulos quaisquer"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S04",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Natureza de um triângulo quanto aos ângulos internos",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Natureza de um triângulo quanto aos ângulos internos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S05",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Teorema de Pitágoras e aplicações",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Teorema de Pitágoras e aplicações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S06",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Seno, cosseno e tangentes de um ângulo agudo",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Seno, cosseno e tangentes de um ângulo agudo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S07",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Tábua de razões trigonométricas",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Tábua de razões trigonométricas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S08",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Lei dos cossenos",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Lei dos cossenos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T04.S09",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Trigonometria",
+   "subtopico": "Lei dos senos",
+   "caminho": [
+    "Matemática",
+    "Trigonometria",
+    "Lei dos senos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T05",
+   "nivel": "topico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Tratamento Da Informação: Estatística",
+   "subtopico": null,
+   "caminho": [
+    "Matemática",
+    "Tratamento Da Informação: Estatística"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T05.S01",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Tratamento Da Informação: Estatística",
+   "subtopico": "Quadros e tabelas",
+   "caminho": [
+    "Matemática",
+    "Tratamento Da Informação: Estatística",
+    "Quadros e tabelas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T05.S02",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Tratamento Da Informação: Estatística",
+   "subtopico": "Gráficos (tipos e interpretação)",
+   "caminho": [
+    "Matemática",
+    "Tratamento Da Informação: Estatística",
+    "Gráficos (tipos e interpretação)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T05.S03",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Tratamento Da Informação: Estatística",
+   "subtopico": "Média aritmética simples e ponderada",
+   "caminho": [
+    "Matemática",
+    "Tratamento Da Informação: Estatística",
+    "Média aritmética simples e ponderada"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "MAT.T05.S04",
+   "nivel": "subtopico",
+   "disciplina": "MAT",
+   "disciplina_nome": "Matemática",
+   "area": "Matemática",
+   "n_questoes_disciplina": 12,
+   "topico": "Tratamento Da Informação: Estatística",
+   "subtopico": "Interpretação de informações",
+   "caminho": [
+    "Matemática",
+    "Tratamento Da Informação: Estatística",
+    "Interpretação de informações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01",
+   "nivel": "topico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": null,
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Matéria e energia nos ecossistemas",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Matéria e energia nos ecossistemas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S02",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Tipos de ecossistemas",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Tipos de ecossistemas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S03",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Biomas brasileiros",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Biomas brasileiros"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S04",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "A água na terra",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "A água na terra"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S05",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Poluição do ar e do solo",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Poluição do ar e do solo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S06",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Lixo",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Lixo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S07",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Desmatamento",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Desmatamento"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T01.S08",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "O Ambiente Em Que Vivemos",
+   "subtopico": "Recursos naturais renováveis",
+   "caminho": [
+    "Biologia",
+    "O Ambiente Em Que Vivemos",
+    "Recursos naturais renováveis"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02",
+   "nivel": "topico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": null,
+   "caminho": [
+    "Biologia",
+    "Ser Humano"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S01",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Alimentos, nutrientes e suas funções",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Alimentos, nutrientes e suas funções"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S02",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Células, tecidos e sistemas",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Células, tecidos e sistemas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S03",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "DNA, genes e cromossomos",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "DNA, genes e cromossomos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S04",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Estrutura e fisiologia do corpo humano",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Estrutura e fisiologia do corpo humano"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S05",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Imunologia",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Imunologia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S06",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Coordenação nervosa e hormonal",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Coordenação nervosa e hormonal"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S07",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Reprodução humana e DST",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Reprodução humana e DST"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T02.S08",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Ser Humano",
+   "subtopico": "Gametogênese e embriologia",
+   "caminho": [
+    "Biologia",
+    "Ser Humano",
+    "Gametogênese e embriologia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03",
+   "nivel": "topico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": null,
+   "caminho": [
+    "Biologia",
+    "Seres Vivos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03.S01",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "A classificação biológica",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "A classificação biológica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03.S02",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "Organização e origem dos seres vivos",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "Organização e origem dos seres vivos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03.S03",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "Vírus",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "Vírus"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03.S04",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "Os cinco reinos dos seres vivos",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "Os cinco reinos dos seres vivos"
+   ],
+   "folhas": [
+    "Reino Monera",
+    "Reino Protista ou Protoctista",
+    "Reino Fungi",
+    "Reino Plantae",
+    "Reino Animalia"
+   ]
+  },
+  {
+   "id": "BIO.T03.S05",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "Organização, morfologia e fisiologia dos representantes dos reinos",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "Organização, morfologia e fisiologia dos representantes dos reinos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03.S06",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "Relações entre os seres vivos",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "Relações entre os seres vivos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "BIO.T03.S07",
+   "nivel": "subtopico",
+   "disciplina": "BIO",
+   "disciplina_nome": "Biologia",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 8,
+   "topico": "Seres Vivos",
+   "subtopico": "Adaptações relacionadas à sobrevivência",
+   "caminho": [
+    "Biologia",
+    "Seres Vivos",
+    "Adaptações relacionadas à sobrevivência"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01",
+   "nivel": "topico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": null,
+   "caminho": [
+    "Química",
+    "Programa"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Elementos químicos, substâncias e misturas",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Elementos químicos, substâncias e misturas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S02",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Separação de misturas",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Separação de misturas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S03",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Estudo do Átomo: número atômico, número de massa, partículas atômicas, íons, distribuição",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Estudo do Átomo: número atômico, número de massa, partículas atômicas, íons, distribuição"
+   ],
+   "folhas": [
+    "eletrônica"
+   ]
+  },
+  {
+   "id": "QUI.T01.S04",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Relações entre espécies atômicas: isótopos, isóbaros, isótonos e isoeletrônicos",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Relações entre espécies atômicas: isótopos, isóbaros, isótonos e isoeletrônicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S05",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Tabela Periódica: famílias, períodos",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Tabela Periódica: famílias, períodos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S06",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Ligações químicas: iônicas, covalentes e metálicas",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Ligações químicas: iônicas, covalentes e metálicas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S07",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Funções inorgânicas: ácidos, bases, sais e óxidos",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Funções inorgânicas: ácidos, bases, sais e óxidos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "QUI.T01.S08",
+   "nivel": "subtopico",
+   "disciplina": "QUI",
+   "disciplina_nome": "Química",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Noções de reações químicas",
+   "caminho": [
+    "Química",
+    "Programa",
+    "Noções de reações químicas"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01",
+   "nivel": "topico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": null,
+   "caminho": [
+    "Física",
+    "Programa"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Energia e suas transformações",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Energia e suas transformações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S02",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Movimentos e forças",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Movimentos e forças"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S03",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Trabalho e energia",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Trabalho e energia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S04",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Máquinas simples",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Máquinas simples"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S05",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Calor e temperatura",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Calor e temperatura"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S06",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Ondas, som e luz",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Ondas, som e luz"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S07",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Ótica",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Ótica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "FIS.T01.S08",
+   "nivel": "subtopico",
+   "disciplina": "FIS",
+   "disciplina_nome": "Física",
+   "area": "Ciências Da Natureza",
+   "n_questoes_disciplina": 3,
+   "topico": "Programa",
+   "subtopico": "Magnetismo e eletricidade",
+   "caminho": [
+    "Física",
+    "Programa",
+    "Magnetismo e eletricidade"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T01",
+   "nivel": "topico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "As Grandes Navegações",
+   "subtopico": null,
+   "caminho": [
+    "História",
+    "As Grandes Navegações"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "As Grandes Navegações",
+   "subtopico": "O descobrimento do Brasil",
+   "caminho": [
+    "História",
+    "As Grandes Navegações",
+    "O descobrimento do Brasil"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T01.S02",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "As Grandes Navegações",
+   "subtopico": "O indígena: usos, costumes, contribuição e política indigenista",
+   "caminho": [
+    "História",
+    "As Grandes Navegações",
+    "O indígena: usos, costumes, contribuição e política indigenista"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02",
+   "nivel": "topico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": null,
+   "caminho": [
+    "História",
+    "Brasil Colônia"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S01",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "As capitanias hereditárias",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "As capitanias hereditárias"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S02",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "Os governos gerais",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "Os governos gerais"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S03",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "O papel dos jesuítas na colonização",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "O papel dos jesuítas na colonização"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S04",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "O negro: a miscigenação, as contribuições",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "O negro: a miscigenação, as contribuições"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S05",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "O nativismo: as origens, a Insurreição Pernambucana (1630), a Inconfidência Mineira (1789)",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "O nativismo: as origens, a Insurreição Pernambucana (1630), a Inconfidência Mineira (1789)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S06",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "A Família Real Portuguesa no Brasil",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "A Família Real Portuguesa no Brasil"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S07",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "Causas da transferência da Família Real para o Brasil",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "Causas da transferência da Família Real para o Brasil"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T02.S08",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Colônia",
+   "subtopico": "Consequências políticas, econômicas e culturais",
+   "caminho": [
+    "História",
+    "Brasil Colônia",
+    "Consequências políticas, econômicas e culturais"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T03",
+   "nivel": "topico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Império",
+   "subtopico": null,
+   "caminho": [
+    "História",
+    "Brasil Império"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T03.S01",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Império",
+   "subtopico": "O Primeiro Reinado",
+   "caminho": [
+    "História",
+    "Brasil Império",
+    "O Primeiro Reinado"
+   ],
+   "folhas": [
+    "A Regência de D. Pedro e o processo de independência",
+    "Assembleia Constituinte e a Constituição outorgada em 1824",
+    "O reconhecimento da Independência",
+    "A abdicação de D. Pedro I"
+   ]
+  },
+  {
+   "id": "HIS.T03.S02",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Império",
+   "subtopico": "As regências",
+   "caminho": [
+    "História",
+    "Brasil Império",
+    "As regências"
+   ],
+   "folhas": [
+    "Características do período regencial",
+    "Movimentos separatistas: A Guerra dos Farrapos e a Balaiada; A Pacificação; A"
+   ]
+  },
+  {
+   "id": "HIS.T03.S03",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil Império",
+   "subtopico": "O Segundo Reinado",
+   "caminho": [
+    "História",
+    "Brasil Império",
+    "O Segundo Reinado"
+   ],
+   "folhas": [
+    "O sistema político do parlamentarismo",
+    "O desenvolvimento econômico",
+    "A imigração estrangeira",
+    "Abolição da escravatura: o fim do tráfico negreiro, as leis abolicionistas",
+    "A Guerra do Paraguai: causas e consequências",
+    "A queda da monarquia"
+   ]
+  },
+  {
+   "id": "HIS.T04",
+   "nivel": "topico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil República (1889 - 1930)",
+   "subtopico": null,
+   "caminho": [
+    "História",
+    "Brasil República (1889 - 1930)"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "HIS.T04.S01",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil República (1889 - 1930)",
+   "subtopico": "O movimento republicano e a Proclamação da República",
+   "caminho": [
+    "História",
+    "Brasil República (1889 - 1930)",
+    "O movimento republicano e a Proclamação da República"
+   ],
+   "folhas": [
+    "O coronelismo",
+    "A política café com leite"
+   ]
+  },
+  {
+   "id": "HIS.T04.S02",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil República (1889 - 1930)",
+   "subtopico": "A Era de Vargas",
+   "caminho": [
+    "História",
+    "Brasil República (1889 - 1930)",
+    "A Era de Vargas"
+   ],
+   "folhas": [
+    "A Revolução de 1930",
+    "O Governo Constitucional",
+    "A Constituição de 1934",
+    "O Golpe de 1937 e a Constituição do Estado Novo",
+    "A participação do Brasil na Segunda Guerra Mundial",
+    "A queda de Vargas"
+   ]
+  },
+  {
+   "id": "HIS.T04.S03",
+   "nivel": "subtopico",
+   "disciplina": "HIS",
+   "disciplina_nome": "História",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil República (1889 - 1930)",
+   "subtopico": "A Redemocratização do País",
+   "caminho": [
+    "História",
+    "Brasil República (1889 - 1930)",
+    "A Redemocratização do País"
+   ],
+   "folhas": [
+    "O Governo de Dutra e a Constituição de 1946",
+    "O Segundo Governo de Vargas (1951 - 1954)",
+    "O Governo de Juscelino Kubitschek de Oliveira",
+    "O Governo de Jânio da Silva Quadros",
+    "O Governo de João Goulart",
+    "O Modelo Político Brasileiro de 1964 a 1985",
+    "Os Governos Brasileiros Pós-Regime Militar"
+   ]
+  },
+  {
+   "id": "GEO.T01",
+   "nivel": "topico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil",
+   "subtopico": null,
+   "caminho": [
+    "Geografia",
+    "Brasil"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T01.S01",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil",
+   "subtopico": "Localização: extensão e posição geográfica",
+   "caminho": [
+    "Geografia",
+    "Brasil",
+    "Localização: extensão e posição geográfica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T01.S02",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil",
+   "subtopico": "Divisão regional e geoeconômica",
+   "caminho": [
+    "Geografia",
+    "Brasil",
+    "Divisão regional e geoeconômica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T01.S03",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil",
+   "subtopico": "Aspectos físicos: relevo, hidrografia, clima, solos e vegetação",
+   "caminho": [
+    "Geografia",
+    "Brasil",
+    "Aspectos físicos: relevo, hidrografia, clima, solos e vegetação"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T01.S04",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil",
+   "subtopico": "Aspectos humanos: população e urbanização, imigração e setores de atividades",
+   "caminho": [
+    "Geografia",
+    "Brasil",
+    "Aspectos humanos: população e urbanização, imigração e setores de atividades"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T01.S05",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Brasil",
+   "subtopico": "Aspectos econômicos: extrativismo vegetal, animal e mineral, agricultura, pecuária, fontes de",
+   "caminho": [
+    "Geografia",
+    "Brasil",
+    "Aspectos econômicos: extrativismo vegetal, animal e mineral, agricultura, pecuária, fontes de"
+   ],
+   "folhas": [
+    "energia, atividades industriais, comércio, transportes"
+   ]
+  },
+  {
+   "id": "GEO.T02",
+   "nivel": "topico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": null,
+   "caminho": [
+    "Geografia",
+    "Continente Americano"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T02.S01",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": "Localização: extensão e posição geográfica",
+   "caminho": [
+    "Geografia",
+    "Continente Americano",
+    "Localização: extensão e posição geográfica"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T02.S02",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": "Divisão política: América do Norte, América Central, América do Sul",
+   "caminho": [
+    "Geografia",
+    "Continente Americano",
+    "Divisão política: América do Norte, América Central, América do Sul"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T02.S03",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": "Aspectos físicos: relevo, hidrografia, clima, solos e vegetação",
+   "caminho": [
+    "Geografia",
+    "Continente Americano",
+    "Aspectos físicos: relevo, hidrografia, clima, solos e vegetação"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T02.S04",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": "Aspectos humanos: população e povoamento",
+   "caminho": [
+    "Geografia",
+    "Continente Americano",
+    "Aspectos humanos: população e povoamento"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T02.S05",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": "Os Povos Pré-Colombianos",
+   "caminho": [
+    "Geografia",
+    "Continente Americano",
+    "Os Povos Pré-Colombianos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T02.S06",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Continente Americano",
+   "subtopico": "Aspectos Econômicos: extrativismo vegetal, animal e mineral, agricultura, pecuária,",
+   "caminho": [
+    "Geografia",
+    "Continente Americano",
+    "Aspectos Econômicos: extrativismo vegetal, animal e mineral, agricultura, pecuária,"
+   ],
+   "folhas": [
+    "fontes de energia; atividades industriais, comércio, transportes"
+   ]
+  },
+  {
+   "id": "GEO.T03",
+   "nivel": "topico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Oceania",
+   "subtopico": null,
+   "caminho": [
+    "Geografia",
+    "Oceania"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T03.S01",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Oceania",
+   "subtopico": "Aspectos humanos, físicos e econômicos",
+   "caminho": [
+    "Geografia",
+    "Oceania",
+    "Aspectos humanos, físicos e econômicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04",
+   "nivel": "topico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": null,
+   "caminho": [
+    "Geografia",
+    "Velho Mundo"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04.S01",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": "Japão: aspectos humanos e econômicos",
+   "caminho": [
+    "Geografia",
+    "Velho Mundo",
+    "Japão: aspectos humanos e econômicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04.S02",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": "China: aspectos humanos e econômicos",
+   "caminho": [
+    "Geografia",
+    "Velho Mundo",
+    "China: aspectos humanos e econômicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04.S03",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": "A Unificação Europeia: aspectos políticos, humanos e econômicos",
+   "caminho": [
+    "Geografia",
+    "Velho Mundo",
+    "A Unificação Europeia: aspectos políticos, humanos e econômicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04.S04",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": "O Mundo Árabe: Oriente Fundamental",
+   "caminho": [
+    "Geografia",
+    "Velho Mundo",
+    "O Mundo Árabe: Oriente Fundamental"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04.S05",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": "África: aspectos humanos, físicos e econômicos",
+   "caminho": [
+    "Geografia",
+    "Velho Mundo",
+    "África: aspectos humanos, físicos e econômicos"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T04.S06",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Velho Mundo",
+   "subtopico": "O Mundo Socialista após a Glasnost e a Perestroika",
+   "caminho": [
+    "Geografia",
+    "Velho Mundo",
+    "O Mundo Socialista após a Glasnost e a Perestroika"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T05",
+   "nivel": "topico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Globalização, O Cenário Do Novo Século",
+   "subtopico": null,
+   "caminho": [
+    "Geografia",
+    "Globalização, O Cenário Do Novo Século"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T05.S01",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Globalização, O Cenário Do Novo Século",
+   "subtopico": "O Mercosul e o Brasil",
+   "caminho": [
+    "Geografia",
+    "Globalização, O Cenário Do Novo Século",
+    "O Mercosul e o Brasil"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T05.S02",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Globalização, O Cenário Do Novo Século",
+   "subtopico": "Da URSS a CEI",
+   "caminho": [
+    "Geografia",
+    "Globalização, O Cenário Do Novo Século",
+    "Da URSS a CEI"
+   ],
+   "folhas": []
+  },
+  {
+   "id": "GEO.T05.S03",
+   "nivel": "subtopico",
+   "disciplina": "GEO",
+   "disciplina_nome": "Geografia",
+   "area": "Ciências Humanas",
+   "n_questoes_disciplina": 6,
+   "topico": "Globalização, O Cenário Do Novo Século",
+   "subtopico": "Tigres Asiáticos",
+   "caminho": [
+    "Geografia",
+    "Globalização, O Cenário Do Novo Século",
+    "Tigres Asiáticos"
+   ],
+   "folhas": []
+  }
+ ]
+}
