@@ -11,9 +11,13 @@ async function carregarDados() {
     const totalQuestoes = await prisma.questao.count()
     const totalClassificadas = await prisma.classificacao.count()
     return { ok: true as const, disciplinas, totalQuestoes, totalClassificadas }
-  } catch {
+  } catch (e) {
     // banco ainda não conectado (Supabase não configurado, ou schema não populado) —
-    // a página sobe do mesmo jeito em vez de derrubar o deploy inteiro.
+    // a página sobe do mesmo jeito em vez de derrubar o deploy inteiro. Loga o motivo
+    // real nos logs do servidor (nunca na tela) — sem isso não dá pra diagnosticar de
+    // fora. Tira qualquer trecho "usuário:senha@" antes de logar, por segurança.
+    const msg = e instanceof Error ? e.message : String(e)
+    console.error('[carregarDados] falha ao consultar o banco:', msg.replace(/:\/\/[^@]+@/, '://***:***@'))
     return { ok: false as const }
   }
 }
