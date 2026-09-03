@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { getUserId, garantirUsuario } from '@/lib/session'
-import { calcularEstatisticaTopicos } from '@/lib/estatistica'
+import { disciplinasDisponiveis, calcularEstatisticaTopicos } from '@/lib/estatistica'
 import DificuldadeSelector from '@/components/DificuldadeSelector'
 import TempoSemanal from '@/components/TempoSemanal'
 
@@ -14,10 +14,12 @@ export default async function Configurar() {
   const userId = await getUserId()
   await garantirUsuario(userId)
 
-  const disciplinas = await prisma.disciplina.findMany({
-    where: { topicos: { some: {} } },
-    orderBy: { id: 'asc' },
-  })
+  // mesmo filtro da Início e do Estudar — só disciplina com classificação
+  // de verdade entra aqui. "tem tópico" não basta: a taxonomia inteira do
+  // edital já está semeada (Matemática incluída), então filtrar só por
+  // Topico mostraria dificuldade/estatística fabricada para o que ainda
+  // não tem nenhuma questão classificada por trás.
+  const disciplinas = await disciplinasDisponiveis()
   const discIds = disciplinas.map(d => d.id)
   const stats = await calcularEstatisticaTopicos(discIds)
   const usuario = await prisma.user.findUnique({ where: { id: userId } })
