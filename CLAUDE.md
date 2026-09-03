@@ -14,6 +14,17 @@ clonados de lá; o banco de dados, o repositório e o deploy são recursos próp
 - **Prisma ORM 5** — PostgreSQL (Supabase)
 - **Tailwind CSS**
 
+## Versão do Next.js — decisão deliberada, diferente do AgroCusto
+Usa **Next 15.3.x**, não 14.2.x como o AgroCusto. O `^14.2.0` copiado de lá resolveu para a versão
+mais nova da linha (14.2.35) e ainda assim `npm audit` aponta uma lista longa de CVEs — o pacote
+`next` do npm agrega avisos de faixas enormes (`9.3.4-canary.0 - 16.3.0-preview.10`), boa parte
+deles em recursos que este projeto não usa ainda (next/image, Server Actions, middleware, i18n).
+Subir pra 15.x resolve a classe de bug mais relevante aqui (cache poisoning de RSC) sem o salto
+maior pra 16.x, que teria risco de quebra maior que o benefício agora. **Reavaliar quando entrar
+next/image, Server Actions ou middleware** — é aí que as vulnerabilidades restantes passam a valer
+a pena investigar uma por uma. `npm audit fix --force` NÃO deve ser rodado sem revisar — ele
+empurra pra 16.x e pra uma versão major nova do eslint-config-next.
+
 ## Banco de dados — mesma armadilha do AgroCusto
 O pgBouncer (porta 6543) do Supabase pode rejeitar conexão neste tipo de projeto com ENOTFOUND.
 Se `npm run db:push` falhar assim, usar o host direto (porta 5432) em `DATABASE_URL` e
