@@ -38,16 +38,32 @@ export default function QuestaoCard({
         <div className="border-t border-line px-4 py-4">
           <p className="text-sm leading-relaxed text-ink">{enunciado}</p>
           <ul className="mt-3 flex flex-col gap-1.5">
-            {LETRAS.filter(l => l in alternativas).map(l => (
-              <li key={l} className={`flex gap-2 text-xs ${l === gabarito ? 'text-certo' : 'text-inksoft'}`}>
-                <span className="font-mono font-semibold">
-                  {l}
-                  {l === gabarito ? ' ✓' : ''}
-                </span>
-                {alternativas[l]}
-              </li>
-            ))}
+            {LETRAS.filter(l => l in alternativas).map(l => {
+              const correta = l === gabarito
+              return (
+                <li
+                  key={l}
+                  className={`flex items-start gap-2.5 rounded-lg border px-3 py-2 text-xs ${
+                    correta ? 'border-certo bg-certo-soft text-ink' : 'border-transparent text-inksoft'
+                  }`}
+                >
+                  <span
+                    className={`flex h-5 w-5 flex-none items-center justify-center rounded-full font-mono font-semibold ${
+                      correta ? 'bg-certo text-[#08211D]' : 'bg-surface2 text-inkfaint'
+                    }`}
+                  >
+                    {l}
+                  </span>
+                  <span className="pt-0.5">{alternativas[l]}</span>
+                </li>
+              )
+            })}
           </ul>
+          {!gabarito && (
+            <p className="mt-3 rounded-lg bg-surface2 px-3 py-2 text-xs text-inkfaint">
+              Gabarito não disponível — essa prova não trouxe a tabela de respostas no PDF.
+            </p>
+          )}
         </div>
       )}
     </div>

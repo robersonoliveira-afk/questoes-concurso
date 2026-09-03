@@ -48,8 +48,7 @@ export default async function Inicio() {
         Bora estudar?
       </h1>
       <p className="mt-2 max-w-md text-sm text-inksoft">
-        {totalQuestoes} questões de provas de verdade já no banco, {totalClassificadas} já sabem em qual
-        conteúdo do edital encaixam.
+        {totalQuestoes} questões de provas de verdade já no banco, prontas pra treinar.
       </p>
 
       {plano.length === 0 ? (
