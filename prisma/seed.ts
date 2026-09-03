@@ -1,14 +1,17 @@
 // Popula o banco com os dados reais já produzidos pelo pipeline em
 // Teste_site_questões/pipeline (taxonomia do edital 2027, as 223 questões
-// fatiadas das 6 provas 2020-2026, e as 62 classificações manuais de
-// Ciências Humanas). Idempotente — usa upsert, roda de novo sem duplicar.
+// fatiadas das 6 provas 2020-2026, e as classificações manuais de Ciências
+// Humanas, Língua Portuguesa e Ciências da Natureza). Idempotente — usa
+// upsert, roda de novo sem duplicar.
 //
 // npm run db:seed
 
 import { PrismaClient } from '@prisma/client'
 import taxonomia from './seed-data/taxonomia.json'
 import questoesRaw from './seed-data/questoes.json'
-import classificacoes from './seed-data/classificacao_ch.json'
+import classifCH from './seed-data/classificacao_ch.json'
+import classifLP from './seed-data/classificacao_lp.json'
+import classifCN from './seed-data/classificacao_cn.json'
 
 const prisma = new PrismaClient()
 
@@ -131,8 +134,8 @@ async function main() {
   }
   console.log(`   ${questoes.length} questões em ${anos.length} edições (${anos.join(', ')})`)
 
-  console.log('→ Classificação manual (Ciências Humanas, 62 questões)')
-  const classif = classificacoes as ClassificacaoRaw[]
+  console.log('→ Classificação manual (Humanas + Língua Portuguesa + Ciências da Natureza)')
+  const classif = [...classifCH, ...classifLP, ...classifCN] as ClassificacaoRaw[]
   for (const c of classif) {
     await prisma.classificacao.upsert({
       where: { questaoId: c.questao_id },

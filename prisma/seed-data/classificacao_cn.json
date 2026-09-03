@@ -1,0 +1,450 @@
+[
+ {
+  "questao_id": "POLI.2020.Q25",
+  "no_id": "BIO.T02.S04",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Funções vitais (respiração/nervoso/hormonal); mesclado com resíduo de Matemática"
+ },
+ {
+  "questao_id": "POLI.2020.Q27",
+  "no_id": "BIO.T02.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Organela produtora de energia — mitocôndria"
+ },
+ {
+  "questao_id": "POLI.2020.Q29",
+  "no_id": "BIO.T02.S04",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Fisiologia cardíaca (sístole/diástole)"
+ },
+ {
+  "questao_id": "POLI.2020.Q30",
+  "no_id": "BIO.T01.S04",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Eutrofização — poluição da água"
+ },
+ {
+  "questao_id": "POLI.2020.Q31",
+  "no_id": "BIO.T03.S07",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Estivação — adaptação à seca"
+ },
+ {
+  "questao_id": "POLI.2020.Q35",
+  "no_id": "BIO.T03.S06",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "Parasitoses/vetores; enunciado mesclado com plantas e fotossíntese"
+ },
+ {
+  "questao_id": "POLI.2020.Q36",
+  "no_id": "FIS.T01",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Unidades de grandezas físicas — mistura movimento/trabalho"
+ },
+ {
+  "questao_id": "POLI.2020.Q38",
+  "no_id": "QUI.T01.S02",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Compostagem — separação de misturas"
+ },
+ {
+  "questao_id": "POLI.2022.Q25",
+  "no_id": "BIO.T01.S01",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "Sucessão ecológica; precedido de resíduo de Matemática"
+ },
+ {
+  "questao_id": "POLI.2022.Q27",
+  "no_id": "BIO.T02.S01",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Nutrientes e funções — literal"
+ },
+ {
+  "questao_id": "POLI.2022.Q28",
+  "no_id": "BIO.T02.S06",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Centro respiratório — coordenação nervosa"
+ },
+ {
+  "questao_id": "POLI.2022.Q30",
+  "no_id": null,
+  "confianca": 0.2,
+  "fora_do_programa": true,
+  "justificativa": "Cálculo epidemiológico + carga de guindaste — sem nó de conteúdo, é matemática aplicada"
+ },
+ {
+  "questao_id": "POLI.2022.Q32",
+  "no_id": "BIO.T03.S05",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Metamorfose do gafanhoto; mesclado com maré negra"
+ },
+ {
+  "questao_id": "POLI.2022.Q33",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Evolução das plantas — reprodução independente de água"
+ },
+ {
+  "questao_id": "POLI.2022.Q34",
+  "no_id": "BIO.T03.S07",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Adaptação de vegetais ao clima"
+ },
+ {
+  "questao_id": "POLI.2022.Q36",
+  "no_id": "FIS.T01.S04",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Roldanas — máquinas simples; mesclado com onda sonora"
+ },
+ {
+  "questao_id": "POLI.2022.Q37",
+  "no_id": "QUI.T01.S05",
+  "confianca": 0.65,
+  "fora_do_programa": false,
+  "justificativa": "Família da tabela periódica, configuração eletrônica"
+ },
+ {
+  "questao_id": "POLI.2022.Q38",
+  "no_id": "QUI.T01.S08",
+  "confianca": 0.65,
+  "fora_do_programa": false,
+  "justificativa": "Classificação de reação química"
+ },
+ {
+  "questao_id": "POLI.2023.Q26",
+  "no_id": "BIO.T02.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Funções da glicose — nutrientes"
+ },
+ {
+  "questao_id": "POLI.2023.Q27",
+  "no_id": "BIO.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Cadeia alimentar marinha — produtores"
+ },
+ {
+  "questao_id": "POLI.2023.Q28",
+  "no_id": "BIO.T02.S06",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Hormônio/glândula/função — literal"
+ },
+ {
+  "questao_id": "POLI.2023.Q29",
+  "no_id": "BIO.T02.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Funções de água/carboidratos/proteínas"
+ },
+ {
+  "questao_id": "POLI.2023.Q30",
+  "no_id": "BIO.T03.S06",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Doenças transmitidas por vetores"
+ },
+ {
+  "questao_id": "POLI.2023.Q31",
+  "no_id": "BIO.T03.S06",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Associações ecológicas — literal"
+ },
+ {
+  "questao_id": "POLI.2023.Q32",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Reino Plantae — adaptações terrestres"
+ },
+ {
+  "questao_id": "POLI.2023.Q33",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Fungos — processos realizados"
+ },
+ {
+  "questao_id": "POLI.2023.Q35",
+  "no_id": "FIS.T01.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Potência/energia — chuveiro elétrico"
+ },
+ {
+  "questao_id": "POLI.2023.Q36",
+  "no_id": "FIS.T01.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Força/tração/normal — dinâmica"
+ },
+ {
+  "questao_id": "POLI.2023.Q37",
+  "no_id": "QUI.T01.S06",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Elementos, valência e ligação — NPK"
+ },
+ {
+  "questao_id": "POLI.2023.Q38",
+  "no_id": "QUI.T01.S07",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Óxido de potássio — função inorgânica"
+ },
+ {
+  "questao_id": "POLI.2024.Q25",
+  "no_id": "BIO.T01.S02",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "População/comunidade/bioma/biosfera — conceitos de ecologia"
+ },
+ {
+  "questao_id": "POLI.2024.Q26",
+  "no_id": "BIO.T03.S05",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Escorpiões e artrópodes"
+ },
+ {
+  "questao_id": "POLI.2024.Q27",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Reino Plantae — grupos e representantes"
+ },
+ {
+  "questao_id": "POLI.2024.Q28",
+  "no_id": "BIO.T02.S04",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Coração e sistema circulatório"
+ },
+ {
+  "questao_id": "POLI.2024.Q29",
+  "no_id": "BIO.T02.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Nutrientes — literal"
+ },
+ {
+  "questao_id": "POLI.2024.Q30",
+  "no_id": "BIO.T02.S07",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Agentes causadores de IST"
+ },
+ {
+  "questao_id": "POLI.2024.Q31",
+  "no_id": "BIO.T01.S07",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Desmatamento da Amazônia — literal"
+ },
+ {
+  "questao_id": "POLI.2024.Q34",
+  "no_id": "FIS.T01.S06",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Onda — frequência e velocidade"
+ },
+ {
+  "questao_id": "POLI.2024.Q35",
+  "no_id": "BIO.T02.S03",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "DNA/gene/cromossomo; mesclado com calor e eletrização"
+ },
+ {
+  "questao_id": "POLI.2024.Q37",
+  "no_id": "QUI.T01.S06",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Ligação covalente, octeto — fósforo branco"
+ },
+ {
+  "questao_id": "POLI.2024.Q38",
+  "no_id": "QUI.T01.S08",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Síntese de FeCl3 — tipos de reação"
+ },
+ {
+  "questao_id": "POLI.2025.Q26",
+  "no_id": "BIO.T03.S02",
+  "confianca": 0.65,
+  "fora_do_programa": false,
+  "justificativa": "Cladograma — origem dos tetrápodes"
+ },
+ {
+  "questao_id": "POLI.2025.Q27",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Classe Insecta — reino Animalia"
+ },
+ {
+  "questao_id": "POLI.2025.Q28",
+  "no_id": "BIO.T01.S03",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Bioma brasileiro — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q30",
+  "no_id": "BIO.T02.S01",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Vitaminas; mesclado com hormônios sexuais"
+ },
+ {
+  "questao_id": "POLI.2025.Q31",
+  "no_id": "BIO.T03.S05",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Órgãos vegetais modificados — reserva de carboidrato"
+ },
+ {
+  "questao_id": "POLI.2025.Q32",
+  "no_id": "BIO.T01.S04",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Leptospirose — doença de veiculação hídrica"
+ },
+ {
+  "questao_id": "POLI.2025.Q33",
+  "no_id": "FIS.T01.S02",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Fragmento quase vazio, contexto compartilhado com Q34"
+ },
+ {
+  "questao_id": "POLI.2025.Q34",
+  "no_id": "FIS.T01.S02",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Momento de força — torque na porta"
+ },
+ {
+  "questao_id": "POLI.2025.Q36",
+  "no_id": "QUI.T01.S06",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Ligação covalente, sal — ozônio/hipoclorito"
+ },
+ {
+  "questao_id": "POLI.2025.Q37",
+  "no_id": "QUI.T01.S04",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Íon alcalino terroso — espécies atômicas"
+ },
+ {
+  "questao_id": "POLI.2025.Q38",
+  "no_id": "QUI.T01.S08",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Reação com geração de gás"
+ },
+ {
+  "questao_id": "POLI.2026.Q25",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Pteridófita/gimnosperma/angiosperma — literal"
+ },
+ {
+  "questao_id": "POLI.2026.Q26",
+  "no_id": "BIO.T03.S04",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Fungos — reino Fungi"
+ },
+ {
+  "questao_id": "POLI.2026.Q27",
+  "no_id": "BIO.T03.S05",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Aves — características gerais"
+ },
+ {
+  "questao_id": "POLI.2026.Q28",
+  "no_id": "BIO.T01.S05",
+  "confianca": 0.55,
+  "fora_do_programa": false,
+  "justificativa": "Efeito estufa — poluição/clima"
+ },
+ {
+  "questao_id": "POLI.2026.Q30",
+  "no_id": "BIO.T02.S06",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Neurônio; mesclado com relações ecológicas"
+ },
+ {
+  "questao_id": "POLI.2026.Q31",
+  "no_id": "BIO.T02.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Técnica de DNA de 3 pessoas"
+ },
+ {
+  "questao_id": "POLI.2026.Q32",
+  "no_id": "BIO.T01.S05",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Microplásticos — poluição ambiental"
+ },
+ {
+  "questao_id": "POLI.2026.Q33",
+  "no_id": "FIS.T01.S06",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Espectro eletromagnético — ondas"
+ },
+ {
+  "questao_id": "POLI.2026.Q35",
+  "no_id": "FIS.T01.S05",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Calor; mesclado com força resultante"
+ },
+ {
+  "questao_id": "POLI.2026.Q36",
+  "no_id": "QUI.T01.S02",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Separação de misturas — literal"
+ },
+ {
+  "questao_id": "POLI.2026.Q37",
+  "no_id": "QUI.T01.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Prótons/nêutrons/elétrons — estudo do átomo"
+ },
+ {
+  "questao_id": "POLI.2026.Q38",
+  "no_id": "QUI.T01.S08",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Neutralização ácido/carbonato — reação química"
+ }
+]

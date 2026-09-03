@@ -1,0 +1,429 @@
+[
+ {
+  "questao_id": "POLI.2020.Q01",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Interpretação de ditado em contexto"
+ },
+ {
+  "questao_id": "POLI.2020.Q02",
+  "no_id": "LP.T02.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Sentido metafórico — conotação"
+ },
+ {
+  "questao_id": "POLI.2020.Q03",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Ditado que resume a ideia do texto"
+ },
+ {
+  "questao_id": "POLI.2020.Q04",
+  "no_id": "LP.T04.S04",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Ditongos decrescentes nasais — encontros vocálicos"
+ },
+ {
+  "questao_id": "POLI.2020.Q05",
+  "no_id": "LP.T05.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Derivação imprópria — formação de palavras"
+ },
+ {
+  "questao_id": "POLI.2020.Q07",
+  "no_id": "LP.T05.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Identificar advérbios — classe de palavras"
+ },
+ {
+  "questao_id": "POLI.2020.Q08",
+  "no_id": "LP.T06.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Classificação do sujeito — termo da oração"
+ },
+ {
+  "questao_id": "POLI.2020.Q10",
+  "no_id": "LP.T06.S04",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Conjunção de consequência; enunciado mesclado"
+ },
+ {
+  "questao_id": "POLI.2020.Q11",
+  "no_id": "LP.T05.S01",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Tu/você — pronome pessoal, fraco"
+ },
+ {
+  "questao_id": "POLI.2020.Q12",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Norma culta/registro — sem nó próprio no edital"
+ },
+ {
+  "questao_id": "POLI.2022.Q01",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Ideia com suporte no texto"
+ },
+ {
+  "questao_id": "POLI.2022.Q02",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Inferência a partir do texto"
+ },
+ {
+  "questao_id": "POLI.2022.Q03",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "V/F sobre sentimento e objetivo do autor"
+ },
+ {
+  "questao_id": "POLI.2022.Q04",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Coesão referencial (pronome, retomada)"
+ },
+ {
+  "questao_id": "POLI.2022.Q05",
+  "no_id": "LP.T02.S01",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Palavra empregada incorretamente"
+ },
+ {
+  "questao_id": "POLI.2022.Q06",
+  "no_id": "LP.T04.S03",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Sílaba tônica — literal"
+ },
+ {
+  "questao_id": "POLI.2022.Q08",
+  "no_id": "LP.T04",
+  "confianca": 0.4,
+  "fora_do_programa": false,
+  "justificativa": "Hiato/dígrafo/fonema — mistura vários subtópicos"
+ },
+ {
+  "questao_id": "POLI.2022.Q09",
+  "no_id": "LP.T06.S02",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Função sintática de expressões"
+ },
+ {
+  "questao_id": "POLI.2022.Q10",
+  "no_id": "LP.T06.S03",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Classificação de orações do período"
+ },
+ {
+  "questao_id": "POLI.2022.Q11",
+  "no_id": "LP.T06.S05",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Concordância verbal — literal"
+ },
+ {
+  "questao_id": "POLI.2022.Q12",
+  "no_id": "LP.T07",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Emprego de vírgula — pontuação"
+ },
+ {
+  "questao_id": "POLI.2023.Q02",
+  "no_id": null,
+  "confianca": 0.1,
+  "fora_do_programa": true,
+  "justificativa": "Só o texto-base, sem comando de questão — falha de extração"
+ },
+ {
+  "questao_id": "POLI.2023.Q03",
+  "no_id": "LP.T05.S02",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Formação de 'desassistidos'"
+ },
+ {
+  "questao_id": "POLI.2023.Q05",
+  "no_id": "LP.T06.S02",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Função morfossintática de 'que' + função sintática"
+ },
+ {
+  "questao_id": "POLI.2023.Q07",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Pronomes como articuladores — coesão"
+ },
+ {
+  "questao_id": "POLI.2023.Q08",
+  "no_id": "LP.T06.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Sujeito agente da ação"
+ },
+ {
+  "questao_id": "POLI.2023.Q09",
+  "no_id": null,
+  "confianca": 0.05,
+  "fora_do_programa": true,
+  "justificativa": "Cabeçalho de seção seguinte vazou — não é questão"
+ },
+ {
+  "questao_id": "POLI.2024.Q01",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Tipologia textual predominante — literal"
+ },
+ {
+  "questao_id": "POLI.2024.Q02",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Relação entre conceitos do texto"
+ },
+ {
+  "questao_id": "POLI.2024.Q03",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "V/F sobre conteúdo do texto"
+ },
+ {
+  "questao_id": "POLI.2024.Q04",
+  "no_id": "LP.T06.S02",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Análise sintática de termos"
+ },
+ {
+  "questao_id": "POLI.2024.Q05",
+  "no_id": "LP.T06.S04",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Conjunções e sentido — nexos oracionais"
+ },
+ {
+  "questao_id": "POLI.2024.Q06",
+  "no_id": "LP.T06.S05",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Uso de verbos — concordância, fraco"
+ },
+ {
+  "questao_id": "POLI.2024.Q07",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Pronome e referente — coesão"
+ },
+ {
+  "questao_id": "POLI.2024.Q08",
+  "no_id": "LP.T06.S05",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Concordância nominal ao pluralizar"
+ },
+ {
+  "questao_id": "POLI.2024.Q09",
+  "no_id": "LP.T07",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Uso de vírgulas — literal"
+ },
+ {
+  "questao_id": "POLI.2024.Q10",
+  "no_id": "LP.T06.S02",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Função sintática de elemento em oração"
+ },
+ {
+  "questao_id": "POLI.2024.Q11",
+  "no_id": "LP.T02.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Figura de linguagem predominante"
+ },
+ {
+  "questao_id": "POLI.2024.Q12",
+  "no_id": "LP.T05.S02",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Palavra 'escutatória' — formação de palavra"
+ },
+ {
+  "questao_id": "POLI.2025.Q01",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Interpretação do texto sobre adolescentes"
+ },
+ {
+  "questao_id": "POLI.2025.Q02",
+  "no_id": "LP.T05.S02",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Derivação imprópria — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q03",
+  "no_id": "LP.T06.S04",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Reescrita com relação de concessão"
+ },
+ {
+  "questao_id": "POLI.2025.Q04",
+  "no_id": "LP.T06.S07",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Crase — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q05",
+  "no_id": "LP.T06.S03",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Orações subordinadas substantivas subjetivas"
+ },
+ {
+  "questao_id": "POLI.2025.Q06",
+  "no_id": "LP.T03.S01",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Acordo ortográfico — literal"
+ },
+ {
+  "questao_id": "POLI.2025.Q07",
+  "no_id": "LP.T05.S01",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Locução verbal — classe de palavras"
+ },
+ {
+  "questao_id": "POLI.2025.Q08",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Pronome pessoal + efeito de sentido, mesclado"
+ },
+ {
+  "questao_id": "POLI.2025.Q10",
+  "no_id": "LP.T02.S02",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Associação de palavras — relação de sentido"
+ },
+ {
+  "questao_id": "POLI.2025.Q11",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Objetivos do cartaz — interpretação"
+ },
+ {
+  "questao_id": "POLI.2025.Q12",
+  "no_id": "LP.T06.S05",
+  "confianca": 0.6,
+  "fora_do_programa": false,
+  "justificativa": "Reescrita mantendo concordância"
+ },
+ {
+  "questao_id": "POLI.2026.Q01",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.3,
+  "fora_do_programa": false,
+  "justificativa": "Linguagem coloquial — variação linguística, sem nó"
+ },
+ {
+  "questao_id": "POLI.2026.Q02",
+  "no_id": "LP.T01.S01",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Natureza do texto — gênero textual"
+ },
+ {
+  "questao_id": "POLI.2026.Q04",
+  "no_id": "LP.T02.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Substituição sinonímica — literal"
+ },
+ {
+  "questao_id": "POLI.2026.Q05",
+  "no_id": "LP.T04.S04",
+  "confianca": 0.7,
+  "fora_do_programa": false,
+  "justificativa": "Semivogal + vogal — encontro vocálico"
+ },
+ {
+  "questao_id": "POLI.2026.Q06",
+  "no_id": "LP.T04",
+  "confianca": 0.5,
+  "fora_do_programa": false,
+  "justificativa": "Hiato/ditongo/tritongo — mistura subtópicos"
+ },
+ {
+  "questao_id": "POLI.2026.Q07",
+  "no_id": "LP.T05.S01",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Classificação de 'meio' — classe de palavras"
+ },
+ {
+  "questao_id": "POLI.2026.Q08",
+  "no_id": "LP.T05.S02",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Família lexical — formação de palavras"
+ },
+ {
+  "questao_id": "POLI.2026.Q09",
+  "no_id": "LP.T05.S01",
+  "confianca": 0.8,
+  "fora_do_programa": false,
+  "justificativa": "Gênero gramatical — classe de palavras"
+ },
+ {
+  "questao_id": "POLI.2026.Q10",
+  "no_id": "LP.T06.S04",
+  "confianca": 0.85,
+  "fora_do_programa": false,
+  "justificativa": "Relação semântica concessiva"
+ },
+ {
+  "questao_id": "POLI.2026.Q11",
+  "no_id": "LP.T06.S07",
+  "confianca": 0.9,
+  "fora_do_programa": false,
+  "justificativa": "Crase — literal"
+ },
+ {
+  "questao_id": "POLI.2026.Q12",
+  "no_id": "LP.T05.S01",
+  "confianca": 0.75,
+  "fora_do_programa": false,
+  "justificativa": "Classificações morfológicas de 'que'"
+ }
+]
