@@ -10,7 +10,7 @@ a protótipo). Os padrões de código (stack, `lib/prisma.ts`, `.gitignore`, con
 clonados de lá; o banco de dados, o repositório e o deploy são recursos próprios e independentes.
 
 ## Stack
-- **Next.js 14** (App Router) — TypeScript
+- **Next.js 15.3.x** (App Router) — TypeScript
 - **Prisma ORM 5** — PostgreSQL (Supabase)
 - **Tailwind CSS**
 
@@ -25,10 +25,31 @@ next/image, Server Actions ou middleware** — é aí que as vulnerabilidades re
 a pena investigar uma por uma. `npm audit fix --force` NÃO deve ser rodado sem revisar — ele
 empurra pra 16.x e pra uma versão major nova do eslint-config-next.
 
-## Banco de dados — mesma armadilha do AgroCusto
-O pgBouncer (porta 6543) do Supabase pode rejeitar conexão neste tipo de projeto com ENOTFOUND.
-Se `npm run db:push` falhar assim, usar o host direto (porta 5432) em `DATABASE_URL` e
-`DIRECT_URL`, como já está no `.env.example`.
+## Banco de dados — NÃO é a mesma armadilha do AgroCusto
+Testei bastante pra conectar de verdade e a causa aqui foi outra (documentando pra não repetir
+a investigação):
+
+1. **O host direto (`db.<projeto>.supabase.co`) só resolve em IPv6**, e a rede da UFSM/Politécnico
+   não tem rota IPv6 — a conexão nem chega a tentar, falha na resolução de endereço.
+2. Por isso o caminho é sempre o **pooler** (Supavisor): `aws-0-<região>.pooler.supabase.com`,
+   usuário `postgres.<ref-do-projeto>` (não `postgres` puro).
+3. **A região do projeto pode não ser a que você pediu ao criar** — confirme em Project Settings →
+   General → Region antes de montar a string. Errar a região dá `tenant/user ... not found` no
+   pooler (TCP conecta, mas ele não reconhece o projeto).
+4. **`sslmode=require` é obrigatório na query string.** Sem isso, a conexão trava e falha com
+   "Can't reach database server" — mensagem idêntica à de host/porta errados, o que engana. Foi
+   isso, não a porta, que causou a maior parte do tempo perdido aqui.
+5. A porta 6543 (pooler, modo transação) conectava por TCP mas o protocolo Postgres nunca
+   completava — pode ser filtro da rede da UFSM nessa porta especificamente, ou pode ter sido só
+   sintoma do problema 4 acima (não ficou 100% isolado). **Rodando local, atrás dessa rede, use
+   5432 (modo sessão) nas duas variáveis.** Na Vercel — rede diferente, sem essa restrição — a
+   combinação padrão do Supabase deve funcionar (6543+pgbouncer para `DATABASE_URL`, 5432 para
+   `DIRECT_URL`); se der o mesmo erro lá, o suspeito é a 6543 de novo, não SSL.
+
+String que funcionou daqui (não é segredo — a senha fica só no `.env`, nunca aqui):
+```
+postgresql://postgres.<ref>:<senha>@aws-0-<região>.pooler.supabase.com:5432/postgres?sslmode=require
+```
 
 ## Origem dos dados (pipeline)
 O schema e o seed foram desenhados em cima da saída real do pipeline em
