@@ -98,6 +98,7 @@ model Questao {
   edicao        Edicao          @relation(fields: [edicaoId], references: [id])
   ano           Int
   numero        Int
+  textoBase     String?                 // texto de leitura compartilhado por um bloco de questões
   enunciado     String                  // texto; aceita $LaTeX$ e tabelas markdown (| ... |)
   alternativas  Json                    // { A: "...", B: "...", ... } — também aceita $LaTeX$
   gabarito      String?                 // letra correta, quando lida do PDF da prova
