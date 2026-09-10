@@ -32,6 +32,7 @@ export default async function Questoes() {
               enunciado={q.enunciado}
               alternativas={q.alternativas as Record<string, string>}
               gabarito={q.gabarito}
+              figuras={q.figuras}
               caminho={caminho}
             />
           )

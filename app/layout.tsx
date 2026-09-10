@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Fredoka, Lexend, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import NavBar from '@/components/NavBar'
 import './globals.css'
 
@@ -33,7 +34,17 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${fredoka.variable} ${lexend.variable} ${mono.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css"
+        />
+      </head>
       <body className="min-h-screen bg-bg font-body text-ink antialiased">
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"
+          strategy="afterInteractive"
+        />
         <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col pb-20 md:flex-row md:pb-0">
           <NavBar />
           <main className="flex-1 px-4 pt-6 md:px-8 md:pt-8">{children}</main>

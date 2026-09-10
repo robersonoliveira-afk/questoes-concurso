@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import RichConteudo from '@/components/RichConteudo'
 
 const LETRAS = ['A', 'B', 'C', 'D', 'E']
 
@@ -10,6 +11,7 @@ export default function QuestaoCard({
   enunciado,
   alternativas,
   gabarito,
+  figuras = [],
   caminho,
 }: {
   ano: number
@@ -17,6 +19,7 @@ export default function QuestaoCard({
   enunciado: string
   alternativas: Record<string, string>
   gabarito: string | null
+  figuras?: string[]
   caminho: string
 }) {
   const [aberto, setAberto] = useState(false)
@@ -36,7 +39,15 @@ export default function QuestaoCard({
       </button>
       {aberto && (
         <div className="border-t border-line px-4 py-4">
-          <p className="text-sm leading-relaxed text-ink">{enunciado}</p>
+          <RichConteudo texto={enunciado} className="text-sm leading-relaxed text-ink" />
+          {figuras.length > 0 && (
+            <div className="mt-3 flex flex-col gap-2">
+              {figuras.map((src, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={i} src={src} alt={`Figura da questão ${numero}`} className="max-w-full rounded border border-line bg-white" />
+              ))}
+            </div>
+          )}
           <ul className="mt-3 flex flex-col gap-1.5">
             {LETRAS.filter(l => l in alternativas).map(l => {
               const correta = l === gabarito
@@ -54,7 +65,7 @@ export default function QuestaoCard({
                   >
                     {l}
                   </span>
-                  <span className="pt-0.5">{alternativas[l]}</span>
+                  <RichConteudo texto={alternativas[l]} className="pt-0.5" />
                 </li>
               )
             })}

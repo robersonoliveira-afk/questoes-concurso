@@ -98,9 +98,10 @@ model Questao {
   edicao        Edicao          @relation(fields: [edicaoId], references: [id])
   ano           Int
   numero        Int
-  enunciado     String
-  alternativas  Json                    // { A: "...", B: "...", ... }
+  enunciado     String                  // texto; aceita $LaTeX$ e tabelas markdown (| ... |)
+  alternativas  Json                    // { A: "...", B: "...", ... } — também aceita $LaTeX$
   gabarito      String?                 // letra correta, quando lida do PDF da prova
+  figuras       String[] @default([])   // URLs de figuras da questão (mapa, gráfico, diagrama)
   arquivoOrigem String?
 
   classificacao Classificacao?

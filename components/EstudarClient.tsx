@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useTransition } from 'react'
 import { registrarTentativa } from '@/app/actions'
+import RichConteudo from '@/components/RichConteudo'
 import type { QuestaoPratica } from '@/lib/estatistica'
 
 const LETRAS = ['A', 'B', 'C', 'D', 'E']
@@ -49,7 +50,21 @@ export default function EstudarClient({ fila }: { fila: QuestaoPratica[] }) {
         <p className="font-mono text-[11px] text-inkfaint">
           {q.ano} · questão {q.numero}
         </p>
-        <p className="mt-3 text-[15px] leading-relaxed text-ink md:text-base">{q.enunciado}</p>
+        <RichConteudo texto={q.enunciado} className="mt-3 text-[15px] leading-relaxed text-ink md:text-base" />
+
+        {q.figuras.length > 0 && (
+          <div className="mt-4 flex flex-col gap-3">
+            {q.figuras.map((src, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={i}
+                src={src}
+                alt={`Figura da questão ${q.numero}`}
+                className="max-w-full rounded-lg border border-line bg-white"
+              />
+            ))}
+          </div>
+        )}
 
         <div className="mt-5 flex flex-col gap-2.5">
           {marcadores.map(([letra, texto]) => {
@@ -68,7 +83,7 @@ export default function EstudarClient({ fila }: { fila: QuestaoPratica[] }) {
                 >
                   {letra}
                 </span>
-                <span className="pt-0.5">{texto}</span>
+                <RichConteudo texto={texto} className="pt-0.5" />
               </div>
             )
           })}

@@ -133,6 +133,7 @@ export type QuestaoPratica = {
   enunciado: string
   alternativas: Record<string, string>
   gabarito: string
+  figuras: string[]
   topicoId: string
   topicoNome: string
   disciplinaNome: string
@@ -183,6 +184,7 @@ export async function filaPratica(userId: string, disciplinaIds: string[]): Prom
     enunciado: q.enunciado,
     alternativas: q.alternativas as Record<string, string>,
     gabarito: q.gabarito!,
+    figuras: q.figuras,
     topicoId: topicoDeRef,
     topicoNome: plano.find(p => p.topicoId === topicoDeRef)?.nome ?? topico.nome,
     disciplinaNome: topico.disciplina.nome,
