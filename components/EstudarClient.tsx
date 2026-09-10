@@ -50,21 +50,24 @@ export default function EstudarClient({ fila }: { fila: QuestaoPratica[] }) {
         <p className="font-mono text-[11px] text-inkfaint">
           {q.ano} · questão {q.numero}
         </p>
-        <RichConteudo texto={q.enunciado} className="mt-3 text-[15px] leading-relaxed text-ink md:text-base" />
-
-        {q.figuras.length > 0 && (
-          <div className="mt-4 flex flex-col gap-3">
+        {(q.textoBase || q.figuras.length > 0) && (
+          <div className="mt-3 rounded-xl border border-line bg-surface2/60 p-4">
+            {q.textoBase && (
+              <RichConteudo texto={q.textoBase} className="text-[13.5px] leading-relaxed text-inksoft" />
+            )}
             {q.figuras.map((src, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 key={i}
                 src={src}
                 alt={`Figura da questão ${q.numero}`}
-                className="max-w-full rounded-lg border border-line bg-white"
+                className={`max-w-full rounded-lg border border-line bg-white ${q.textoBase ? 'mt-3' : ''}`}
               />
             ))}
           </div>
         )}
+
+        <RichConteudo texto={q.enunciado} className="mt-4 text-[15px] leading-relaxed text-ink md:text-base" />
 
         <div className="mt-5 flex flex-col gap-2.5">
           {marcadores.map(([letra, texto]) => {

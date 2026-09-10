@@ -130,6 +130,7 @@ export type QuestaoPratica = {
   id: string
   ano: number
   numero: number
+  textoBase: string | null
   enunciado: string
   alternativas: Record<string, string>
   gabarito: string
@@ -181,6 +182,7 @@ export async function filaPratica(userId: string, disciplinaIds: string[]): Prom
     id: q.id,
     ano: q.ano,
     numero: q.numero,
+    textoBase: q.textoBase,
     enunciado: q.enunciado,
     alternativas: q.alternativas as Record<string, string>,
     gabarito: q.gabarito!,

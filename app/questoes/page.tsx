@@ -29,6 +29,7 @@ export default async function Questoes() {
               key={q.id}
               ano={q.ano}
               numero={q.numero}
+              textoBase={q.textoBase}
               enunciado={q.enunciado}
               alternativas={q.alternativas as Record<string, string>}
               gabarito={q.gabarito}

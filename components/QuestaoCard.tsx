@@ -8,6 +8,7 @@ const LETRAS = ['A', 'B', 'C', 'D', 'E']
 export default function QuestaoCard({
   ano,
   numero,
+  textoBase = null,
   enunciado,
   alternativas,
   gabarito,
@@ -16,6 +17,7 @@ export default function QuestaoCard({
 }: {
   ano: number
   numero: number
+  textoBase?: string | null
   enunciado: string
   alternativas: Record<string, string>
   gabarito: string | null
@@ -39,15 +41,21 @@ export default function QuestaoCard({
       </button>
       {aberto && (
         <div className="border-t border-line px-4 py-4">
-          <RichConteudo texto={enunciado} className="text-sm leading-relaxed text-ink" />
-          {figuras.length > 0 && (
-            <div className="mt-3 flex flex-col gap-2">
+          {(textoBase || figuras.length > 0) && (
+            <div className="mb-3 rounded-lg border border-line bg-surface2/60 p-3">
+              {textoBase && <RichConteudo texto={textoBase} className="text-xs leading-relaxed text-inksoft" />}
               {figuras.map((src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img key={i} src={src} alt={`Figura da questão ${numero}`} className="max-w-full rounded border border-line bg-white" />
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Figura da questão ${numero}`}
+                  className={`max-w-full rounded border border-line bg-white ${textoBase ? 'mt-2' : ''}`}
+                />
               ))}
             </div>
           )}
+          <RichConteudo texto={enunciado} className="text-sm leading-relaxed text-ink" />
           <ul className="mt-3 flex flex-col gap-1.5">
             {LETRAS.filter(l => l in alternativas).map(l => {
               const correta = l === gabarito
