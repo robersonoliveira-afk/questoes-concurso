@@ -117,19 +117,21 @@ async function main() {
     })
   }
   for (const q of questoes) {
+    // update com os mesmos campos: re-rodar o seed propaga gabarito/enunciado
+    // novos do fatiador pras questões que já existem no banco.
+    const dados = {
+      edicaoId: `POLI.${q.ano}`,
+      ano: q.ano,
+      numero: q.numero,
+      enunciado: q.enunciado,
+      alternativas: q.alternativas,
+      gabarito: q.gabarito,
+      arquivoOrigem: q.prova,
+    }
     await prisma.questao.upsert({
       where: { id: q.id },
-      update: {},
-      create: {
-        id: q.id,
-        edicaoId: `POLI.${q.ano}`,
-        ano: q.ano,
-        numero: q.numero,
-        enunciado: q.enunciado,
-        alternativas: q.alternativas,
-        gabarito: q.gabarito,
-        arquivoOrigem: q.prova,
-      },
+      update: dados,
+      create: { id: q.id, ...dados },
     })
   }
   console.log(`   ${questoes.length} questões em ${anos.length} edições (${anos.join(', ')})`)
