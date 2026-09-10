@@ -32,6 +32,10 @@ function renderMath(el: HTMLElement) {
 function escapeHtml(s: string) {
   return s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]!))
 }
+// atributo HTML: só & e " precisam escapar; < e > ficam (a fórmula pode ter x<5)
+function escapeAttr(s: string) {
+  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+}
 
 /** troca $...$ e $$...$$ por spans marcados; o resto vira HTML seguro */
 function inline(texto: string): string {
@@ -39,10 +43,10 @@ function inline(texto: string): string {
   return partes
     .map(p => {
       if (p.startsWith('$$') && p.endsWith('$$')) {
-        return `<span data-tex="${escapeHtml(p.slice(2, -2))}" data-display="1"></span>`
+        return `<span data-tex="${escapeAttr(p.slice(2, -2))}" data-display="1"></span>`
       }
       if (p.startsWith('$') && p.endsWith('$') && p.length > 2) {
-        return `<span data-tex="${escapeHtml(p.slice(1, -1))}"></span>`
+        return `<span data-tex="${escapeAttr(p.slice(1, -1))}"></span>`
       }
       return escapeHtml(p).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     })
