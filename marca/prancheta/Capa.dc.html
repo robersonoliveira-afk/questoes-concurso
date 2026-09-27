@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0B0A14; font-family: 'Lexend', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #9B82FF; } a:hover { color: #C3B0FF; }
+  </style>
+</helmet>
+<div style="width: 960px; height: 540px; background: #100E1B; padding: 60px 64px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 18px;">
+    <svg viewBox="0 0 100 100" width="64" height="64" aria-label="Questa">
+      <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"></circle>
+      <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"></path>
+    </svg>
+    <span style="font-family: 'Fredoka', sans-serif; font-size: 58px; font-weight: 600; letter-spacing: -0.025em; color: #F5F3FF;">questa</span>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px; max-width: 640px;">
+    <div style="font-family: 'Fredoka', sans-serif; font-size: 40px; font-weight: 600; line-height: 1.15; color: #F5F3FF; text-wrap: pretty;">Quanto cada assunto vale na próxima prova.</div>
+    <div style="font-family: 'Lexend', sans-serif; font-size: 17px; line-height: 1.55; color: #ABA3D1; text-wrap: pretty;">Classificação de questões de concurso pelo conteúdo do edital, com plano de estudo priorizado por frequência histórica e dificuldade declarada.</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 18px;">
+    <div style="display: grid; grid-template-columns: repeat(50, minmax(0, 1fr)); gap: 4px;">
+      <sc-for list="{{cells}}" as="cell" hint-placeholder-count="50">
+        <div style="{{cell.st}}"></div>
+      </sc-for>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: #675AB9;">208 QUESTÕES · 6 PROVAS · 2020 A 2026</span>
+      <span style="font-family: 'Lexend', sans-serif; font-size: 15px; color: #9B82FF;">Spoiler da sua prova.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    var cells = [];
+    for (var i = 0; i < 50; i++) {
+      var c = i < 12 ? '#C3B0FF' : (i < 24 ? '#A492FF' : (i < 38 ? '#8D78EE' : '#675AB9'));
+      cells.push({ st: 'height: 22px; border-radius: 2px; background: ' + c + ';' });
+    }
+    return { cells: cells };
+  }
+}
+</script>
+</body>
+</html>

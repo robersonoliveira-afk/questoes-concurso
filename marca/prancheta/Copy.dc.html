@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0B0A14; font-family: 'Lexend', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #9B82FF; } a:hover { color: #C3B0FF; }
+  </style>
+</helmet>
+<div style="width: 1180px; height: 620px; background: #0B0A14; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 26px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8279AB;">FECHAMENTO DO FILME · TRÊS PÚBLICOS</span>
+    <span style="font-family: 'Lexend', sans-serif; font-size: 14px; color: #ABA3D1;">Mesma animação nos vinte primeiros segundos. Só o cartão final troca.</span>
+  </div>
+
+  <div style="display: flex; gap: 26px;">
+    <sc-for list="{{cartoes}}" as="c" hint-placeholder-count="3">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="{{c.pontoSt}}"></span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #8279AB;">{{c.publico}}</span>
+        </div>
+        <div style="height: 400px; background: #100E1B; border-radius: 14px; padding: 32px 28px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px;">
+          <div style="{{c.fraseSt}}">{{c.frase}}</div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+            <svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+              <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"></circle>
+              <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"></path>
+            </svg>
+            <span style="font-family: 'Fredoka', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: #F5F3FF;">questa</span>
+            <span style="font-family: 'Lexend', sans-serif; font-size: 13px; color: #ABA3D1;">{{c.assinatura}}</span>
+          </div>
+        </div>
+        <div style="font-family: 'Lexend', sans-serif; font-size: 12.5px; line-height: 1.5; color: #8279AB;">{{c.onde}}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    var frase = 'font-family: \'Fredoka\', sans-serif; font-weight: 600; line-height: 1.14; color: #F5F3FF; text-align: center; text-wrap: pretty; ';
+    var ponto = 'width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: ';
+    return {
+      cartoes: [
+        {
+          publico: 'ALUNO',
+          frase: 'Você não precisa estudar tudo. Só o que cai.',
+          assinatura: 'Spoiler da sua prova.',
+          onde: 'Story e reels. É quem mais vê e quem mais compartilha.',
+          fraseSt: frase + 'font-size: 30px;',
+          pontoSt: ponto + '#7C5CFF;'
+        },
+        {
+          publico: 'PAI E MÃE',
+          frase: 'Seu filho não precisa estudar tudo.',
+          assinatura: 'Quanto cada assunto vale na prova dele.',
+          onde: 'Grupo de pais, cartaz de escola, anúncio pago. É quem paga.',
+          fraseSt: frase + 'font-size: 32px;',
+          pontoSt: ponto + '#FFC94A;'
+        },
+        {
+          publico: 'ESCOLA E CURSINHO',
+          frase: 'Quanto cada assunto vale na próxima prova.',
+          assinatura: 'Plano de estudo a partir do edital vigente.',
+          onde: 'Apresentação, proposta, conversa institucional. Sem gíria.',
+          fraseSt: frase + 'font-size: 28px;',
+          pontoSt: ponto + '#2DD4BF;'
+        }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

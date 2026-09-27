@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questa · filme de 25s</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#0B0A14;color:#ABA3D1;
+       font:14px/1.5 'Lexend',system-ui,sans-serif;
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;
+       gap:18px;padding:24px 20px 40px}
+  h1{font:600 17px/1.2 'Fredoka',sans-serif;color:#F5F3FF;margin:0;letter-spacing:-.01em}
+  .topo{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;justify-content:center}
+  .topo span{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;
+             text-transform:uppercase;color:#675AB9}
+  canvas{height:min(74vh,860px);width:auto;aspect-ratio:9/16;border-radius:14px;
+         background:#100E1B;box-shadow:0 18px 50px rgba(0,0,0,.5);display:block}
+  .barra{display:flex;align-items:center;gap:12px;width:min(520px,92vw)}
+  input[type=range]{flex:1;accent-color:#7C5CFF;height:22px}
+  .tempo{font:500 12px/1 'JetBrains Mono',monospace;color:#8279AB;
+         font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+  .botoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  button{font:600 14px/1 'Fredoka',sans-serif;border:none;border-radius:999px;
+         padding:12px 22px;cursor:pointer;transition:transform .12s}
+  button:active{transform:scale(.97)}
+  button:disabled{opacity:.45;cursor:default}
+  .b1{background:#6A48F0;color:#fff}
+  .b2{background:#241F42;color:#F5F3FF}
+  .b3{background:#3D3018;color:#FFC94A}
+  .aviso{font-size:12.5px;color:#675AB9;text-align:center;max-width:56ch}
+  .aviso b{color:#8279AB;font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Questa</h1>
+  <span id="rot">filme 25s · 1080 × 1920</span>
+</div>
+
+<canvas id="c" width="1080" height="1920"></canvas>
+
+<div class="barra">
+  <input type="range" id="scrub" min="0" max="2550" value="0">
+  <span class="tempo" id="tempo">00,0s</span>
+</div>
+
+<div class="botoes">
+  <button class="b1" id="play">Tocar</button>
+  <button class="b2" id="replay">Do início</button>
+  <button class="b3" id="gravar">Baixar .webm</button>
+</div>
+
+<p class="aviso" id="aviso">Toca sozinho, mas sem som, o navegador bloqueia áudio automático. Aperta
+<b>Tocar</b> ou <b>Do início</b> pra ligar o som. A gravação roda em tempo real: leva os 25
+segundos e meio do filme e baixa um <b>.webm</b> em 1080 × 1920, 30 fps, com o som embutido.</p>
+
+<script>
+(function () {
+  'use strict';
+
+  var C = {
+    breu:'#100E1B', sup:'#1A1730', sup2:'#241F42', marca:'#7C5CFF', suave:'#2B2354',
+    tinta:'#F5F3FF', media:'#ABA3D1', fraca:'#8279AB',
+    xp:'#FFC94A', p4:'#A492FF', p1:'#675AB9',
+    certo:'#2DD4BF', certoSuave:'#12332F', marcaClaro:'#9B82FF'
+  };
+  var W = 1080, H = 1920, DUR = 25.5;
+  var cv = document.getElementById('c');
+  var ctx = cv.getContext('2d');
+
+  /* ---------- utilidades ---------- */
+  function clamp(v,a,b){ return v<a?a:(v>b?b:v); }
+  function lerp(a,b,t){ return a+(b-a)*t; }
+  function smooth(t){ return t*t*(3-2*t); }
+  function seg(t,a,b){ return clamp((t-a)/(b-a),0,1); }
+  function ease(t,a,b){ return smooth(seg(t,a,b)); }
+
+  /* inverso do smoothstep por bisseção: "em que instante a curva vale y" */
+  function invEase(y,a,b){
+    var lo=0, hi=1;
+    for (var i=0;i<24;i++){
+      var mid=(lo+hi)/2;
+      if (smooth(mid) < y) lo=mid; else hi=mid;
+    }
+    return a + (b-a)*((lo+hi)/2);
+  }
+
+  function fonte(peso,tam,fam){
+    return peso+' '+tam+'px '+fam;
+  }
+  var FD = "'Fredoka', sans-serif";
+  var LX = "'Lexend', sans-serif";
+  var JB = "'JetBrains Mono', monospace";
+
+  function txt(s,x,y,font,cor,align,esp){
+    ctx.save();
+    ctx.font = font; ctx.fillStyle = cor;
+    ctx.textAlign = align || 'center'; ctx.textBaseline = 'alphabetic';
+    if ('letterSpacing' in ctx) ctx.letterSpacing = (esp || 0) + 'px';
+    ctx.fillText(s,x,y);
+    ctx.restore();
+  }
+
+  function rr(x,y,w,h,r,cor){
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(x,y,w,h,r);
+    else ctx.rect(x,y,w,h);
+    ctx.fillStyle = cor; ctx.fill();
+  }
+
+  var RAD = Math.PI/180;
+  function arco(cx,cy,r,esp,de,ate,cor){
+    ctx.beginPath();
+    ctx.arc(cx,cy,r,de*RAD,ate*RAD);
+    ctx.strokeStyle = cor; ctx.lineWidth = esp; ctx.lineCap = 'round';
+    ctx.stroke();
+  }
+
+  /* o anel: abertura de 85 graus centrada em 45, haste saindo por ela */
+  function anel(cx,cy,R,corTrilha,corArco,frac,corHaste,alpha){
+    var esp = R*0.394;
+    ctx.save();
+    ctx.globalAlpha = alpha === undefined ? 1 : alpha;
+    if (corTrilha) arco(cx,cy,R,esp,87.5,362.5,corTrilha);
+    if (corArco && frac > 0) arco(cx,cy,R,esp,87.5,87.5+275*clamp(frac,0,1),corArco);
+    if (corHaste){
+      var a = 45*RAD;
+      ctx.beginPath();
+      ctx.moveTo(cx+Math.cos(a)*R*0.857, cy+Math.sin(a)*R*0.857);
+      ctx.lineTo(cx+Math.cos(a)*R*1.54,  cy+Math.sin(a)*R*1.54);
+      ctx.strokeStyle = corHaste; ctx.lineWidth = esp; ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  /* ---------- geometria das 50 questões ---------- */
+  var CEL = 68, GAP = 16, COLS = 10, LINHAS = 5;
+  var GW = COLS*CEL + (COLS-1)*GAP;
+  var GX = (W-GW)/2, GY = 660;
+  var RCX = 540, RCY = 862, RR_ = 220;
+
+  var pecas = [];
+  for (var i=0;i<50;i++){
+    var col = i%COLS, lin = Math.floor(i/COLS);
+    var ang = (87.5 + 275*(i/49))*RAD;
+    pecas.push({
+      gx: GX + col*(CEL+GAP) + CEL/2,
+      gy: GY + lin*(CEL+GAP) + CEL/2,
+      rx: RCX + Math.cos(ang)*RR_,
+      ry: RCY + Math.sin(ang)*RR_
+    });
+  }
+
+  var BLOCOS = [
+    {nome:'Língua Portuguesa',  n:12, ate:12},
+    {nome:'Matemática',         n:12, ate:24},
+    {nome:'Ciências da Natureza', n:14, ate:38},
+    {nome:'Ciências Humanas',   n:12, ate:50}
+  ];
+
+  var HORAS = [
+    {nome:'Geometria', h:'4,0h', f:0.82},
+    {nome:'Sintaxe',   h:'2,5h', f:0.51},
+    {nome:'República', h:'1,0h', f:0.20}
+  ];
+
+  /* a questão do quadro 6, coerente com a Geometria que veio antes */
+  var ALTS = ['1/2', '2/3', '3/2', '4/3', '5/4'];
+  var LETRAS = ['A', 'B', 'C', 'D', 'E'];
+  var CERTA = 2;
+
+  function virg(v){ return v.toFixed(1).replace('.',','); }
+
+  function quebra(s,max,font){
+    ctx.save(); ctx.font = font;
+    var ps = s.split(' '), linhas = [], cur = '';
+    for (var i=0;i<ps.length;i++){
+      var teste = cur ? cur+' '+ps[i] : ps[i];
+      if (ctx.measureText(teste).width > max && cur){ linhas.push(cur); cur = ps[i]; }
+      else cur = teste;
+    }
+    if (cur) linhas.push(cur);
+    ctx.restore();
+    return linhas;
+  }
+
+  /* ---------- o filme ---------- */
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = C.breu; ctx.fillRect(0,0,W,H);
+
+    /* 22,5s em diante: corte seco para o cartão final */
+    if (t >= 22.5){ final(t); return; }
+
+    /* ---- 0,0 a 3,0 · a prova aparece apagada ---- */
+    var aparece = ease(t,0.3,2.8);
+    var rotulo  = ease(t,0.1,0.9)*(1-ease(t,6.4,7.2));
+    if (rotulo > 0){
+      ctx.save(); ctx.globalAlpha = rotulo;
+      txt('PROVA DE INGRESSO · 50 QUESTÕES', 540, 566, fonte(500,26,JB), C.fraca, 'center', 5);
+      ctx.restore();
+    }
+
+    /* ---- 3,0 a 7,0 · acende por bloco ---- */
+    var acesas = Math.floor(ease(t,3.2,6.8)*50 + 0.0001);
+
+    /* ---- 7,0 a 11,0 · a grade vira o anel ---- */
+    var morph = ease(t,7.0,10.9);
+
+    /* as peças, que somem assim que o anel traçado assume */
+    var somem = ease(t,10.3,11.0);
+    if (somem < 1){
+      for (var i=0;i<50;i++){
+        var p = pecas[i];
+        var nasce = clamp((aparece*60 - i*0.9)/6, 0, 1);
+        if (nasce <= 0) continue;
+
+        var ti = clamp((morph - (i/49)*0.34)/0.66, 0, 1);
+        var e = smooth(ti);
+        var x = lerp(p.gx, p.rx, e);
+        var y = lerp(p.gy, p.ry, e);
+        var lado = lerp(CEL, 26, e);
+        var raio = lerp(6, 13, e);
+        var cor = (i < acesas) ? C.marca : C.sup2;
+
+        ctx.save();
+        ctx.globalAlpha = nasce * (1 - somem);
+        rr(x-lado/2, y-lado/2, lado, lado, raio, cor);
+        ctx.restore();
+      }
+    }
+
+    /* o anel traçado assume no fim do morph */
+    if (t < 10.9){
+      var surge = ease(t,10.2,10.9);
+      if (surge > 0) anel(RCX,RCY,RR_, C.suave, null, 0, C.suave, surge*0.9);
+    }
+
+    /* ---- lista de disciplinas, 3,4 a 7,0 ---- */
+    var lista = ease(t,3.4,4.2) * (1-ease(t,6.9,7.5));
+    if (lista > 0){
+      ctx.save(); ctx.globalAlpha = lista;
+      var y0 = 1176;
+      for (var b=0;b<BLOCOS.length;b++){
+        var bl = BLOCOS[b];
+        var on = acesas >= bl.ate;
+        var parcial = acesas > (bl.ate - bl.n);
+        var cor2 = on ? C.tinta : (parcial ? C.media : C.p1);
+        var corN = on ? C.marca : (parcial ? C.p4 : C.p1);
+        txt(bl.nome, 190, y0 + b*66, fonte(400,30,LX), cor2, 'left');
+        txt(String(bl.n), 890, y0 + b*66, fonte(600,30,JB), corN, 'right');
+      }
+      ctx.restore();
+    }
+
+    /* ---- 11,0 a 15,2 · questões esperadas ---- */
+    if (t >= 10.9){
+      /* termina de sumir ANTES do quadro seguinte começar a entrar, sem sobreposição */
+      var vivo = ease(t,10.9,11.4) * (1 - ease(t,14.8,15.2));
+      var frac = ease(t,11.4,14.2)*0.62;
+      var valor = ease(t,11.4,14.2)*3.4;
+      ctx.save(); ctx.globalAlpha = vivo;
+      anel(RCX,RCY,RR_, C.suave, C.marca, frac, C.suave, 1);
+      txt(virg(valor), RCX, RCY+40, fonte(600,148,JB), C.tinta, 'center');
+      var ap = ease(t,12.6,13.4);
+      ctx.globalAlpha = vivo*ap;
+      txt('Geometria', 540, 1272, fonte(600,82,FD), C.tinta, 'center');
+      txt('questões esperadas na próxima prova', 540, 1342, fonte(400,32,LX), C.media, 'center');
+      ctx.restore();
+    }
+
+    /* ---- 15,3 a 18,4 · vira hora, só entra depois do anel ter sumido de vez ---- */
+    if (t >= 15.3 && t < 18.45){
+      var v2 = ease(t,15.3,15.8) * (1 - ease(t,18.0,18.4));
+      ctx.save(); ctx.globalAlpha = v2;
+
+      txt('3,4', 356, 712, fonte(600,64,JB), C.p1, 'center');
+      ctx.strokeStyle = C.fraca; ctx.lineWidth = 6; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(470,692); ctx.lineTo(584,692);
+      ctx.moveTo(556,666); ctx.lineTo(584,692); ctx.lineTo(556,718);
+      ctx.stroke();
+      txt('4h', 742, 726, fonte(600,118,JB), C.xp, 'center');
+
+      txt('QUESTÃO ESPERADA VIRA HORA', 540, 814, fonte(500,24,JB), C.fraca, 'center', 5);
+
+      for (var k=0;k<HORAS.length;k++){
+        var it = HORAS[k];
+        var yb = 986 + k*146;
+        var ab = ease(t, 15.8+k*0.30, 16.3+k*0.30);
+        ctx.globalAlpha = v2*ab;
+        txt(it.nome, 150, yb, fonte(400,34,LX), C.tinta, 'left');
+        txt(it.h, 930, yb, fonte(600,32,JB), C.xp, 'right');
+        rr(150, yb+26, 780, 16, 8, 'rgba(245,243,255,0.09)');
+        var cresce = ease(t, 16.0+k*0.30, 17.1+k*0.30);
+        rr(150, yb+26, 780*it.f*cresce, 16, 8, C.xp);
+      }
+      ctx.restore();
+    }
+
+    /* ---- 18,5 a 22,5 · a hora vira questão resolvida, e a questão enche o anel ---- */
+    if (t >= 18.45){ quadroResolver(t); }
+  }
+
+  /* o beat que fecha o laço: as 4h não são assistidas, são resolvidas */
+  function quadroResolver(t){
+    var v3 = ease(t,18.5,19.0);
+    var sel = ease(t,19.3,19.6);
+    var acertou = ease(t,19.9,20.15);
+
+    /* o cartão sai de cena e o anel toma conta */
+    var cresceAnel = ease(t,20.5,21.3);
+    var cartao = v3 * (1 - ease(t,20.4,21.0));
+
+    ctx.save();
+
+    /* rótulo do quadro */
+    ctx.globalAlpha = v3 * (1 - ease(t,20.4,20.9));
+    txt('RESOLVENDO O QUE VALE', 540, 392, fonte(500,26,JB), C.fraca, 'center', 5);
+
+    /* o cartão de questão */
+    if (cartao > 0.01){
+      ctx.globalAlpha = cartao;
+      rr(110, 660, 860, 900, 30, C.sup);
+      txt('POLI.2025.Q22', 158, 736, fonte(500,24,JB), C.fraca, 'left', 3);
+      txt('Os triângulos ABC e DEF são', 158, 822, fonte(400,36,LX), C.tinta, 'left');
+      txt('semelhantes. A razão entre eles é:', 158, 874, fonte(400,36,LX), C.tinta, 'left');
+
+      for (var i=0;i<5;i++){
+        var yl = 962 + i*116;
+        var ehCerta = (i === CERTA);
+        var fundo = C.sup2, bolha = C.sup2, corLetra = C.fraca, corAlt = C.media;
+
+        if (ehCerta && sel > 0){
+          fundo = C.suave; bolha = C.marca; corLetra = '#FFFFFF'; corAlt = C.tinta;
+        }
+        if (ehCerta && acertou > 0.5){
+          fundo = C.certoSuave; bolha = C.certo; corLetra = '#08211D'; corAlt = C.certo;
+        }
+
+        rr(150, yl, 780, 88, 22, fundo);
+        ctx.beginPath();
+        ctx.arc(206, yl+44, 26, 0, Math.PI*2);
+        ctx.fillStyle = bolha; ctx.fill();
+        txt(LETRAS[i], 206, yl+53, fonte(600,26,JB), corLetra, 'center');
+        txt(ALTS[i], 264, yl+57, fonte(500,34,JB), corAlt, 'left');
+
+        /* o tique de acerto */
+        if (ehCerta && acertou > 0){
+          ctx.save();
+          ctx.globalAlpha = cartao * acertou;
+          ctx.strokeStyle = C.certo; ctx.lineWidth = 7;
+          ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+          ctx.beginPath();
+          ctx.moveTo(846, yl+44); ctx.lineTo(864, yl+62); ctx.lineTo(896, yl+26);
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+    }
+
+    /* o anel: pequeno no topo enquanto o cartão existe, depois cresce e assume */
+    var acy = lerp(534, 980, cresceAnel);
+    var aR  = lerp(70, 220, cresceAnel);
+
+    /* uma questão respondida move o anel, e o resto do estudo termina de encher */
+    var frac = ease(t,20.0,20.2)*0.2 + ease(t,20.7,21.9)*0.8;
+    var dourado = ease(t,21.85,22.1);
+
+    ctx.globalAlpha = v3;
+    anel(540, acy, aR, C.suave, C.marca, frac, C.suave, 1);
+    if (dourado > 0){
+      ctx.globalAlpha = v3 * dourado;
+      anel(540, acy, aR, null, C.xp, 1, C.xp, 1);
+    }
+    ctx.restore();
+  }
+
+  /* ---- 22,5 a 25,5 · cartão final, a tese nas duas linhas ---- */
+  function final(t){
+    var a1 = ease(t,22.65,23.1);
+    var a1b = ease(t,23.35,23.75);
+    var a2 = ease(t,24.1,24.5);
+    var font = fonte(600,92,FD);
+
+    /* a subtração */
+    var l1 = quebra('Você não precisa estudar tudo.', 850, font);
+    ctx.save(); ctx.globalAlpha = a1;
+    for (var i=0;i<l1.length;i++){
+      txt(l1[i], 540, 606 + i*104, font, C.tinta, 'center');
+    }
+    ctx.restore();
+
+    /* o método */
+    var l2 = quebra('Precisa resolver o que vale.', 850, font);
+    ctx.save(); ctx.globalAlpha = a1b;
+    var y2 = 606 + l1.length*104 + 62;
+    for (var j=0;j<l2.length;j++){
+      txt(l2[j], 540, y2 + j*104, font, C.marcaClaro, 'center');
+    }
+    ctx.restore();
+
+    ctx.save(); ctx.globalAlpha = a2;
+    anel(540, 1296, 54, null, C.marca, 1, C.marca, 1);
+    txt('questa', 540, 1482, fonte(600,110,FD), C.tinta, 'center', -2);
+    txt('Spoiler da sua prova.', 540, 1556, fonte(400,38,LX), C.media, 'center');
+    ctx.restore();
+  }
+
+  /* ---------- trilha sonora, sintetizada, sem arquivo externo ---------- */
+  var Som = {
+    ctx: null, master: null, destMix: null, nodes: [], habilitado: false,
+    init: function () {
+      if (this.ctx) return;
+      try {
+        this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        this.master = this.ctx.createGain();
+        this.master.gain.value = 0.8;
+        this.master.connect(this.ctx.destination);
+        this.destMix = this.ctx.createMediaStreamDestination();
+        this.master.connect(this.destMix);
+        this.habilitado = true;
+      } catch (e) { this.habilitado = false; }
+    },
+    registra: function (n) { this.nodes.push(n); },
+    parar: function () {
+      if (!this.ctx) return;
+      var agora = this.ctx.currentTime;
+      this.nodes.forEach(function (n) { try { n.stop(agora); } catch (e) {} });
+      this.nodes = [];
+    }
+  };
+
+  function tom(at, freq, dur, vol, tipoOsc) {
+    if (!Som.ctx) return;
+    var o = Som.ctx.createOscillator(), g = Som.ctx.createGain();
+    o.type = tipoOsc || 'sine';
+    o.frequency.setValueAtTime(freq, at);
+    g.gain.setValueAtTime(0, at);
+    g.gain.linearRampToValueAtTime(vol, at + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+    o.connect(g); g.connect(Som.master);
+    o.start(at); o.stop(at + dur + 0.02);
+    Som.registra(o);
+  }
+
+  function varredura(at, dur, f0, f1, vol, tipoOsc) {
+    if (!Som.ctx) return;
+    var o = Som.ctx.createOscillator(), g = Som.ctx.createGain();
+    o.type = tipoOsc || 'sine';
+    o.frequency.setValueAtTime(f0, at);
+    o.frequency.exponentialRampToValueAtTime(Math.max(f1, 1), at + dur);
+    g.gain.setValueAtTime(0, at);
+    g.gain.linearRampToValueAtTime(vol, at + dur * 0.35);
+    g.gain.linearRampToValueAtTime(0.0001, at + dur);
+    o.connect(g); g.connect(Som.master);
+    o.start(at); o.stop(at + dur + 0.02);
+    Som.registra(o);
+  }
+
+  function rajadaRuido(at, dur, vol, f0, f1) {
+    if (!Som.ctx) return;
+    var n = Math.max(1, Math.round(Som.ctx.sampleRate * dur));
+    var buffer = Som.ctx.createBuffer(1, n, Som.ctx.sampleRate);
+    var dados = buffer.getChannelData(0);
+    for (var i = 0; i < n; i++) dados[i] = Math.random() * 2 - 1;
+    var src = Som.ctx.createBufferSource();
+    src.buffer = buffer;
+    var filtro = Som.ctx.createBiquadFilter();
+    filtro.type = 'bandpass'; filtro.Q.value = 0.8;
+    filtro.frequency.setValueAtTime(f0, at);
+    filtro.frequency.exponentialRampToValueAtTime(Math.max(f1, 60), at + dur);
+    var g = Som.ctx.createGain();
+    g.gain.setValueAtTime(0, at);
+    g.gain.linearRampToValueAtTime(vol, at + dur * 0.3);
+    g.gain.linearRampToValueAtTime(0.0001, at + dur);
+    src.connect(filtro); filtro.connect(g); g.connect(Som.master);
+    src.start(at); src.stop(at + dur + 0.02);
+    Som.registra(src);
+  }
+
+  function acorde(at, freqs, dur, vol) {
+    freqs.forEach(function (f, i) { tom(at + i * 0.01, f, dur, vol / Math.sqrt(freqs.length), 'triangle'); });
+    freqs.forEach(function (f) {
+      tom(at + 0.09, f, dur * 0.8, vol * 0.18, 'sine');
+      tom(at + 0.18, f, dur * 0.6, vol * 0.09, 'sine');
+    });
+  }
+
+  /* a trilha inteira, amarrada nos mesmos instantes do storyboard */
+  function agendarTrilha(epoch) {
+    if (!Som.ctx) return;
+    function A(v) { return epoch + v; }
+
+    /* os quatro blocos acendendo, um arpejo subindo, no instante exato que cada um completa */
+    var notasBloco = [392.00, 440.00, 523.25, 659.25];
+    var alvos = [12 / 50, 24 / 50, 38 / 50, 1];
+    for (var i = 0; i < 4; i++) {
+      tom(A(invEase(alvos[i], 3.2, 6.8)), notasBloco[i], 0.22, 0.10, 'triangle');
+    }
+
+    /* a grade virando anel, um sopro de ruído subindo, e o assentamento em 10,9 */
+    rajadaRuido(A(7.0), 3.9, 0.08, 300, 2200);
+    tom(A(10.86), 130, 0.35, 0.16, 'sine');
+    rajadaRuido(A(10.86), 0.18, 0.10, 900, 220);
+
+    /* contagem de 0,0 a 3,4, ticks subindo, e um dó travando o número */
+    var nTicks = 13;
+    for (var k = 0; k <= nTicks; k++) {
+      tom(A(11.4 + (14.2 - 11.4) * (k / nTicks)), 720 + 260 * (k / nTicks), 0.05, 0.045, 'square');
+    }
+    tom(A(14.22), 1046.5, 0.16, 0.10, 'triangle');
+
+    /* corte para "vira hora", a seta da conversão, e o pouso em 4h */
+    rajadaRuido(A(15.28), 0.14, 0.09, 1800, 500);
+    varredura(A(15.50), 0.32, 500, 1400, 0.09, 'sine');
+    tom(A(15.78), 880, 0.22, 0.11, 'triangle');
+
+    /* as três barras enchendo, uma nota por barra */
+    var notasBarra = [523.25, 659.25, 784.00];
+    for (var b = 0; b < 3; b++) tom(A(16.0 + b * 0.30), notasBarra[b], 0.5, 0.09, 'triangle');
+
+    /* corte para a questão, o toque da alternativa e o acerto */
+    rajadaRuido(A(18.45), 0.13, 0.09, 1600, 480);
+    tom(A(19.32), 660, 0.06, 0.055, 'square');
+    tom(A(19.92), 880, 0.18, 0.10, 'triangle');
+    tom(A(19.99), 1318.5, 0.24, 0.075, 'triangle');
+
+    /* o anel enchendo com o resto do estudo, e o fechamento dourado */
+    for (var q = 0; q < 11; q++) {
+      tom(A(20.7 + (21.85 - 20.7) * (q / 10)), 600 + 380 * (q / 10), 0.045, 0.038, 'square');
+    }
+    tom(A(21.90), 1046.5, 0.55, 0.12, 'triangle');
+
+    /* corte seco final, e o acorde de marca no logotipo */
+    rajadaRuido(A(22.48), 0.10, 0.11, 2200, 300);
+    acorde(A(24.12), [392.00, 493.88, 587.33, 784.00], 1.7, 0.16);
+  }
+
+  function ligarSomSePrimeiraVez() {
+    Som.init();
+    if (Som.ctx && Som.ctx.state === 'suspended') Som.ctx.resume().catch(function () {});
+  }
+
+  /* ---------- reprodução ---------- */
+  var bPlay = document.getElementById('play');
+  var bReplay = document.getElementById('replay');
+  var bGravar = document.getElementById('gravar');
+  var scrub = document.getElementById('scrub');
+  var tempo = document.getElementById('tempo');
+  var aviso = document.getElementById('aviso');
+
+  var tocando = false, t0 = 0, tAtual = 0, raf = null;
+
+  function mostra(t){
+    tAtual = clamp(t,0,DUR);
+    draw(tAtual);
+    scrub.value = Math.round(tAtual*100);
+    tempo.textContent = tAtual.toFixed(1).replace('.',',') + 's';
+  }
+
+  function laco(){
+    var t = (performance.now()-t0)/1000;
+    if (t >= DUR){ mostra(DUR); parar(); return; }
+    mostra(t);
+    raf = requestAnimationFrame(laco);
+  }
+  function tocar(){
+    if (tAtual >= DUR-0.01) tAtual = 0;
+    t0 = performance.now() - tAtual*1000;
+    tocando = true; bPlay.textContent = 'Pausar';
+    ligarSomSePrimeiraVez();
+    if (Som.ctx){
+      Som.parar();
+      agendarTrilha(Som.ctx.currentTime - tAtual);
+    }
+    raf = requestAnimationFrame(laco);
+  }
+  function parar(){
+    tocando = false; bPlay.textContent = 'Tocar';
+    if (raf) cancelAnimationFrame(raf);
+    Som.parar();
+  }
+
+  bPlay.addEventListener('click', function(){ tocando ? parar() : tocar(); });
+  bReplay.addEventListener('click', function(){ parar(); mostra(0); tocar(); });
+  scrub.addEventListener('input', function(){ parar(); mostra(scrub.value/100); });
+
+  /* ---------- exportar webm, com áudio quando o navegador permitir ---------- */
+  function tipo(comAudio){
+    var opcoes = comAudio
+      ? ['video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm']
+      : ['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'];
+    for (var i=0;i<opcoes.length;i++){
+      if (window.MediaRecorder && MediaRecorder.isTypeSupported(opcoes[i])) return opcoes[i];
+    }
+    return null;
+  }
+
+  bGravar.addEventListener('click', async function(){
+    parar();
+    ligarSomSePrimeiraVez();
+    if (Som.ctx && Som.ctx.state === 'suspended'){ try { await Som.ctx.resume(); } catch (e) {} }
+    var comAudio = !!(Som.ctx && Som.habilitado && Som.ctx.state === 'running');
+
+    var mime = tipo(comAudio);
+    if (!mime){ aviso.textContent = 'Este navegador não grava webm. Abra no Chrome ou no Edge.'; return; }
+
+    var fps = 30, total = Math.round(DUR*fps);
+    var streamVideo = cv.captureStream(0);
+    var track = streamVideo.getVideoTracks()[0];
+
+    var streamFinal = streamVideo;
+    var atraso = 0.06;
+    if (comAudio){
+      Som.parar();
+      agendarTrilha(Som.ctx.currentTime + atraso);
+      streamFinal = new MediaStream(
+        streamVideo.getVideoTracks().concat(Som.destMix.stream.getAudioTracks())
+      );
+    }
+
+    var pedacos = [];
+    var rec = new MediaRecorder(streamFinal, {
+      mimeType: mime, videoBitsPerSecond: 12000000, audioBitsPerSecond: 160000
+    });
+    rec.ondataavailable = function(e){ if (e.data && e.data.size) pedacos.push(e.data); };
+    var fim = new Promise(function(r){ rec.onstop = r; });
+
+    bGravar.disabled = true; bPlay.disabled = true; bReplay.disabled = true;
+    rec.start();
+
+    var inicio = performance.now() + atraso*1000;
+    for (var f=0; f<=total; f++){
+      var alvo = inicio + f*(1000/fps);
+      mostra(f/fps);
+      if (track.requestFrame) track.requestFrame();
+      bGravar.textContent = 'Gravando ' + Math.round(f/total*100) + '%';
+      var espera = alvo - performance.now();
+      await new Promise(function(r){ setTimeout(r, Math.max(0, espera)); });
+    }
+
+    rec.stop();
+    await fim;
+    if (comAudio) Som.parar();
+
+    var blob = new Blob(pedacos, { type: mime });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'questa-25s.webm';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 4000);
+
+    bGravar.disabled = false; bPlay.disabled = false; bReplay.disabled = false;
+    bGravar.textContent = 'Baixar .webm';
+    aviso.innerHTML = (comAudio ? 'Arquivo salvo, com som. ' : 'Arquivo salvo, sem som, este navegador bloqueou o áudio. ') +
+      'Para virar <b>.mp4</b>, converta no CloudConvert ou com ' +
+      '<b>ffmpeg -i questa-25s.webm -c:v libx264 -c:a aac -pix_fmt yuv420p questa-25s.mp4</b>.';
+  });
+
+  /* ---------- arranque ---------- */
+  Promise.all([
+    document.fonts.load('600 96px Fredoka'),
+    document.fonts.load('600 110px Fredoka'),
+    document.fonts.load('400 38px Lexend'),
+    document.fonts.load('600 148px "JetBrains Mono"'),
+    document.fonts.load('500 26px "JetBrains Mono"')
+  ]).then(function(){ return document.fonts.ready; })
+   .then(function(){ mostra(0); tocar(); })
+   .catch(function(){ mostra(0); });
+})();
+</script>
+</body>
+</html>

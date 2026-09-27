@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0B0A14; font-family: 'Lexend', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #9B82FF; } a:hover { color: #C3B0FF; }
+  </style>
+</helmet>
+<div style="width: 400px; height: 800px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8279AB;">QUADRO 2</span>
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: #675AB9;">00:03 / 00:07</span>
+  </div>
+  <div style="width: 360px; height: 640px; background: #100E1B; border-radius: 14px; padding: 34px 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 28px;">
+    <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px;">
+      <sc-for list="{{cells}}" as="cell" hint-placeholder-count="50">
+        <div style="{{cell.st}}"></div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 9px;">
+      <sc-for list="{{linhas}}" as="linha" hint-placeholder-count="4">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <span style="{{linha.nomeSt}}">{{linha.nome}}</span>
+          <span style="{{linha.numSt}}">{{linha.num}}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="font-size: 12.5px; line-height: 1.5; color: #ABA3D1;">As peças acendem por bloco e o contador sobe junto. É o motor lendo as provas passadas.</div>
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    var cells = [];
+    for (var i = 0; i < 50; i++) {
+      cells.push({ st: 'aspect-ratio: 1; border-radius: 3px; background: ' + (i < 24 ? '#7C5CFF' : '#241F42') + ';' });
+    }
+    var base = 'font-family: \'Lexend\', sans-serif; font-size: 13px; ';
+    var mono = 'font-family: \'JetBrains Mono\', monospace; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; ';
+    var dados = [
+      { nome: 'Língua Portuguesa', num: '12', on: true },
+      { nome: 'Matemática', num: '12', on: true },
+      { nome: 'Ciências da Natureza', num: '14', on: false },
+      { nome: 'Ciências Humanas', num: '12', on: false }
+    ];
+    var linhas = dados.map(function (d) {
+      return {
+        nome: d.nome,
+        num: d.num,
+        nomeSt: base + 'color: ' + (d.on ? '#F5F3FF' : '#675AB9') + ';',
+        numSt: mono + 'color: ' + (d.on ? '#7C5CFF' : '#675AB9') + ';'
+      };
+    });
+    return { cells: cells, linhas: linhas };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0B0A14; font-family: 'Lexend', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #9B82FF; } a:hover { color: #C3B0FF; }
+  </style>
+</helmet>
+<div style="width: 400px; height: 800px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8279AB;">QUADRO 3</span>
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: #675AB9;">00:07 / 00:11</span>
+  </div>
+  <div style="width: 360px; height: 640px; background: #100E1B; border-radius: 14px; padding: 34px 28px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;">
+    <div style="position: relative; width: 260px; height: 260px;">
+      <sc-for list="{{dots}}" as="dot" hint-placeholder-count="50">
+        <div style="{{dot.st}}"></div>
+      </sc-for>
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: #8279AB; text-align: center;">A PROVA VIRA O ANEL</div>
+  </div>
+  <div style="font-size: 12.5px; line-height: 1.5; color: #ABA3D1;">A grade se curva e as cinquenta peças escorrem para a trilha. O símbolo se monta com as questões, não aparece pronto.</div>
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    var dots = [];
+    var R = 33, c = 50, avanco = 0.78;
+    for (var i = 0; i < 50; i++) {
+      var ang = (87.5 + 275 * (i / 49)) * Math.PI / 180;
+      var rx = c + R * Math.cos(ang);
+      var ry = c + R * Math.sin(ang);
+      var col = i % 10, row = Math.floor(i / 10);
+      var gx = 16 + col * (68 / 9);
+      var gy = 64 + row * (28 / 4);
+      var t = (avanco - (i / 49) * 0.34) / 0.66;
+      t = t < 0 ? 0 : (t > 1 ? 1 : t);
+      var e = t * t * (3 - 2 * t);
+      var x = gx + (rx - gx) * e;
+      var y = gy + (ry - gy) * e;
+      dots.push({
+        st: 'position: absolute; left: calc(' + x.toFixed(2) + '% - 4px); top: calc(' + y.toFixed(2) +
+            '% - 4px); width: 8px; height: 8px; border-radius: ' + (2 + 2 * e).toFixed(2) +
+            'px; background: #7C5CFF; opacity: ' + (0.34 + 0.66 * e).toFixed(2) + ';'
+      });
+    }
+    return { dots: dots };
+  }
+}
+</script>
+</body>
+</html>

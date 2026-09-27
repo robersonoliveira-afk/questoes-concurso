@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" width="360" height="100" role="img" aria-label="Questa">
+  <title>Questa</title>
+  <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+          stroke-linecap="round" stroke-dasharray="158.4 48.9"
+          transform="rotate(87.5 50 50)"/>
+  <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"/>
+  <text x="125" y="68" font-family="Fredoka, 'Trebuchet MS', sans-serif" font-size="56"
+        font-weight="600" letter-spacing="-1.5" fill="#F5F3FF">questa</text>
+</svg>

@@ -11,12 +11,31 @@ const ITENS: { href: string; label: string; icon: LucideIcon }[] = [
   { href: '/questoes', label: 'Questões', icon: Layers },
 ]
 
+/** O símbolo da marca: anel aberto (85°) com haste a 45°, lido como Q e como
+ *  medidor de progresso. Nunca gire nem preencha o miolo — ver marca/identidade-visual.html. */
+function Logo({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label="Questa" className="flex-none">
+      <circle
+        cx="50" cy="50" r="33" fill="none" stroke="currentColor" strokeWidth="13"
+        strokeLinecap="round" strokeDasharray="158.4 48.9" transform="rotate(87.5 50 50)"
+        className="text-brand-bright"
+      />
+      <path d="M70 70 L86 86" fill="none" stroke="currentColor" strokeWidth="13" strokeLinecap="round" className="text-brand-bright" />
+    </svg>
+  )
+}
+
 export default function NavBar() {
   const pathname = usePathname()
 
   return (
     <>
-      {/* mobile: barra fixa embaixo, pra não brigar com o polegar */}
+      {/* mobile: cabeçalho com a marca, depois a barra fixa embaixo */}
+      <header className="flex items-center gap-2.5 px-4 pt-5 md:hidden">
+        <Logo size={26} />
+        <span className="font-display text-lg font-semibold tracking-tight text-ink">questa</span>
+      </header>
       <nav className="fixed inset-x-0 bottom-0 z-20 flex border-t border-line bg-surface/95 backdrop-blur md:hidden">
         {ITENS.map(item => {
           const ativo = pathname === item.href
@@ -38,10 +57,9 @@ export default function NavBar() {
 
       {/* desktop: trilha lateral */}
       <aside className="hidden w-56 flex-none border-r border-line px-4 py-8 md:block">
-        <Link href="/" className="mb-10 block px-2">
-          <span className="font-display text-xl font-semibold tracking-tight text-ink">
-            Questões<span className="text-brand-bright">+</span>
-          </span>
+        <Link href="/" className="mb-10 flex items-center gap-2.5 px-2">
+          <Logo size={30} />
+          <span className="font-display text-xl font-semibold tracking-tight text-ink">questa</span>
         </Link>
         <nav className="flex flex-col gap-1">
           {ITENS.map(item => {

@@ -59,7 +59,7 @@ export default async function Inicio() {
         <>
           <Link
             href="/estudar"
-            className="mt-8 flex items-center justify-between rounded-2xl bg-brand px-6 py-5 shadow-lg shadow-brand/20 transition-transform active:scale-[0.98]"
+            className="mt-8 flex items-center justify-between rounded-2xl bg-brand-fill px-6 py-5 shadow-lg shadow-brand/20 transition-transform active:scale-[0.98]"
           >
             <div>
               <p className="font-display text-lg font-semibold text-white">Continuar estudando</p>

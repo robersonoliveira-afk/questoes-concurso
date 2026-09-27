@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questa · Identidade Visual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* chrome do documento */
+  --bg:#faf9f7; --fg:#1c1a17; --mut:#5f5a53; --line:#e0dcd5; --card:#ffffff;
+  --ac:#8a4b2a; --ac2:#2f5d50; --code:#f2efe9;
+
+  /* tokens Questa: base */
+  --q-breu:#100E1B; --q-sup:#1A1730; --q-sup2:#241F42;
+  --q-linha:rgba(245,243,255,.08);
+  --q-tinta:#F5F3FF; --q-tinta-media:#ABA3D1; --q-tinta-fraca:#8279AB;
+
+  /* tokens Questa: marca */
+  --q-marca:#7C5CFF; --q-marca-claro:#9B82FF; --q-marca-fundo:#6A48F0;
+  --q-marca-suave:#2B2354; --q-marca-texto:#5B3BD9;
+
+  /* tokens Questa: função */
+  --q-xp:#FFC94A; --q-xp-suave:#3D3018;
+  --q-certo:#2DD4BF; --q-certo-suave:#12332F;
+  --q-errado:#FF6B6B; --q-errado-suave:#3A1F22;
+
+  /* tokens Questa: papel */
+  --q-papel:#FBFAFF; --q-papel2:#F1EEFB; --q-tinta-escura:#17142A;
+
+  /* escala de prioridade */
+  --p1:#675AB9; --p2:#7A68D4; --p3:#8D78EE; --p4:#A492FF; --p5:#C3B0FF;
+
+  /* escala de dificuldade */
+  --d1:#8FE3F5; --d2:#5CC2E8; --d3:#4098D8; --d4:#2E6FC0; --d5:#2B4CA3;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);margin:0;padding:0 20px 100px;
+     font:16px/1.65 'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif}
+.wrap{max-width:920px;margin:0 auto}
+
+header{padding:64px 0 30px;border-bottom:2px solid var(--fg)}
+.marcador{font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;
+          text-transform:uppercase;color:var(--ac)}
+h1{font:600 clamp(34px,6vw,48px)/1.05 'Fraunces',Georgia,serif;margin:10px 0 10px;letter-spacing:-.02em}
+.sub{color:var(--mut);font-size:15.5px;margin:0;max-width:62ch}
+
+h2{font:500 12px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;
+   color:var(--ac);margin:64px 0 6px}
+h2 + .h2sub{font:600 25px/1.25 'Fraunces',Georgia,serif;margin:0 0 20px;letter-spacing:-.01em}
+h3{font:600 17px/1.35 'IBM Plex Sans',sans-serif;margin:34px 0 8px}
+h4{font:600 14px/1.4 'IBM Plex Sans',sans-serif;margin:24px 0 6px;color:var(--ac2)}
+p{margin:0 0 14px;max-width:74ch}
+ul{margin:0 0 14px;padding-left:20px} li{margin:0 0 7px;max-width:72ch}
+strong{font-weight:600}
+code{background:var(--code);padding:1px 5px;border-radius:3px;
+     font:13px/1.4 'JetBrains Mono',monospace}
+hr{border:none;border-top:1px solid var(--line);margin:48px 0}
+.small{font-size:13.5px;color:var(--mut)}
+.nota{border-left:3px solid var(--ac);background:var(--card);padding:14px 18px;
+      margin:0 0 20px;border-radius:0 8px 8px 0;font-size:14.5px}
+.nota strong{color:var(--ac)}
+
+table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)}
+.tw{overflow-x:auto;margin:0 0 20px;border:1px solid var(--line);border-radius:8px}
+th{text-align:left;padding:10px 13px;border-bottom:1.5px solid var(--line);font-weight:600;
+   font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);white-space:nowrap}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;font-size:13px}
+
+/* palco escuro: onde a marca aparece de verdade */
+.palco{background:var(--q-breu);border-radius:16px;padding:34px 30px;margin:0 0 22px;
+       border:1px solid #2a2440}
+.palco.claro{background:var(--q-papel);border-color:#e2ddf2}
+.legenda{font:400 12.5px/1.5 'IBM Plex Sans',sans-serif;color:var(--mut);margin:-12px 0 24px}
+
+/* paleta */
+.paleta{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px;margin:0 0 8px}
+.cor{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card);
+     cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;display:block;width:100%}
+.cor:hover{border-color:var(--ac)}
+.chapa{height:74px;display:block}
+.cor .info{padding:9px 11px 11px}
+.cor .nome{font:600 13px/1.3 'IBM Plex Sans',sans-serif;display:block}
+.cor .hex{font:500 11.5px/1.4 'JetBrains Mono',monospace;color:var(--mut);text-transform:uppercase}
+.cor .papel{font-size:11px;color:var(--mut);display:block;margin-top:3px;line-height:1.35}
+.copiado{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);
+         background:var(--fg);color:var(--bg);padding:9px 17px;border-radius:20px;
+         font:500 13px/1 'IBM Plex Sans',sans-serif;opacity:0;pointer-events:none;
+         transition:opacity .18s;z-index:50}
+.copiado.on{opacity:1}
+
+/* rampas */
+.rampa{display:flex;border-radius:9px;overflow:hidden;margin:0 0 6px;border:1px solid var(--q-linha)}
+.rampa span{flex:1;height:52px;display:flex;align-items:flex-end;justify-content:center;
+            padding-bottom:6px;font:600 10.5px/1 'JetBrains Mono',monospace}
+
+/* contraste */
+.par{display:flex;align-items:center;gap:13px;padding:11px 13px;border-bottom:1px solid var(--line)}
+.par:last-child{border-bottom:none}
+.amostra{width:132px;flex:none;border-radius:7px;padding:9px 11px;font-size:13px;text-align:center;
+         font-family:'Lexend',sans-serif}
+.razao{font:600 13px/1 'JetBrains Mono',monospace;width:56px;flex:none}
+.selo{font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.05em;padding:4px 8px;
+      border-radius:12px;flex:none}
+.ok{background:#e4f0ea;color:#1d5443}
+.lim{background:#fbf0dd;color:#7a5312}
+.nao{background:#f8e3e1;color:#8a2a2a}
+
+/* tipografia */
+.tipo{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:18px 20px;margin:0 0 12px}
+.tipo .rot{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;
+           color:var(--mut);margin-bottom:11px}
+.esp-display{font-family:'Fredoka',sans-serif;color:var(--fg)}
+.esp-corpo{font-family:'Lexend',sans-serif;color:var(--fg)}
+.esp-mono{font-family:'JetBrains Mono',monospace;color:var(--fg)}
+
+/* app: componentes reais */
+.app{font-family:'Lexend',sans-serif;color:var(--q-tinta);max-width:420px}
+.app .eyebrow{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;
+              text-transform:uppercase;color:var(--q-tinta-fraca)}
+.app h3.tela{font:600 30px/1.15 'Fredoka',sans-serif;margin:7px 0 6px;color:var(--q-tinta)}
+.app .lead{font-size:14px;color:var(--q-tinta-media);margin:0 0 22px}
+.cta{display:flex;align-items:center;justify-content:space-between;gap:14px;
+     background:var(--q-marca-fundo);border-radius:18px;padding:17px 20px;
+     box-shadow:0 10px 26px rgba(124,92,255,.22)}
+.cta b{font:600 17px/1.25 'Fredoka',sans-serif;color:#fff;display:block}
+.cta i{font-style:normal;font-size:13.5px;color:#fff;display:block;margin-top:2px;opacity:.92}
+.linha-topico{display:flex;align-items:center;gap:12px;background:var(--q-sup);
+              border:1px solid var(--q-linha);border-radius:14px;padding:12px 15px;margin-top:9px}
+.linha-topico .pos{font:500 12px/1 'JetBrains Mono',monospace;color:var(--q-tinta-fraca);width:14px}
+.linha-topico .nome{font-size:14px;font-weight:500;color:var(--q-tinta);display:block}
+.linha-topico .meta{font-size:12px;color:var(--q-tinta-media);display:block;margin-top:1px}
+.linha-topico .horas{font:600 12.5px/1 'JetBrains Mono',monospace;color:var(--q-xp);
+                     font-variant-numeric:tabular-nums;white-space:nowrap}
+.barra-p{height:5px;border-radius:3px;background:rgba(245,243,255,.09);overflow:hidden;margin-top:7px}
+.barra-p i{display:block;height:100%;border-radius:3px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip-d{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+        font:500 13px/1 'JetBrains Mono',monospace;background:var(--q-sup2);color:var(--q-tinta-fraca)}
+.chip-d.on{box-shadow:0 0 0 2px var(--q-tinta)}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 12px;
+      font:500 12px/1 'JetBrains Mono',monospace}
+
+/* peças */
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin:0 0 8px}
+.peca{border-radius:14px;overflow:hidden;border:1px solid #2a2440;background:var(--q-breu);
+      display:flex;align-items:center;justify-content:center;position:relative}
+.peca.icone{aspect-ratio:1}
+.peca.story{aspect-ratio:9/16}
+.rot-peca{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;
+          color:var(--mut);margin-top:9px;display:block;text-align:center}
+
+/* regras faça / não faça */
+.regras{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.regra{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:15px 17px;font-size:13.5px}
+.regra .cab{font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.08em;
+            text-transform:uppercase;margin-bottom:9px;display:block}
+.faca .cab{color:#1d5443} .naofaca .cab{color:#8a2a2a}
+
+pre{background:var(--code);padding:15px 17px;border-radius:8px;overflow-x:auto;
+    border:1px solid var(--line);margin:0 0 18px}
+pre code{background:none;padding:0;font-size:12.5px;line-height:1.6}
+
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+       color:var(--mut);font-size:13px}
+@media (max-width:620px){
+  .par{flex-wrap:wrap} .amostra{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="marcador">Identidade visual</div>
+  <h1>Questa</h1>
+  <p class="sub">Sistema de marca da plataforma de estudo por questões: nome, símbolo, cor, tipografia
+  e os componentes que carregam o dado. Tudo aqui é token, não sugestão: os valores desta página são
+  os mesmos que entram em <code>tailwind.config.ts</code>.</p>
+</header>
+
+<h2>01</h2>
+<div class="h2sub">O nome</div>
+
+<p><strong>Questa</strong> (kés-ta). Um brasileiro lê <em>questão</em> na primeira vez que vê.
+Quem joga lê <em>quest</em>, missão. As duas leituras são verdadeiras e nenhuma precisa ser explicada.
+A palavra não tem idade nem nível colado nela, então ela sobe de concurso de ingresso para ENEM e para
+concurso público sem trocar de marca.</p>
+
+<h3>Grafia</h3>
+<ul>
+  <li>Em texto corrido: <strong>Questa</strong>, maiúscula inicial, como qualquer nome próprio.</li>
+  <li>No logotipo: <strong>questa</strong>, caixa baixa, sempre.</li>
+  <li>Nunca <code>QUESTA</code>, nunca <code>Quest.a</code>, nunca com acento.</li>
+  <li>Sem artigo definido colado à força. Escreve-se "no Questa", "o Questa", nunca "a Questa".</li>
+</ul>
+
+<h3>Assinatura</h3>
+<div class="palco">
+  <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:clamp(24px,4.4vw,36px);
+              line-height:1.2;color:var(--q-tinta)">Spoiler da sua prova.</div>
+  <div style="font-family:'Lexend',sans-serif;font-size:14px;color:var(--q-tinta-media);margin-top:11px">
+    Assinatura principal. Curta, falada, e diz exatamente o que o produto faz.</div>
+</div>
+<p class="legenda">Alternativa para contexto institucional, quando a conversa é com escola, cursinho ou
+universidade: <strong>Quanto cada assunto vale na sua prova.</strong></p>
+
+<h2>02</h2>
+<div class="h2sub">O símbolo é um medidor</div>
+
+<p>O símbolo é um anel aberto com uma haste em 45 graus. Lido como letra, é o <strong>Q</strong>.
+Lido como instrumento, é um <strong>medidor</strong>: o anel é a trilha e a parte preenchida é
+quanto daquilo já foi feito. É a mesma peça que a interface usa para mostrar progresso, então
+a marca e o componente são o mesmo objeto, e não duas coisas parecidas.</p>
+
+<div class="palco">
+  <div style="display:flex;flex-wrap:wrap;gap:44px;align-items:center;justify-content:center">
+    <div style="text-align:center">
+      <svg viewBox="0 0 100 100" width="112" height="112" aria-label="Símbolo Questa">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+      <span class="rot-peca">Símbolo</span>
+    </div>
+    <div style="text-align:center">
+      <svg viewBox="0 0 360 100" width="270" height="75" aria-label="Logotipo Questa">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"/>
+        <text x="125" y="68" font-family="Fredoka, sans-serif" font-size="56" font-weight="600"
+              letter-spacing="-1.5" fill="#F5F3FF">questa</text>
+      </svg>
+      <span class="rot-peca">Lockup horizontal</span>
+    </div>
+  </div>
+</div>
+
+<h3>O anel em uso, preenchido</h3>
+<div class="palco">
+  <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center">
+    <div style="text-align:center">
+      <svg viewBox="0 0 100 100" width="76" height="76">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#2B2354" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="31.7 207.3" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#2B2354" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+      <span class="rot-peca">20%</span>
+    </div>
+    <div style="text-align:center">
+      <svg viewBox="0 0 100 100" width="76" height="76">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#2B2354" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="87.1 207.3" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#2B2354" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+      <span class="rot-peca">55%</span>
+    </div>
+    <div style="text-align:center">
+      <svg viewBox="0 0 100 100" width="76" height="76">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#2B2354" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#FFC94A" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 207.3" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#FFC94A" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+      <span class="rot-peca">100%</span>
+    </div>
+  </div>
+</div>
+<p class="legenda">O anel fecha em <code>xp</code> dourado, e só nos 100%. É a única recompensa visual
+do sistema, e ela perde o efeito se for usada antes da hora.</p>
+
+<h3>Construção e limites</h3>
+<div class="tw"><table>
+  <tr><th>Parâmetro</th><th>Valor</th><th>Observação</th></tr>
+  <tr><td>Grade</td><td class="num">100 × 100</td><td>Raio do anel 33, espessura 13, pontas arredondadas</td></tr>
+  <tr><td>Abertura</td><td class="num">85°</td><td>Centrada em 45°, embaixo à direita, é onde a haste sai</td></tr>
+  <tr><td>Área de respiro</td><td class="num">0,5 × altura</td><td>Nada entra nessa margem, nem texto nem borda</td></tr>
+  <tr><td>Tamanho mínimo</td><td class="num">20 px</td><td>Abaixo disso a abertura fecha e vira um ponto</td></tr>
+  <tr><td>Lockup mínimo</td><td class="num">96 px</td><td>De largura total. Abaixo disso, use o símbolo sozinho</td></tr>
+</table></div>
+
+<div class="regras">
+  <div class="regra faca"><span class="cab">Faça</span>
+    Símbolo sozinho em favicon, ícone de app e avatar. Ele foi desenhado para ser lido em 20 px.</div>
+  <div class="regra naofaca"><span class="cab">Não faça</span>
+    Girar o símbolo. A haste em 45 graus embaixo à direita é o que o faz ler como Q e não como anel qualquer.</div>
+  <div class="regra naofaca"><span class="cab">Não faça</span>
+    Preencher o miolo do anel, aplicar gradiente ou sombra interna. O anel é traço, sempre.</div>
+  <div class="regra naofaca"><span class="cab">Não faça</span>
+    Escrever o logotipo em outra fonte que não Fredoka 600, nem alterar o espacejamento negativo.</div>
+</div>
+
+<hr>
+
+<h2>03</h2>
+<div class="h2sub">A paleta tem função, não gosto</div>
+
+<p>Quatorze valores em cinco grupos. Cada cor responde por uma pergunta da interface, e nenhuma
+acumula duas respostas. Clique em qualquer amostra para copiar o hex.</p>
+
+<h3>Base escura, a superfície do app</h3>
+<div class="paleta">
+  <button class="cor" data-hex="#100E1B"><span class="chapa" style="background:#100E1B"></span>
+    <span class="info"><span class="nome">breu</span><span class="hex">#100E1B</span>
+    <span class="papel">Fundo de tudo</span></span></button>
+  <button class="cor" data-hex="#1A1730"><span class="chapa" style="background:#1A1730"></span>
+    <span class="info"><span class="nome">superficie</span><span class="hex">#1A1730</span>
+    <span class="papel">Cartão, lista, painel</span></span></button>
+  <button class="cor" data-hex="#241F42"><span class="chapa" style="background:#241F42"></span>
+    <span class="info"><span class="nome">superficie2</span><span class="hex">#241F42</span>
+    <span class="papel">Elemento inativo, campo</span></span></button>
+</div>
+
+<h3>Tinta</h3>
+<div class="paleta">
+  <button class="cor" data-hex="#F5F3FF"><span class="chapa" style="background:#F5F3FF"></span>
+    <span class="info"><span class="nome">tinta</span><span class="hex">#F5F3FF</span>
+    <span class="papel">Título e texto principal</span></span></button>
+  <button class="cor" data-hex="#ABA3D1"><span class="chapa" style="background:#ABA3D1"></span>
+    <span class="info"><span class="nome">tinta-media</span><span class="hex">#ABA3D1</span>
+    <span class="papel">Apoio, subtítulo</span></span></button>
+  <button class="cor" data-hex="#8279AB"><span class="chapa" style="background:#8279AB"></span>
+    <span class="info"><span class="nome">tinta-fraca</span><span class="hex">#8279AB</span>
+    <span class="papel">Rótulo mono, numeração</span></span></button>
+</div>
+
+<h3>Marca</h3>
+<div class="paleta">
+  <button class="cor" data-hex="#7C5CFF"><span class="chapa" style="background:#7C5CFF"></span>
+    <span class="info"><span class="nome">questa</span><span class="hex">#7C5CFF</span>
+    <span class="papel">A marca. Traço, ícone, destaque</span></span></button>
+  <button class="cor" data-hex="#6A48F0"><span class="chapa" style="background:#6A48F0"></span>
+    <span class="info"><span class="nome">questa-fundo</span><span class="hex">#6A48F0</span>
+    <span class="papel">Preenchimento com texto branco em cima</span></span></button>
+  <button class="cor" data-hex="#9B82FF"><span class="chapa" style="background:#9B82FF"></span>
+    <span class="info"><span class="nome">questa-claro</span><span class="hex">#9B82FF</span>
+    <span class="papel">Link, estado ativo, foco</span></span></button>
+  <button class="cor" data-hex="#2B2354"><span class="chapa" style="background:#2B2354"></span>
+    <span class="info"><span class="nome">questa-suave</span><span class="hex">#2B2354</span>
+    <span class="papel">Fundo de selo, trilha do anel</span></span></button>
+  <button class="cor" data-hex="#5B3BD9"><span class="chapa" style="background:#5B3BD9"></span>
+    <span class="info"><span class="nome">questa-texto</span><span class="hex">#5B3BD9</span>
+    <span class="papel">A marca escrita sobre papel claro</span></span></button>
+</div>
+
+<h3>Função</h3>
+<div class="paleta">
+  <button class="cor" data-hex="#FFC94A"><span class="chapa" style="background:#FFC94A"></span>
+    <span class="info"><span class="nome">xp</span><span class="hex">#FFC94A</span>
+    <span class="papel">Progresso, horas, conquista</span></span></button>
+  <button class="cor" data-hex="#2DD4BF"><span class="chapa" style="background:#2DD4BF"></span>
+    <span class="info"><span class="nome">certo</span><span class="hex">#2DD4BF</span>
+    <span class="papel">Só isto: acertou a questão</span></span></button>
+  <button class="cor" data-hex="#FF6B6B"><span class="chapa" style="background:#FF6B6B"></span>
+    <span class="info"><span class="nome">errado</span><span class="hex">#FF6B6B</span>
+    <span class="papel">Só isto: errou a questão</span></span></button>
+</div>
+
+<div class="nota"><strong>A regra que segura o sistema inteiro.</strong>
+<code>certo</code> e <code>errado</code> existem para um evento só, a resposta do aluno a uma questão.
+Não servem para dificuldade, não servem para prioridade, não servem para status de nada. No instante
+em que verde e vermelho aparecem em outro lugar, o aluno lê julgamento onde não há, e o feedback do
+quiz perde força. Dificuldade e prioridade têm escala própria, logo abaixo.</div>
+
+<h3>Papel claro, o site público</h3>
+<p>O app é escuro por decisão, porque a sessão de estudo acontece à noite. Mas quem paga costuma chegar
+pelo navegador, de dia, e escuro em página de venda lê como jogo, não como escola. O sistema tem os dois
+lados, com a mesma marca e a mesma tipografia.</p>
+<div class="paleta">
+  <button class="cor" data-hex="#FBFAFF"><span class="chapa" style="background:#FBFAFF;box-shadow:inset 0 0 0 1px #e0dcd5"></span>
+    <span class="info"><span class="nome">papel</span><span class="hex">#FBFAFF</span>
+    <span class="papel">Fundo do site</span></span></button>
+  <button class="cor" data-hex="#F1EEFB"><span class="chapa" style="background:#F1EEFB"></span>
+    <span class="info"><span class="nome">papel2</span><span class="hex">#F1EEFB</span>
+    <span class="papel">Bloco, cartão claro</span></span></button>
+  <button class="cor" data-hex="#17142A"><span class="chapa" style="background:#17142A"></span>
+    <span class="info"><span class="nome">tinta-escura</span><span class="hex">#17142A</span>
+    <span class="papel">Texto sobre papel</span></span></button>
+</div>
+
+<hr>
+
+<h2>04</h2>
+<div class="h2sub">Duas escalas para os dois números que o produto vende</div>
+
+<h3>Prioridade: quanto o tópico vale</h3>
+<p>Cinco passos em uma só matiz, a da marca. Quanto mais claro, mais alto o valor esperado.
+Usada em barra, em mapa de calor e no ordenamento da lista. Como é a mesma família do violeta,
+ela reforça a marca em vez de brigar com ela.</p>
+<div class="palco">
+  <div class="rampa">
+    <span style="background:var(--p1);color:#E6E1FF">p1</span>
+    <span style="background:var(--p2);color:#F2EEFF">p2</span>
+    <span style="background:var(--p3);color:#1A1035">p3</span>
+    <span style="background:var(--p4);color:#1A1035">p4</span>
+    <span style="background:var(--p5);color:#1A1035">p5</span>
+  </div>
+  <div style="display:flex;justify-content:space-between;font:500 11px/1 'JetBrains Mono',monospace;
+              color:var(--q-tinta-fraca);padding:0 2px">
+    <span>menos questões esperadas</span><span>mais</span>
+  </div>
+</div>
+<div class="tw"><table>
+  <tr><th>Passo</th><th>Hex</th><th>Faixa sugerida</th></tr>
+  <tr><td>p1</td><td class="num">#675AB9</td><td>abaixo de 1,0 questão esperada</td></tr>
+  <tr><td>p2</td><td class="num">#7A68D4</td><td>1,0 a 1,9</td></tr>
+  <tr><td>p3</td><td class="num">#8D78EE</td><td>2,0 a 2,9</td></tr>
+  <tr><td>p4</td><td class="num">#A492FF</td><td>3,0 a 3,9</td></tr>
+  <tr><td>p5</td><td class="num">#C3B0FF</td><td>4,0 ou mais</td></tr>
+</table></div>
+
+<h3>Dificuldade declarada: de 1 a 10</h3>
+<p>Azul, matiz que não aparece em nenhuma outra função do sistema. É escala ordinal e não julgamento:
+dizer que um assunto é difícil para você não é errar nada. Cinco degraus cobrindo os dez níveis,
+com a cor do número virando de escuro para claro no meio da escala.</p>
+<div class="palco">
+  <div class="chips">
+    <span class="chip-d" style="background:var(--d1);color:#0B2430">1</span>
+    <span class="chip-d" style="background:var(--d1);color:#0B2430">2</span>
+    <span class="chip-d" style="background:var(--d2);color:#0B2430">3</span>
+    <span class="chip-d" style="background:var(--d2);color:#0B2430">4</span>
+    <span class="chip-d" style="background:var(--d3);color:#071A26">5</span>
+    <span class="chip-d" style="background:var(--d3);color:#071A26">6</span>
+    <span class="chip-d on" style="background:var(--d4);color:#fff">7</span>
+    <span class="chip-d" style="background:var(--d4);color:#fff">8</span>
+    <span class="chip-d" style="background:var(--d5);color:#fff">9</span>
+    <span class="chip-d" style="background:var(--d5);color:#fff">10</span>
+  </div>
+  <p style="font-family:'Lexend',sans-serif;font-size:13px;color:var(--q-tinta-media);margin:18px 0 0">
+  Na tela real só o nível escolhido aparece colorido. Os outros ficam em <code
+  style="background:#241F42;color:#ABA3D1">superficie2</code>, e o escolhido ganha um anel de 2 px em
+  <code style="background:#241F42;color:#ABA3D1">tinta</code>, que é o que garante leitura nos degraus
+  mais escuros.</p>
+</div>
+<div class="tw"><table>
+  <tr><th>Níveis</th><th>Hex</th><th>Cor do número</th></tr>
+  <tr><td>1 e 2</td><td class="num">#8FE3F5</td><td class="num">#0B2430</td></tr>
+  <tr><td>3 e 4</td><td class="num">#5CC2E8</td><td class="num">#0B2430</td></tr>
+  <tr><td>5 e 6</td><td class="num">#4098D8</td><td class="num">#071A26</td></tr>
+  <tr><td>7 e 8</td><td class="num">#2E6FC0</td><td class="num">#FFFFFF</td></tr>
+  <tr><td>9 e 10</td><td class="num">#2B4CA3</td><td class="num">#FFFFFF</td></tr>
+</table></div>
+
+<hr>
+
+<h2>05</h2>
+<div class="h2sub">O que pode ficar sobre o quê</div>
+
+<p>Razões de contraste medidas contra <code>breu</code> <span class="num">#100E1B</span>.
+O corte é 4,5:1 para texto normal e 3:1 para texto grande e elemento de interface.</p>
+
+<div class="tw" style="border-radius:8px">
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#F5F3FF">tinta</div>
+    <span class="razao">17,4:1</span><span class="selo ok">Livre</span>
+    <span class="small">Título, corpo, qualquer tamanho</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#ABA3D1">tinta-media</div>
+    <span class="razao">8,1:1</span><span class="selo ok">Livre</span>
+    <span class="small">Subtítulo e apoio</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#8279AB">tinta-fraca</div>
+    <span class="razao">4,8:1</span><span class="selo ok">Livre</span>
+    <span class="small">Rótulo mono de 11 e 12 px</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#FFC94A">xp</div>
+    <span class="razao">12,5:1</span><span class="selo ok">Livre</span>
+    <span class="small">Número de horas, contador</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#2DD4BF">certo</div>
+    <span class="razao">10,3:1</span><span class="selo ok">Livre</span>
+    <span class="small">Feedback de acerto</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#FF6B6B">errado</div>
+    <span class="razao">6,8:1</span><span class="selo ok">Livre</span>
+    <span class="small">Feedback de erro</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#7C5CFF">questa em texto</div>
+    <span class="razao">4,4:1</span><span class="selo lim">Só grande</span>
+    <span class="small">Acima de 18 px. Abaixo disso, use <code>questa-claro</code></span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#100E1B;color:#9B82FF">questa-claro</div>
+    <span class="razao">6,3:1</span><span class="selo ok">Livre</span>
+    <span class="small">É este o violeta de link e de texto pequeno</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#7C5CFF;color:rgba(255,255,255,.8)">branco 80% sobre marca</div>
+    <span class="razao">3,3:1</span><span class="selo nao">Não use</span>
+    <span class="small">Branco com opacidade sobre violeta reprova</span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#6A48F0;color:#fff">branco sobre questa-fundo</div>
+    <span class="razao">5,6:1</span><span class="selo ok">Livre</span>
+    <span class="small">É por isso que o preenchimento é <code>questa-fundo</code>, não <code>questa</code></span>
+  </div>
+  <div class="par">
+    <div class="amostra" style="background:#FBFAFF;color:#5B3BD9">questa-texto sobre papel</div>
+    <span class="razao">6,7:1</span><span class="selo ok">Livre</span>
+    <span class="small">A marca escrita no site claro</span>
+  </div>
+</div>
+
+<div class="nota"><strong>Duas regras que saem da tabela.</strong>
+Sobre preenchimento de marca, texto sempre em branco cheio, nunca branco com opacidade.
+E o violeta que vai em texto pequeno é <code>questa-claro</code>, nunca <code>questa</code>.</div>
+
+<hr>
+
+<h2>06</h2>
+<div class="h2sub">Três famílias, três trabalhos</div>
+
+<div class="tipo">
+  <div class="rot">Fredoka · display · 500 600 700</div>
+  <div class="esp-display" style="font-size:40px;font-weight:600;line-height:1.1;letter-spacing:-.01em">
+    Bora estudar?</div>
+  <p class="small" style="margin:11px 0 0">Arredondada e alta de energia. Título de tela, botão principal,
+  número grande. Nunca em texto corrido: ela cansa depois de duas linhas.</p>
+</div>
+
+<div class="tipo">
+  <div class="rot">Lexend · corpo · 400 500 600</div>
+  <div class="esp-corpo" style="font-size:16px;line-height:1.6">
+    A escolha está ligada ao conteúdo. Enunciado de prova é texto longo, e a Lexend foi desenhada
+    para reduzir esforço de leitura. Todo texto que o aluno precisa ler para responder vem nela.</div>
+</div>
+
+<div class="tipo">
+  <div class="rot">JetBrains Mono · número e rótulo · 400 500 600</div>
+  <div class="esp-mono" style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums">
+    3,4 questões · 4,0 h · POLI.2025.Q43</div>
+  <p class="small" style="margin:11px 0 0">Todo número vem em mono com <code>tabular-nums</code>.
+  A tela é cheia de valores em lista e eles precisam alinhar na vertical. Também carrega o ID de
+  questão, que vem do pipeline e é rastreável ao arquivo de origem.</p>
+</div>
+
+<h3>Escala</h3>
+<div class="tw"><table>
+  <tr><th>Papel</th><th>Família</th><th>Tamanho e entrelinha</th><th>Peso</th></tr>
+  <tr><td>Título de tela</td><td>Fredoka</td><td class="num">30 / 1.15</td><td class="num">600</td></tr>
+  <tr><td>Título de seção</td><td>Fredoka</td><td class="num">18 / 1.3</td><td class="num">600</td></tr>
+  <tr><td>Botão principal</td><td>Fredoka</td><td class="num">17 / 1.25</td><td class="num">600</td></tr>
+  <tr><td>Corpo</td><td>Lexend</td><td class="num">15 / 1.6</td><td class="num">400</td></tr>
+  <tr><td>Corpo forte</td><td>Lexend</td><td class="num">15 / 1.6</td><td class="num">500</td></tr>
+  <tr><td>Apoio</td><td>Lexend</td><td class="num">13 / 1.5</td><td class="num">400</td></tr>
+  <tr><td>Rótulo</td><td>JetBrains Mono</td><td class="num">11 / 1, tracking .16em, caixa alta</td><td class="num">500</td></tr>
+  <tr><td>Número em lista</td><td>JetBrains Mono</td><td class="num">12.5 / 1</td><td class="num">600</td></tr>
+</table></div>
+
+<hr>
+
+<h2>07</h2>
+<div class="h2sub">Template: os componentes que carregam o dado</div>
+
+<p>Espaçamento em escala de 4. Raios: <span class="num">14 px</span> em item de lista,
+<span class="num">18 px</span> em cartão e botão principal, <span class="num">999 px</span> em selo e chip.
+Borda sempre <code>linha</code>, que é tinta a 8% e não uma cor sólida, para acompanhar a superfície.</p>
+
+<div class="palco">
+  <div class="app">
+    <div class="eyebrow">Politécnico / CTISM</div>
+    <h3 class="tela">Bora estudar?</h3>
+    <p class="lead">208 questões de provas de verdade já no banco, prontas pra treinar.</p>
+
+    <div class="cta">
+      <div>
+        <b>Continuar estudando</b>
+        <i>Prioridade agora: Geometria</i>
+      </div>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="flex:none">
+        <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#fff"/>
+      </svg>
+    </div>
+
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin:26px 0 10px">
+      <span style="font:600 16px/1.3 'Fredoka',sans-serif;color:var(--q-tinta)">O que estudar primeiro</span>
+      <span style="font:500 12px/1 'JetBrains Mono',monospace;color:var(--q-tinta-fraca)">6,0 h/sem</span>
+    </div>
+
+    <div class="linha-topico">
+      <span class="pos">1</span>
+      <div style="flex:1;min-width:0">
+        <span class="nome">Geometria</span>
+        <span class="meta">Matemática · 3,4 questões esperadas</span>
+        <div class="barra-p"><i style="width:85%;background:var(--p4)"></i></div>
+      </div>
+      <span class="horas">4,0h</span>
+    </div>
+    <div class="linha-topico">
+      <span class="pos">2</span>
+      <div style="flex:1;min-width:0">
+        <span class="nome">Sintaxe</span>
+        <span class="meta">Língua Portuguesa · 2,6 questões esperadas</span>
+        <div class="barra-p"><i style="width:65%;background:var(--p3)"></i></div>
+      </div>
+      <span class="horas">2,5h</span>
+    </div>
+    <div class="linha-topico">
+      <span class="pos">3</span>
+      <div style="flex:1;min-width:0">
+        <span class="nome">República</span>
+        <span class="meta">História · 1,4 questões esperadas</span>
+        <div class="barra-p"><i style="width:35%;background:var(--p2)"></i></div>
+      </div>
+      <span class="horas">1,0h</span>
+    </div>
+
+    <div style="margin-top:26px">
+      <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;
+                  color:var(--q-tinta-fraca);margin-bottom:11px">Quanto isso te pega</div>
+      <div class="chips">
+        <span class="chip-d" style="background:var(--q-sup2)">1</span>
+        <span class="chip-d" style="background:var(--q-sup2)">2</span>
+        <span class="chip-d on" style="background:var(--d2);color:#0B2430">3</span>
+        <span class="chip-d" style="background:var(--q-sup2)">4</span>
+        <span class="chip-d" style="background:var(--q-sup2)">5</span>
+        <span class="chip-d" style="background:var(--q-sup2)">6</span>
+        <span class="chip-d" style="background:var(--q-sup2)">7</span>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:26px">
+      <span class="pill" style="background:var(--q-certo-suave);color:var(--q-certo)">Acertou</span>
+      <span class="pill" style="background:var(--q-errado-suave);color:var(--q-errado)">Errou</span>
+      <span class="pill" style="background:var(--q-xp-suave);color:var(--q-xp)">+12 XP</span>
+      <span class="pill" style="background:var(--q-marca-suave);color:var(--q-marca-claro)">POLI.2025.Q43</span>
+    </div>
+  </div>
+</div>
+<p class="legenda">Tela inicial montada com os tokens desta página. A barra de prioridade usa a rampa p1 a p5,
+a bolinha de dificuldade usa a rampa azul, e verde e vermelho só aparecem no selo de resposta.</p>
+
+<h3>Estados</h3>
+<div class="tw"><table>
+  <tr><th>Estado</th><th>Tratamento</th></tr>
+  <tr><td>Toque</td><td><code>active:scale-[0.98]</code>, sem mudança de cor</td></tr>
+  <tr><td>Foco de teclado</td><td>Anel de 2 px em <code>questa-claro</code>, deslocado 2 px</td></tr>
+  <tr><td>Selecionado</td><td>Anel de 2 px em <code>tinta</code>, sem alterar o preenchimento</td></tr>
+  <tr><td>Desabilitado</td><td><code>superficie2</code> com texto em <code>tinta-fraca</code>, sem opacidade global</td></tr>
+  <tr><td>Carregando</td><td>Bloco em <code>superficie</code> pulsando, nunca giro infinito</td></tr>
+</table></div>
+
+<hr>
+
+<h2>08</h2>
+<div class="h2sub">Aplicações</div>
+
+<div class="apps">
+  <div>
+    <div class="peca icone" style="background:var(--q-marca-fundo)">
+      <svg viewBox="0 0 100 100" width="58%" height="58%">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#fff" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="rot-peca">Ícone de app</span>
+  </div>
+  <div>
+    <div class="peca icone">
+      <svg viewBox="0 0 100 100" width="58%" height="58%">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="rot-peca">Favicon e avatar</span>
+  </div>
+  <div>
+    <div class="peca story" style="flex-direction:column;gap:20px;padding:26px">
+      <svg viewBox="0 0 100 100" width="46" height="46">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#7C5CFF" stroke-width="13"
+                stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+        <path d="M70 70 L86 86" fill="none" stroke="#7C5CFF" stroke-width="13" stroke-linecap="round"/>
+      </svg>
+      <div style="text-align:center">
+        <div style="font:600 25px/1.15 'Fredoka',sans-serif;color:var(--q-tinta)">Geometria vale<br>3,4 questões</div>
+        <div style="font:400 13px/1.5 'Lexend',sans-serif;color:var(--q-tinta-media);margin-top:12px">
+          Spoiler da sua prova.</div>
+      </div>
+    </div>
+    <span class="rot-peca">Story</span>
+  </div>
+</div>
+
+<h3>Site público, superfície clara</h3>
+<div class="palco claro">
+  <svg viewBox="0 0 360 100" width="180" height="50" style="display:block">
+    <circle cx="50" cy="50" r="33" fill="none" stroke="#5B3BD9" stroke-width="13"
+            stroke-linecap="round" stroke-dasharray="158.4 48.9" transform="rotate(87.5 50 50)"/>
+    <path d="M70 70 L86 86" fill="none" stroke="#5B3BD9" stroke-width="13" stroke-linecap="round"/>
+    <text x="125" y="68" font-family="Fredoka, sans-serif" font-size="56" font-weight="600"
+          letter-spacing="-1.5" fill="#17142A">questa</text>
+  </svg>
+  <div style="font:600 clamp(22px,4vw,32px)/1.2 'Fredoka',sans-serif;color:var(--q-tinta-escura);
+              margin:26px 0 10px;max-width:20ch">Seu filho não precisa estudar tudo.</div>
+  <div style="font:400 15px/1.6 'Lexend',sans-serif;color:#4a4468;max-width:48ch">
+    O Questa lê as provas passadas do concurso, calcula quantas questões cada assunto vale na próxima,
+    e transforma isso em quantas horas estudar de cada coisa.</div>
+  <div style="display:inline-block;margin-top:22px;background:var(--q-marca-fundo);color:#fff;
+              border-radius:999px;padding:13px 26px;font:600 15px/1 'Fredoka',sans-serif">
+    Ver o plano do meu filho</div>
+</div>
+<p class="legenda">Mesma marca, mesma tipografia, registro diferente. A tela escura fala com quem estuda.
+A página clara fala com quem paga.</p>
+
+<hr>
+
+<h2>09</h2>
+<div class="h2sub">Tokens</div>
+
+<p>Cole em <code>tailwind.config.ts</code>, dentro de <code>theme.extend</code>.
+Os nomes já existentes no projeto foram mantidos, para não quebrar as classes que estão no código.</p>
+
+<pre><code>colors: {
+  bg:        '#100E1B',
+  surface:   '#1A1730',
+  surface2:  '#241F42',
+  ink:       '#F5F3FF',
+  inksoft:   '#ABA3D1',
+  inkfaint:  '#8279AB',
+  line:      'rgba(245,243,255,0.08)',
+
+  brand: { DEFAULT: '#7C5CFF', bright: '#9B82FF', fill: '#6A48F0',
+           soft: '#2B2354', onlight: '#5B3BD9' },
+
+  xp:     { DEFAULT: '#FFC94A', soft: '#3D3018' },
+  certo:  { DEFAULT: '#2DD4BF', soft: '#12332F' },
+  errado: { DEFAULT: '#FF6B6B', soft: '#3A1F22' },
+
+  papel:  { DEFAULT: '#FBFAFF', alt: '#F1EEFB', ink: '#17142A' },
+
+  prio: { 1: '#675AB9', 2: '#7A68D4', 3: '#8D78EE', 4: '#A492FF', 5: '#C3B0FF' },
+  dif:  { 1: '#8FE3F5', 2: '#5CC2E8', 3: '#4098D8', 4: '#2E6FC0', 5: '#2B4CA3' },
+}</code></pre>
+
+<div class="nota"><strong>Dois ajustes em relação ao que está no código hoje.</strong>
+<code>inkfaint</code> passa de <span class="num">#6F6796</span> para <span class="num">#8279AB</span>,
+porque o valor antigo dá 3,6:1 e é usado em rótulo de 11 e 12 px. E o preenchimento de botão principal
+passa a ser <code>brand.fill</code>, não <code>brand</code>, que é o que faz o texto branco passar no
+contraste.</div>
+
+<footer>
+  Questa · identidade visual · 13/09/2026<br>
+  Arquivos do símbolo em <code>marca/logo/</code>: <code>simbolo.svg</code>,
+  <code>simbolo-mono.svg</code> (herda <code>currentColor</code>),
+  <code>lockup-horizontal.svg</code>.
+</footer>
+
+</div>
+
+<div class="copiado" id="aviso">copiado</div>
+<script>
+document.querySelectorAll('.cor').forEach(function(b){
+  b.addEventListener('click', function(){
+    var hex = b.dataset.hex;
+    navigator.clipboard.writeText(hex).then(function(){
+      var a = document.getElementById('aviso');
+      a.textContent = hex + ' copiado';
+      a.classList.add('on');
+      clearTimeout(window.__t);
+      window.__t = setTimeout(function(){ a.classList.remove('on'); }, 1300);
+    });
+  });
+});
+</script>
+</body>
+</html>

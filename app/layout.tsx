@@ -21,8 +21,8 @@ const mono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Questões Concurso',
-  description: 'Estuda pro Politécnico/CTISM sabendo o que mais cai — e o que você ainda não manda bem.',
+  title: 'questa',
+  description: 'Spoiler da sua prova. Quanto cada assunto vale no Politécnico/CTISM, e quanto você já manda bem nele.',
 }
 
 export const viewport: Viewport = {

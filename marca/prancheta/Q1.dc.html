@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0B0A14; font-family: 'Lexend', 'Segoe UI', system-ui, sans-serif; }
+    a { color: #9B82FF; } a:hover { color: #C3B0FF; }
+  </style>
+</helmet>
+<div style="width: 400px; height: 800px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #8279AB;">QUADRO 1</span>
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: #675AB9;">00:00 / 00:03</span>
+  </div>
+  <div style="width: 360px; height: 640px; background: #100E1B; border-radius: 14px; padding: 34px 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 28px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: #8279AB;">PROVA DE INGRESSO · 50 QUESTÕES</div>
+    <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px;">
+      <sc-for list="{{cells}}" as="cell" hint-placeholder-count="50">
+        <div style="{{cell.st}}"></div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="font-size: 12.5px; line-height: 1.5; color: #ABA3D1;">A prova inteira aparece apagada, uma peça por questão. Nada se move ainda.</div>
+</div>
+</x-dc>
+<script data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    var cells = [];
+    for (var i = 0; i < 50; i++) {
+      cells.push({ st: 'aspect-ratio: 1; border-radius: 3px; background: #241F42;' });
+    }
+    return { cells: cells };
+  }
+}
+</script>
+</body>
+</html>

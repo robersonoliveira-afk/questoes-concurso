@@ -1,19 +1,45 @@
 // Popula o banco com os dados reais já produzidos pelo pipeline em
-// Teste_site_questões/pipeline (taxonomia do edital 2027, as 223 questões
-// fatiadas das 6 provas 2020-2026, e as classificações manuais de Ciências
-// Humanas, Língua Portuguesa e Ciências da Natureza). Idempotente — usa
-// upsert, roda de novo sem duplicar.
+// Teste_site_questões/pipeline: taxonomia do edital 2027, as 650 questões
+// revisadas visualmente das 13 provas 2013-2026 (banco_poli.json), e as
+// classificações manuais de todas as disciplinas. Idempotente — usa upsert,
+// roda de novo sem duplicar nem regredir texto/gabarito já revisado.
 //
 // npm run db:seed
 
 import { PrismaClient } from '@prisma/client'
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
 import taxonomia from './seed-data/taxonomia.json'
-import questoesRaw from './seed-data/questoes.json'
 import classifCH from './seed-data/classificacao_ch.json'
 import classifLP from './seed-data/classificacao_lp.json'
 import classifCN from './seed-data/classificacao_cn.json'
+import classifMAT from './seed-data/classificacao_mat.json'
+import classifLPNovas from './seed-data/classificacao_lp_novas.json'
+import classifCHNovas from './seed-data/classificacao_ch_novas.json'
+import classifCNNovas from './seed-data/classificacao_cn_novas.json'
 
 const prisma = new PrismaClient()
+
+const caminhoBanco = path.resolve(
+  process.cwd(), '..', 'Teste_site_questões', 'pipeline', 'out', 'banco_poli.json'
+)
+
+type QuestaoBanco = {
+  id: string
+  ano: number
+  numero: number
+  area: string
+  enunciado: string
+  alternativas: Record<string, string>
+  gabarito: string | null
+  anulada: boolean
+  texto_base: string | null
+}
+
+type BancoPoli = {
+  questoes: QuestaoBanco[]
+  textos_base: { id: string; texto: string }[]
+}
 
 type NoTaxonomia = {
   id: string
@@ -23,16 +49,6 @@ type NoTaxonomia = {
   n_questoes_disciplina: number
   topico: string
   subtopico: string | null
-}
-
-type QuestaoRaw = {
-  id: string
-  prova: string
-  ano: number
-  numero: number
-  enunciado: string
-  alternativas: Record<string, string>
-  gabarito: string | null
 }
 
 type ClassificacaoRaw = {
@@ -105,8 +121,10 @@ async function main() {
   }
   console.log(`   ${topicos.length} tópicos, ${subtopicos.length} subtópicos`)
 
-  console.log('→ Edições históricas + questões das 6 provas')
-  const questoes = questoesRaw as QuestaoRaw[]
+  console.log('→ Edições históricas + questões revisadas das 13 provas (2013-2026)')
+  const banco = JSON.parse(readFileSync(caminhoBanco, 'utf-8')) as BancoPoli
+  const textosBase = new Map(banco.textos_base.map(t => [t.id, t.texto]))
+  const questoes = banco.questoes.filter(q => !q.anulada)
   const anos = [...new Set(questoes.map(q => q.ano))].sort()
   for (const ano of anos) {
     const edicaoId = `POLI.${ano}`
@@ -117,16 +135,18 @@ async function main() {
     })
   }
   for (const q of questoes) {
-    // update com os mesmos campos: re-rodar o seed propaga gabarito/enunciado
-    // novos do fatiador pras questões que já existem no banco.
+    // update com os mesmos campos: re-rodar o seed propaga texto/gabarito
+    // revisados pras questões que já existem no banco.
     const dados = {
       edicaoId: `POLI.${q.ano}`,
       ano: q.ano,
       numero: q.numero,
+      textoBase: q.texto_base ? (textosBase.get(q.texto_base) ?? null) : null,
       enunciado: q.enunciado,
       alternativas: q.alternativas,
       gabarito: q.gabarito,
-      arquivoOrigem: q.prova,
+      figuras: [] as string[],
+      arquivoOrigem: 'pipeline/extrair_poli.py (revisão visual)',
     }
     await prisma.questao.upsert({
       where: { id: q.id },
@@ -136,8 +156,11 @@ async function main() {
   }
   console.log(`   ${questoes.length} questões em ${anos.length} edições (${anos.join(', ')})`)
 
-  console.log('→ Classificação manual (Humanas + Língua Portuguesa + Ciências da Natureza)')
-  const classif = [...classifCH, ...classifLP, ...classifCN] as ClassificacaoRaw[]
+  console.log('→ Classificação manual (todas as disciplinas)')
+  const classif = [
+    ...classifCH, ...classifLP, ...classifCN,
+    ...classifMAT, ...classifLPNovas, ...classifCHNovas, ...classifCNNovas,
+  ] as ClassificacaoRaw[]
   for (const c of classif) {
     await prisma.classificacao.upsert({
       where: { questaoId: c.questao_id },

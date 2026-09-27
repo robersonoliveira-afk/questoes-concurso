@@ -26,6 +26,9 @@ dev.log
 *.pem
 .vercel
 
+# Backups locais do banco (prisma/backup_dump.mjs) — nunca commitar dado de usuário
+/backups/
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts

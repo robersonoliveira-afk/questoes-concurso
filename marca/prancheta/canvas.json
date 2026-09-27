@@ -1,0 +1,29 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Filme" },
+    { "id": "page-2", "name": "Peças" },
+    { "id": "page-3", "name": "Copy" }
+  ],
+  "artboards": [
+    { "file": "Q1.dc.html", "x": 0,    "y": 0,   "w": 400, "h": 800, "page": "page-1", "title": "Quadro 1 · a prova apagada" },
+    { "file": "Q2.dc.html", "x": 480,  "y": 0,   "w": 400, "h": 800, "page": "page-1", "title": "Quadro 2 · acende por bloco" },
+    { "file": "Q3.dc.html", "x": 960,  "y": 0,   "w": 400, "h": 800, "page": "page-1", "title": "Quadro 3 · a grade vira o anel" },
+    { "file": "Q4.dc.html", "x": 0,    "y": 920, "w": 400, "h": 800, "page": "page-1", "title": "Quadro 4 · questões esperadas" },
+    { "file": "Q5.dc.html", "x": 480,  "y": 920, "w": 400, "h": 800, "page": "page-1", "title": "Quadro 5 · vira hora" },
+    { "file": "Q6.dc.html", "x": 960,  "y": 920, "w": 400, "h": 800, "page": "page-1", "title": "Quadro 6 · fechamento" },
+
+    { "file": "Main.dc.html",   "x": 0,    "y": 0,   "w": 540, "h": 960,  "page": "page-2", "title": "Story 9:16" },
+    { "file": "Feed.dc.html",   "x": 620,  "y": 0,   "w": 600, "h": 600,  "page": "page-2", "title": "Feed 1:1" },
+    { "file": "Capa.dc.html",   "x": 620,  "y": 720, "w": 960, "h": 540,  "page": "page-2", "title": "Capa 16:9" },
+    { "file": "Cartaz.dc.html", "x": 1660, "y": 0,   "w": 794, "h": 1123, "page": "page-2", "title": "Cartaz A4" },
+
+    { "file": "Copy.dc.html", "x": 0, "y": 0, "w": 1180, "h": 620, "page": "page-3", "title": "Três fechamentos" }
+  ],
+  "annotations": [
+    { "id": "nota-filme", "x": 0, "y": -190, "w": 880, "page": "page-1",
+      "text": "Filme de 22s, 9:16.\nA espinha: a prova aparece inteira, acende por bloco, se curva e vira o anel. Do anel sai o número de questões esperadas, o número vira hora, e a hora vira a frase final.\nO quadro 3 é o que carrega o filme: o símbolo se monta com as questões em vez de aparecer pronto." },
+    { "id": "nota-pecas", "x": 0, "y": -150, "w": 700, "page": "page-2",
+      "text": "O cartaz é a única peça em superfície clara, por disciplina de impressão e porque quem lê mural não é quem estuda de madrugada.\n[ENDEREÇO DO SITE] é para preencher quando o domínio estiver fechado." }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

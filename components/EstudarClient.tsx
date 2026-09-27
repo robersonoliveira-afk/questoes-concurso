@@ -97,7 +97,7 @@ export default function EstudarClient({ fila }: { fila: QuestaoPratica[] }) {
             <button
               type="button"
               onClick={() => setRevelada(true)}
-              className="flex-1 rounded-xl bg-brand py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand/20 active:scale-[0.98]"
+              className="flex-1 rounded-xl bg-brand-fill py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand/20 active:scale-[0.98]"
             >
               Ver resposta
             </button>
